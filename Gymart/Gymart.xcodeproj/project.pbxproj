@@ -54,14 +54,46 @@
 		3F3FB24622A0675C00D22D36 /* Gymart */ = {
 			isa = PBXGroup;
 			children = (
-				3F3FB24722A0675C00D22D36 /* AppDelegate.swift */,
-				3F3FB24922A0675C00D22D36 /* ViewController.swift */,
-				3F3FB24B22A0675C00D22D36 /* Main.storyboard */,
-				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
-				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
-				3F3FB25322A0675D00D22D36 /* Info.plist */,
+				3F3FB25C22A068BA00D22D36 /* SupportingFiles */,
+				3F3FB25B22A068B300D22D36 /* Model */,
+				3F3FB25A22A0689A00D22D36 /* View */,
+				3F3FB25922A0689000D22D36 /* Controller */,
 			);
 			path = Gymart;
+			sourceTree = "<group>";
+		};
+		3F3FB25922A0689000D22D36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24922A0675C00D22D36 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F3FB25A22A0689A00D22D36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
+				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
+				3F3FB24B22A0675C00D22D36 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F3FB25B22A068B300D22D36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F3FB25C22A068BA00D22D36 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24722A0675C00D22D36 /* AppDelegate.swift */,
+				3F3FB25322A0675D00D22D36 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
-				INFOPLIST_FILE = Gymart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gymart/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.william.Gymart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
-				INFOPLIST_FILE = Gymart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gymart/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.william.Gymart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
