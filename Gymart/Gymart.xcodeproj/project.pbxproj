@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2622AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */; };
+		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */,
 				3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */,
+				3F23FE2A22AD73050085B20C /* RegisterViewController.swift */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
+				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
 				3F23FE2622AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift in Sources */,

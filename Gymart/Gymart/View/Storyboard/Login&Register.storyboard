@@ -76,6 +76,9 @@ Gymart</string>
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" red="0.44573783874511719" green="0.48942786455154419" blue="0.92161422967910767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0o4-iE-RsZ" kind="presentation" id="hjn-Ji-YGB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -108,6 +111,21 @@ Gymart</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzJ-9D-NLN" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="6aa-4b-NVe">
+            <objects>
+                <viewController id="0o4-iE-RsZ" customClass="RegisterViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ef3-D8-0eb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cQH-6q-wR4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmr-Tl-pWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="760"/>
         </scene>
     </scenes>
     <resources>
