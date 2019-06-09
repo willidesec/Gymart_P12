@@ -119,9 +119,81 @@ Gymart</string>
                     <view key="view" contentMode="scaleToFill" id="Ef3-D8-0eb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-C3-bfn">
+                                <rect key="frame" x="311" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="b1a-0K-bah"/>
+                                    <constraint firstAttribute="height" constant="44" id="ttd-1a-EdX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonDidTapped" destination="0o4-iE-RsZ" eventType="touchUpInside" id="301-Ca-KdW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8M-1E-XlA">
+                                <rect key="frame" x="41.999999999999986" y="164" width="238.66666666666663" height="93.333333333333314"/>
+                                <string key="text">Create your
+account</string>
+                                <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gb6-P0-WKF" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="277.33333333333331" width="291" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Jw8-3s-2iX"/>
+                                    <constraint firstAttribute="width" constant="291" id="Yu1-Je-l4v"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-m4-GCt" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="405.33333333333331" width="291" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bbk-RZ-dPr"/>
+                                    <constraint firstAttribute="width" constant="291" id="Bfo-0y-h1O"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-Wi-HyA" customClass="LoginButton" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="469.33333333333331" width="291" height="43.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Chu-Y4-1rj"/>
+                                    <constraint firstAttribute="width" constant="291" id="nf1-ib-zGM"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWh-jO-iIl" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="341.33333333333331" width="291" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="MFE-5x-fn6"/>
+                                    <constraint firstAttribute="height" constant="44" id="oXs-hR-iig"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r8M-1E-XlA" firstAttribute="top" secondItem="cQH-6q-wR4" secondAttribute="top" constant="120" id="3iM-Pj-6K5"/>
+                            <constraint firstItem="cQH-6q-wR4" firstAttribute="trailing" secondItem="Kuj-C3-bfn" secondAttribute="trailing" constant="20" id="Ctv-k3-c2A"/>
+                            <constraint firstItem="Gb6-P0-WKF" firstAttribute="leading" secondItem="r8M-1E-XlA" secondAttribute="leading" id="F8H-Uw-kK4"/>
+                            <constraint firstItem="Gb6-P0-WKF" firstAttribute="centerX" secondItem="Ef3-D8-0eb" secondAttribute="centerX" id="JfT-gr-BsF"/>
+                            <constraint firstItem="A1b-m4-GCt" firstAttribute="top" secondItem="zWh-jO-iIl" secondAttribute="bottom" constant="20" id="PpQ-9t-qDQ"/>
+                            <constraint firstItem="1S3-Wi-HyA" firstAttribute="top" secondItem="A1b-m4-GCt" secondAttribute="bottom" constant="20" id="QU6-fu-ndo"/>
+                            <constraint firstItem="zWh-jO-iIl" firstAttribute="centerX" secondItem="Ef3-D8-0eb" secondAttribute="centerX" id="hP4-j2-cJF"/>
+                            <constraint firstItem="A1b-m4-GCt" firstAttribute="centerX" secondItem="Ef3-D8-0eb" secondAttribute="centerX" id="hdI-Ji-fPI"/>
+                            <constraint firstItem="1S3-Wi-HyA" firstAttribute="centerX" secondItem="Ef3-D8-0eb" secondAttribute="centerX" id="mzP-pc-i2w"/>
+                            <constraint firstItem="Gb6-P0-WKF" firstAttribute="top" secondItem="r8M-1E-XlA" secondAttribute="bottom" constant="20" id="pbN-vW-72b"/>
+                            <constraint firstItem="zWh-jO-iIl" firstAttribute="top" secondItem="Gb6-P0-WKF" secondAttribute="bottom" constant="20" id="ugg-Ar-0PP"/>
+                            <constraint firstItem="Kuj-C3-bfn" firstAttribute="top" secondItem="cQH-6q-wR4" secondAttribute="top" constant="20" id="zO4-DB-gsd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cQH-6q-wR4"/>
                     </view>
+                    <connections>
+                        <outlet property="emailUserInput" destination="zWh-jO-iIl" id="iui-xx-ZmO"/>
+                        <outlet property="passwordUserInput" destination="A1b-m4-GCt" id="6gB-JS-NA0"/>
+                        <outlet property="userNameInput" destination="Gb6-P0-WKF" id="Hwg-vP-N0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmr-Tl-pWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,6 +201,7 @@ Gymart</string>
         </scene>
     </scenes>
     <resources>
+        <image name="cancel" width="52" height="52"/>
         <image name="logo" width="247" height="243"/>
     </resources>
 </document>

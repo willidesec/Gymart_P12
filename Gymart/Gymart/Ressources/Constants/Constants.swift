@@ -16,6 +16,7 @@ struct Constants {
     }
     
     struct Placeholder {
+        static let userName = "User Name"
         static let email = "Email"
         static let password = "Password"
     }
