@@ -101,6 +101,7 @@ Gymart</string>
                     </view>
                     <connections>
                         <outlet property="emailUserInput" destination="tY0-KH-E8J" id="Kp4-Fz-uX7"/>
+                        <outlet property="logInButton" destination="wE8-eQ-cdT" id="n3d-fN-UDX"/>
                         <outlet property="passwordUserInput" destination="xR7-du-0wk" id="9Kd-b7-I1d"/>
                     </connections>
                 </viewController>

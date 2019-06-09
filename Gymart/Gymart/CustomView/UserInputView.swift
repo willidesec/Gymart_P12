@@ -22,6 +22,9 @@ class UserInputView: UIView {
         textfield.textColor = UIColor.blue
         textfield.autocapitalizationType = .none
         textfield.font = UIFont.mainObliqueFont(size: 16)
+        textfield.clearButtonMode = .always
+        textfield.autocorrectionType = .no
+        textfield.spellCheckingType = .no
         return textfield
     }()
     
