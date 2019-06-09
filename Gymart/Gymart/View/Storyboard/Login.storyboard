@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kuw-h9-kcA">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DejaVuSans.ttf">
+            <string>DejaVuSans</string>
+        </array>
+        <array key="DejaVuSansCondensed-Bold.ttf">
+            <string>DejaVuSansCondensed-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="luc-bd-SPR">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="Kuw-h9-kcA" customClass="LoginViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zEn-h1-nej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-bG-VnG">
+                                <rect key="frame" x="64" y="104.00000000000001" width="247" height="219.33333333333337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="k37-Qc-BTz">
+                                <rect key="frame" x="64.666666666666686" y="345.33333333333331" width="246" height="97.333333333333314"/>
+                                <string key="text">Welcome in 
+Gymart</string>
+                                <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tY0-KH-E8J" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="459.66666666666669" width="291" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="ZDX-40-FUD"/>
+                                    <constraint firstAttribute="height" constant="44" id="afR-4G-yMR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR7-du-0wk" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="523.66666666666663" width="291" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="bCL-XL-qoG"/>
+                                    <constraint firstAttribute="height" constant="44" id="cF1-co-4Y9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-eQ-cdT" customClass="LoginButton" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="42" y="587.66666666666663" width="291" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="Hra-PG-g3J"/>
+                                    <constraint firstAttribute="height" constant="44" id="lAr-4A-Vyd"/>
+                                </constraints>
+                                <state key="normal" title="Log in"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-jo-wlA">
+                                <rect key="frame" x="64.000000000000014" y="738" width="247.33333333333337" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scx-r7-yON">
+                                        <rect key="frame" x="0.0" y="0.0" width="183.33333333333334" height="30"/>
+                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMi-Ht-uSl">
+                                        <rect key="frame" x="190.33333333333334" y="0.0" width="57" height="30"/>
+                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
+                                        <state key="normal" title="Sign up">
+                                            <color key="titleColor" red="0.44573783874511719" green="0.48942786455154419" blue="0.92161422967910767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VWJ-bG-VnG" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="3hY-5Y-3go"/>
+                            <constraint firstItem="Lwg-jo-wlA" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="LFG-XS-uFm"/>
+                            <constraint firstItem="k37-Qc-BTz" firstAttribute="top" secondItem="VWJ-bG-VnG" secondAttribute="bottom" constant="22" id="Lfe-Dz-Vh3"/>
+                            <constraint firstItem="xR7-du-0wk" firstAttribute="top" secondItem="tY0-KH-E8J" secondAttribute="bottom" constant="20" id="MBY-zy-H0J"/>
+                            <constraint firstItem="nuf-yy-59G" firstAttribute="bottom" secondItem="Lwg-jo-wlA" secondAttribute="bottom" constant="10" id="O1b-jj-Fe1"/>
+                            <constraint firstItem="wE8-eQ-cdT" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="OFJ-1L-bfR"/>
+                            <constraint firstItem="k37-Qc-BTz" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="Pho-rD-ekX"/>
+                            <constraint firstItem="tY0-KH-E8J" firstAttribute="top" secondItem="k37-Qc-BTz" secondAttribute="bottom" constant="17" id="dRL-3Q-UCE"/>
+                            <constraint firstItem="tY0-KH-E8J" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="fED-w4-JBb"/>
+                            <constraint firstItem="VWJ-bG-VnG" firstAttribute="top" secondItem="nuf-yy-59G" secondAttribute="top" constant="60" id="p0y-Ay-xaC"/>
+                            <constraint firstItem="xR7-du-0wk" firstAttribute="centerX" secondItem="zEn-h1-nej" secondAttribute="centerX" id="uVi-Xj-sqn"/>
+                            <constraint firstItem="wE8-eQ-cdT" firstAttribute="top" secondItem="xR7-du-0wk" secondAttribute="bottom" constant="20" id="wcu-b0-Rf4"/>
+                            <constraint firstItem="k37-Qc-BTz" firstAttribute="height" secondItem="zEn-h1-nej" secondAttribute="height" multiplier="0.12" id="ylE-tB-hH1"/>
+                            <constraint firstItem="VWJ-bG-VnG" firstAttribute="height" secondItem="zEn-h1-nej" secondAttribute="height" multiplier="0.27" id="yvu-JO-azp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nuf-yy-59G"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailUserInput" destination="tY0-KH-E8J" id="Kp4-Fz-uX7"/>
+                        <outlet property="passwordUserInput" destination="xR7-du-0wk" id="9Kd-b7-I1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzJ-9D-NLN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="247" height="243"/>
+    </resources>
+</document>

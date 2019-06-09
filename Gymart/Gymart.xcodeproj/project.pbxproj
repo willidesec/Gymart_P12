@@ -7,9 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2FADA522AC15550004C720 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login.storyboard */; };
+		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
+		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
+		3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */; };
+		3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */; };
+		3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */; };
+		3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */; };
+		3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */; };
+		3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */; };
+		3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */; };
+		3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */; };
+		3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */; };
+		3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC022AC2F300004C720 /* LoginButton.swift */; };
+		3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC222AC30CE0004C720 /* UIView+extension.swift */; };
+		3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC422AC33C50004C720 /* UIFont+extension.swift */; };
+		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
+		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
+		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24922A0675C00D22D36 /* ViewController.swift */; };
-		3F3FB24D22A0675C00D22D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24B22A0675C00D22D36 /* Main.storyboard */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
 		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
@@ -17,10 +34,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2FADA422AC15550004C720 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansCondensed.ttf; sourceTree = "<group>"; };
+		3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSans.ttf; sourceTree = "<group>"; };
+		3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC022AC2F300004C720 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		3F2FADC222AC30CE0004C720 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC422AC33C50004C720 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3FB24922A0675C00D22D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F3FB24C22A0675C00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3FB25122A0675D00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +73,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2FADA322AC15300004C720 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADA422AC15550004C720 /* Login.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3F2FADA622AC181E0004C720 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC622AC34CC0004C720 /* Constants */,
+				3F2FADA722AC182C0004C720 /* Fonts */,
+				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		3F2FADA722AC182C0004C720 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */,
+				3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */,
+				3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */,
+				3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */,
+				3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */,
+				3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */,
+				3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */,
+				3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */,
+				3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F2FADBC22AC1E0C0004C720 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */,
+				3F2FADC222AC30CE0004C720 /* UIView+extension.swift */,
+				3F2FADC422AC33C50004C720 /* UIFont+extension.swift */,
+				3F2FADC922AC39200004C720 /* CALayer+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F2FADBF22AC2F0E0004C720 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC022AC2F300004C720 /* LoginButton.swift */,
+				3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3F2FADC622AC34CC0004C720 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC722AC35760004C720 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3F3FB23B22A0675C00D22D36 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +154,14 @@
 		3F3FB24622A0675C00D22D36 /* Gymart */ = {
 			isa = PBXGroup;
 			children = (
+				3F2FADA622AC181E0004C720 /* Ressources */,
 				3F3FB25D22A071E500D22D36 /* Config */,
 				3F3FB25C22A068BA00D22D36 /* SupportingFiles */,
 				3F3FB25B22A068B300D22D36 /* Model */,
 				3F3FB25A22A0689A00D22D36 /* View */,
 				3F3FB25922A0689000D22D36 /* Controller */,
+				3F2FADBC22AC1E0C0004C720 /* Extensions */,
+				3F2FADBF22AC2F0E0004C720 /* CustomView */,
 			);
 			path = Gymart;
 			sourceTree = "<group>";
@@ -71,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3FB24922A0675C00D22D36 /* ViewController.swift */,
+				3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,9 +178,8 @@
 		3F3FB25A22A0689A00D22D36 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
 				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
-				3F3FB24B22A0675C00D22D36 /* Main.storyboard */,
+				3F2FADA322AC15300004C720 /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,11 +267,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */,
+				3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */,
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
+				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
+				3F2FADA522AC15550004C720 /* Login.storyboard in Resources */,
+				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
 				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
+				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
+				3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */,
+				3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */,
+				3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */,
+				3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */,
 				3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */,
-				3F3FB24D22A0675C00D22D36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,22 +291,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
+				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
+				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
+				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */,
+				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
+				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,
+				3F2FADC822AC35760004C720 /* Constants.swift in Sources */,
+				3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F3FB24B22A0675C00D22D36 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F3FB24C22A0675C00D22D36 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
