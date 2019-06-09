@@ -46,7 +46,6 @@ class LoginViewController: UIViewController {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
-        print(notification.name)
         
         let logInButtonOriginY = logInButton.frame.origin.y
         let distanceFromBottom = view.frame.height - logInButtonOriginY

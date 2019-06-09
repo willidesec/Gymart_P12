@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2622AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */; };
-		3F2FADA522AC15550004C720 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login.storyboard */; };
+		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
 		3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */; };
@@ -28,7 +28,6 @@
 		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
 		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
-		3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24922A0675C00D22D36 /* ViewController.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
 		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
@@ -38,7 +37,7 @@
 /* Begin PBXFileReference section */
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
-		3F2FADA422AC15550004C720 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
 		3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansCondensed.ttf; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F3FB24922A0675C00D22D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3FB25122A0675D00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,19 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F23FE2722AD31B80085B20C /* Login */ = {
+		3F23FE2722AD31B80085B20C /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
 				3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */,
 				3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */,
 			);
-			path = Login;
+			path = "Login&Register";
 			sourceTree = "<group>";
 		};
 		3F2FADA322AC15300004C720 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				3F2FADA422AC15550004C720 /* Login.storyboard */,
+				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -183,8 +181,7 @@
 		3F3FB25922A0689000D22D36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F3FB24922A0675C00D22D36 /* ViewController.swift */,
-				3F23FE2722AD31B80085B20C /* Login */,
+				3F23FE2722AD31B80085B20C /* Login&Register */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,7 +283,7 @@
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
 				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
-				3F2FADA522AC15550004C720 /* Login.storyboard in Resources */,
+				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
 				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
 				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
 				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
@@ -310,7 +307,6 @@
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
-				3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */,
 				3F23FE2622AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
