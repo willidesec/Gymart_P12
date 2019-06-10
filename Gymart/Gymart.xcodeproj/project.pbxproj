@@ -10,6 +10,7 @@
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2622AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */; };
 		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
+		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -33,12 +34,14 @@
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
 		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
 		3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */; };
+		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2522AD30AC0085B20C /* LoginViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -64,6 +67,9 @@
 		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Gymart.xcconfig; sourceTree = "<group>"; };
 		3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Gymart-PreProd.xcconfig"; sourceTree = "<group>"; };
+		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
+		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
+		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +162,8 @@
 			children = (
 				3F3FB24622A0675C00D22D36 /* Gymart */,
 				3F3FB24522A0675C00D22D36 /* Products */,
+				4C9506C1FC48B794E3ED1E5A /* Pods */,
+				A8562B67907D98D17FDFC6B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +219,7 @@
 			children = (
 				3F3FB24722A0675C00D22D36 /* AppDelegate.swift */,
 				3F3FB25322A0675D00D22D36 /* Info.plist */,
+				3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -223,6 +233,23 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		4C9506C1FC48B794E3ED1E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */,
+				63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8562B67907D98D17FDFC6B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F3FB25622A0675D00D22D36 /* Build configuration list for PBXNativeTarget "Gymart" */;
 			buildPhases = (
+				2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */,
 				3F3FB24022A0675C00D22D36 /* Sources */,
 				3F3FB24122A0675C00D22D36 /* Frameworks */,
 				3F3FB24222A0675C00D22D36 /* Resources */,
+				84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */,
+				024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +313,7 @@
 			files = (
 				3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */,
 				3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */,
+				3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */,
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
 				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
@@ -299,6 +330,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gymart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F3FB24022A0675C00D22D36 /* Sources */ = {
@@ -336,6 +450,7 @@
 /* Begin XCBuildConfiguration section */
 		3F3FB25422A0675D00D22D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -397,6 +512,7 @@
 		};
 		3F3FB25522A0675D00D22D36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -452,7 +568,7 @@
 		};
 		3F3FB25722A0675D00D22D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */;
+			baseConfigurationReference = 9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,7 +587,7 @@
 		};
 		3F3FB25822A0675D00D22D36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */;
+			baseConfigurationReference = 63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

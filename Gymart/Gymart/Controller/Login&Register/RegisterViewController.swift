@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -29,10 +30,40 @@ class RegisterViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func signUpButtonDidTapped() {
+        createUserAccount()
+    }
     
     // MARK: - Methods
+    private func createUserAccount() {
+        guard let username = userNameInput.textField.text, !username.isEmpty else {
+            // TODO: Alert
+            print("Pas de username")
+            return
+        }
+        guard let email = emailUserInput.textField.text, !email.isEmpty else {
+            // TODO: Alert
+            print("Pas de email")
+            return
+        }
+        guard let password = passwordUserInput.textField.text, !password.isEmpty else {
+            // TODO: Alert
+            print("Pas de password")
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if error == nil && authResult != nil {
+                print("User created!")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("Error creating user: \(error!.localizedDescription)")
+            }
+        }
+    }
+    
     private func configureTextField() {
-        guard let userImage = #imageLiteral(resourceName: "email").cgImage else { return }
+        guard let userImage = #imageLiteral(resourceName: "user").cgImage else { return }
         userNameInput.iconImageView.image = UIImage(cgImage: userImage)
         userNameInput.textField.placeholder = Constants.Placeholder.userName
         userNameInput.textField.keyboardType = .default

@@ -11,6 +11,7 @@ import UIKit
 extension UIFont {
     
     class func mainRegularFont(size: CGFloat) -> UIFont {
+        // mettre une valeur par défault
         return UIFont(name: Constants.App.mainRegularFont, size: size)!
     }
     

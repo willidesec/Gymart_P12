@@ -60,6 +60,9 @@ Gymart</string>
                                     <constraint firstAttribute="height" constant="44" id="lAr-4A-Vyd"/>
                                 </constraints>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="logInButtonDidTapped" destination="Kuw-h9-kcA" eventType="touchUpInside" id="je4-6N-Lc5"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-jo-wlA">
                                 <rect key="frame" x="64.000000000000014" y="738" width="247.33333333333337" height="30"/>
@@ -162,6 +165,9 @@ account</string>
                                     <constraint firstAttribute="width" constant="291" id="nf1-ib-zGM"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonDidTapped" destination="0o4-iE-RsZ" eventType="touchUpInside" id="ZbJ-ev-xWP"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWh-jO-iIl" customClass="UserInputView" customModule="Gymart" customModuleProvider="target">
                                 <rect key="frame" x="42" y="341.33333333333331" width="291" height="44"/>

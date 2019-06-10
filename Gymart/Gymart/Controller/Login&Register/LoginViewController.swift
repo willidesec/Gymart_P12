@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -27,7 +28,38 @@ class LoginViewController: UIViewController {
         removeKeyboardNotificationObservers()
     }
     
+    // MARK: - IBAction
+    @IBAction func logInButtonDidTapped() {
+        logIn()
+        
+    }
+    
+    
     // MARK: - Methods
+    private func logIn() {
+        guard let email = emailUserInput.textField.text, !email.isEmpty else {
+            // TODO: Alert
+            print("Pas de email")
+            return
+        }
+        guard let password = passwordUserInput.textField.text, !password.isEmpty else {
+            // TODO: Alert
+            print("Pas de password")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+            // Potentiellement inutile
+            guard let strongSelf = self else { return }
+            
+            if error == nil && user != nil {
+                print("User logged in !")
+            } else {
+                print("Error loging user: \(error!.localizedDescription)")
+            }
+        }
+    }
+    
     private func createKeyboardNotificationObservers() {
         // Listen for keyboard events
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
