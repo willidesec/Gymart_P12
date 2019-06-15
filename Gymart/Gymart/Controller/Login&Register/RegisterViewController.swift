@@ -10,6 +10,10 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
+    
+    // MARK: - Properties
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
 
     // MARK: - IBOutlet
     @IBOutlet weak var userNameInput: UserInputView!
@@ -55,14 +59,29 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        let user: [String: Any] = [
+            "userName": username,
+            "email": email,
+        ]
+        
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if error == nil && authResult != nil {
-                print("User created!")
+                self.saveUserData(user)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error creating user: \(error!.localizedDescription)")
             }
         }
+    }
+    
+    private func saveUserData(_ user: [String: Any]) {
+        ref = db.collection("users").addDocument(data: user, completion: { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        })
     }
     
     private func configureTextField() {
