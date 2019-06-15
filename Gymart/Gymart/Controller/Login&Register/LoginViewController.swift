@@ -48,10 +48,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-            // Potentiellement inutile
-            guard let strongSelf = self else { return }
-            
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if error == nil && user != nil {
                 print("User logged in !")
             } else {
@@ -60,48 +57,20 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func createKeyboardNotificationObservers() {
-        // Listen for keyboard events
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
-    private func removeKeyboardNotificationObservers() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
-    
-    @objc func keyboardWillChange(notification: Notification) {
-        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
-        
-        let logInButtonOriginY = logInButton.frame.origin.y
-        let distanceFromBottom = view.frame.height - logInButtonOriginY
-        let keyboardMovingHeight = keyboardRect.height - distanceFromBottom
-        
-        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
-            view.frame.origin.y = -keyboardMovingHeight
-        } else {
-            view.frame.origin.y = 0
-        }
-    }
-    
     private func configureTextField() {
         guard let emailImage = #imageLiteral(resourceName: "email").cgImage else { return }
         emailUserInput.iconImageView.image = UIImage(cgImage: emailImage)
         emailUserInput.textField.placeholder = Constants.Placeholder.email
         emailUserInput.textField.keyboardType = .emailAddress
-        emailUserInput.textField.returnKeyType = .next
+        emailUserInput.textField.returnKeyType = .done
         emailUserInput.textField.delegate = self
         
         guard let podlockImage = #imageLiteral(resourceName: "padlock").cgImage else { return }
         passwordUserInput.iconImageView.image = UIImage(cgImage: podlockImage)
         passwordUserInput.textField.placeholder = Constants.Placeholder.password
         passwordUserInput.textField.isSecureTextEntry = true
+        
+        passwordUserInput.textField.returnKeyType = .done
         passwordUserInput.textField.delegate = self
     }
 

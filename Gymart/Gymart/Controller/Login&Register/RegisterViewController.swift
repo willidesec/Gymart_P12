@@ -21,11 +21,14 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         configureTextField()
-        
+        createKeyboardNotificationObservers()
+    }
+    
+    deinit {
+        removeKeyboardNotificationObservers()
     }
     
     // MARK: - IBAction
-    
     @IBAction func cancelButtonDidTapped() {
         dismiss(animated: true, completion: nil)
     }
@@ -67,21 +70,22 @@ class RegisterViewController: UIViewController {
         userNameInput.iconImageView.image = UIImage(cgImage: userImage)
         userNameInput.textField.placeholder = Constants.Placeholder.userName
         userNameInput.textField.keyboardType = .default
-        userNameInput.textField.returnKeyType = .next
-        //        emailUserInput.textField.delegate = self
+        userNameInput.textField.returnKeyType = .done
+        userNameInput.textField.delegate = self
         
         
         guard let emailImage = #imageLiteral(resourceName: "email").cgImage else { return }
         emailUserInput.iconImageView.image = UIImage(cgImage: emailImage)
         emailUserInput.textField.placeholder = Constants.Placeholder.email
         emailUserInput.textField.keyboardType = .emailAddress
-        emailUserInput.textField.returnKeyType = .next
-//        emailUserInput.textField.delegate = self
+        emailUserInput.textField.returnKeyType = .done
+        emailUserInput.textField.delegate = self
         
         guard let podlockImage = #imageLiteral(resourceName: "padlock").cgImage else { return }
         passwordUserInput.iconImageView.image = UIImage(cgImage: podlockImage)
         passwordUserInput.textField.placeholder = Constants.Placeholder.password
-        passwordUserInput.textField.isSecureTextEntry = true
-//        passwordUserInput.textField.delegate = self
+//        passwordUserInput.textField.isSecureTextEntry = true
+        passwordUserInput.textField.returnKeyType = .done
+        passwordUserInput.textField.delegate = self
     }
 }
