@@ -8,9 +8,27 @@
 
 import UIKit
 
+// MARK: - UIAlert
+extension UIViewController {
+    internal func displayAlert(message: String) {
+        let alertVC = UIAlertController(title: Constants.Alert.title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: Constants.Alert.okMessage, style: .default, handler: nil)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UITextField
 extension UIViewController {
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+extension UIViewController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
@@ -48,13 +66,6 @@ extension UIViewController {
         } else {
             view.frame.origin.y = 0
         }
-    }
-}
-
-extension UIViewController: UITextFieldDelegate {
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 }
 

@@ -38,8 +38,7 @@ class LoginViewController: UIViewController {
     // MARK: - Methods
     private func logIn() {
         guard let email = emailUserInput.textField.text, !email.isEmpty else {
-            // TODO: Alert
-            print("Pas de email")
+            displayAlert(message: Constants.Alert.noEmail)
             return
         }
         guard let password = passwordUserInput.textField.text, !password.isEmpty else {

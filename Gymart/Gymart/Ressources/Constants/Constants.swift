@@ -20,4 +20,11 @@ struct Constants {
         static let email = "Email"
         static let password = "Password"
     }
+    
+    struct Alert {
+        static let title = "Oups"
+        static let okMessage = "Ok"
+        
+        static let noEmail = "Entrer une adresse email"
+    }
 }
