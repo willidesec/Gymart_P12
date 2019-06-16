@@ -10,6 +10,8 @@
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
 		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
+		3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */; };
+		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -40,6 +42,8 @@
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
+				3F25403422B6BCE200DB33DC /* Training.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				3F23FE2722AD31B80085B20C /* Login&Register */,
+				3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
 				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
+				3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */,
 				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
 				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
 				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
@@ -421,6 +428,7 @@
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
+				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
