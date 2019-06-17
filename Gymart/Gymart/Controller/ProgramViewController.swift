@@ -9,6 +9,9 @@
 import UIKit
 
 class ProgramViewController: UIViewController {
+    
+    // MARK: - Properties
+    var array = ["John", "David"]
 
     // MARK: - IBOutlet
     @IBOutlet weak var programTableView: UITableView!
@@ -26,11 +29,15 @@ class ProgramViewController: UIViewController {
 
 extension ProgramViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Identifier", for: indexPath)
         
+        cell.textLabel?.text = array[indexPath.row]
+        
+        return cell
     }
     
     

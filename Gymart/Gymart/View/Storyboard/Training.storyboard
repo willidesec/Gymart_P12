@@ -21,6 +21,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Cz-vm-GNE">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Identifier" rowHeight="80" id="E8D-d3-YBb">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E8D-d3-YBb" id="EaF-Ok-CWq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5A-wC-fqM">
+                                                    <rect key="frame" x="6" y="6" width="363" height="67.666666666666671"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNC-fZ-gZy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="67.666666666666671"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="wNC-fZ-gZy" secondAttribute="height" multiplier="1:1" id="PQM-4Q-jli"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wNC-fZ-gZy" firstAttribute="top" secondItem="Y5A-wC-fqM" secondAttribute="top" id="XcH-L1-Rad"/>
+                                                        <constraint firstItem="wNC-fZ-gZy" firstAttribute="leading" secondItem="Y5A-wC-fqM" secondAttribute="leading" id="dFu-hk-Se1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wNC-fZ-gZy" secondAttribute="bottom" id="qgu-Gx-PQf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Y5A-wC-fqM" secondAttribute="trailing" constant="6" id="7yF-7l-7bf"/>
+                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="leading" secondItem="EaF-Ok-CWq" secondAttribute="leading" constant="6" id="YE6-nQ-gJf"/>
+                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="top" secondItem="EaF-Ok-CWq" secondAttribute="top" constant="6" id="hLI-Cl-jDF"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y5A-wC-fqM" secondAttribute="bottom" constant="6" id="ykL-nl-ByT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
