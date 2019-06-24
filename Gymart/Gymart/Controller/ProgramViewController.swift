@@ -11,7 +11,7 @@ import UIKit
 class ProgramViewController: UIViewController {
     
     // MARK: - Properties
-    var array = ["John", "David"]
+    var programs = [Program]()
 
     // MARK: - IBOutlet
     @IBOutlet weak var programTableView: UITableView!
@@ -23,19 +23,25 @@ class ProgramViewController: UIViewController {
 
         programTableView.delegate = self
         programTableView.dataSource = self
+        programTableView.separatorStyle = .none
+        
+        let program1 = Program(name: "Full Body", description: "December 2018")
+        let program2 = Program(name: "Half Body", description: "May 2019")
+        
+        programs = [program1, program2]
     }
 
 }
 
 extension ProgramViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return programs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Identifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Identifier", for: indexPath) as? ProgramTableViewCell else { return UITableViewCell() }
         
-        cell.textLabel?.text = array[indexPath.row]
+        cell.program = programs[indexPath.row]
         
         return cell
     }

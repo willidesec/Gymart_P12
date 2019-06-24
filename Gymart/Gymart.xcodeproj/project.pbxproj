@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
+		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
 		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303AFF1922C0E5100077B62A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3F23FE2722AD31B80085B20C /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
+				303AFF1922C0E5100077B62A /* Cells */,
 				3F2FADA322AC15300004C720 /* Storyboard */,
 			);
 			path = View;
@@ -213,6 +226,7 @@
 		3F3FB25B22A068B300D22D36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30E0618A22C0E905007A1964 /* Program.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,7 +358,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -355,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */ = {
@@ -388,7 +402,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -413,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -427,11 +441,13 @@
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
+				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
+				303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */,
 				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,
 				3F2FADC822AC35760004C720 /* Constants.swift in Sources */,
 				3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */,
