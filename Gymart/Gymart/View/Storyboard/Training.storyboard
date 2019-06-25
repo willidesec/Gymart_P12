@@ -62,7 +62,6 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="Kgp-Kj-6BC" firstAttribute="leading" secondItem="wNC-fZ-gZy" secondAttribute="trailing" constant="8" id="Gae-OK-cUn"/>
                                                         <constraint firstAttribute="bottom" secondItem="Kgp-Kj-6BC" secondAttribute="bottom" constant="8" id="RT5-Be-5TH"/>
@@ -85,6 +84,7 @@
                                             <outlet property="containerView" destination="Y5A-wC-fqM" id="Uj1-Rz-0ao"/>
                                             <outlet property="programDescriptionLabel" destination="8ym-iW-PxR" id="aHL-lL-qx9"/>
                                             <outlet property="programNameLabel" destination="cex-fS-6zX" id="rPo-3A-Sah"/>
+                                            <outlet property="tagView" destination="wNC-fZ-gZy" id="OF0-qd-bun"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

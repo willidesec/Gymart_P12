@@ -9,8 +9,12 @@
 import UIKit
 
 extension CALayer {
-    func roundedCorner() {
-        cornerRadius = frame.height / 2
+    func roundedCorner(_ radius: CGFloat? = nil) {
+        if let radius = radius {
+            cornerRadius = radius
+        } else {
+            cornerRadius = frame.height / 2
+        }
     }
     
     
