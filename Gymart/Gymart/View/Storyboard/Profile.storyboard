@@ -10,17 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="pn8-xE-D2C">
             <objects>
-                <viewController id="gNx-Pa-Ube" sceneMemberID="viewController">
+                <viewController id="gNx-Pa-Ube" customClass="ProfileViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mzm-GL-5Zd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aXF-MX-JOF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0fu-Mt-qvC"/>
+                    <navigationItem key="navigationItem" id="0fu-Mt-qvC">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ydS-p9-j1w">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signOutItemDidTapped:" destination="gNx-Pa-Ube" id="v9L-RW-Wuy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEi-hT-FhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,6 +43,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ObP-hd-LQl" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
