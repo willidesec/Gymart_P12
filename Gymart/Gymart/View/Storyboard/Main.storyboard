@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="5Fy-15-Oty">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2h-m7-1Gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController id="hGi-Bg-4S1" sceneMemberID="viewController">
+                <tabBarController id="hGi-Bg-4S1" customClass="MainViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YUc-Do-uro">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

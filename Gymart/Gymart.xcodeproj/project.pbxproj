@@ -37,10 +37,11 @@
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
 		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
 		3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */; };
-		3F5A60F722C7C03300D84692 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Home.storyboard */; };
+		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
 		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
 		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
 		3F5A60FD22C7C72B00D84692 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */; };
+		3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */; };
 		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +78,11 @@
 		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Gymart.xcconfig; sourceTree = "<group>"; };
 		3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Gymart-PreProd.xcconfig"; sourceTree = "<group>"; };
-		3F5A60F622C7C03300D84692 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3F5A60F622C7C03300D84692 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F5A60F822C7C4C000D84692 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Gymart/Controller/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
 		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
 		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +120,7 @@
 		3F2FADA322AC15300004C720 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				3F5A60F622C7C03300D84692 /* Home.storyboard */,
+				3F5A60F622C7C03300D84692 /* Main.storyboard */,
 				3F25403422B6BCE200DB33DC /* Training.storyboard */,
 				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
 				3F5A60F822C7C4C000D84692 /* Profile.storyboard */,
@@ -218,9 +220,10 @@
 		3F3FB25922A0689000D22D36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F23FE2722AD31B80085B20C /* Login&Register */,
+				3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */,
 				3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */,
 				3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */,
+				3F23FE2722AD31B80085B20C /* Login&Register */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,7 +347,7 @@
 				3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */,
 				3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */,
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
-				3F5A60F722C7C03300D84692 /* Home.storyboard in Resources */,
+				3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */,
 				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
 				3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
@@ -458,6 +461,7 @@
 				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F5A60FD22C7C72B00D84692 /* ProfileViewController.swift in Sources */,
+				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,

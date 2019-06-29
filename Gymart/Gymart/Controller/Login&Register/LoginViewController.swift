@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if error == nil && user != nil {
-                print("User logged in !")
+                self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error loging user: \(error!.localizedDescription)")
             }
