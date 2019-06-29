@@ -93,7 +93,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-wA-uj0">
-                                <rect key="frame" x="301" y="694" width="44" height="44"/>
+                                <rect key="frame" x="301" y="645" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="EVW-j9-RR3"/>
                                     <constraint firstAttribute="height" constant="44" id="pND-dz-Etm"/>
@@ -128,12 +128,14 @@
             </objects>
             <point key="canvasLocation" x="1018.4" y="22.906403940886701"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Training-->
         <scene sceneID="8qz-m9-m9a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9mo-Ak-4VT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Program" automaticallyAdjustsScrollViewInsets="NO" id="9mo-Ak-4VT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Training" id="8xZ-7F-rdg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJ0-gf-U8B">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJ0-gf-U8B" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGi-Bg-4S1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Fy-15-Oty">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2h-m7-1Gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="hGi-Bg-4S1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YUc-Do-uro">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RWy-L1-cbz" kind="relationship" relationship="viewControllers" id="lB8-rA-1Bh"/>
+                        <segue destination="kul-th-CtR" kind="relationship" relationship="viewControllers" id="4dJ-ql-fkj"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-581" y="-448"/>
+        </scene>
+        <!--Training-->
+        <scene sceneID="Hml-wz-F5c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Training" id="RWy-L1-cbz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OiO-Vb-T4F"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXP-5h-jpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1101" y="-23"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="oye-vw-ObS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="kul-th-CtR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="uAr-r0-b6W"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLA-JC-Fbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-173" y="-23"/>
+        </scene>
+    </scenes>
+</document>

@@ -203,7 +203,7 @@ account</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmr-Tl-pWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="760"/>
+            <point key="canvasLocation" x="833" y="23"/>
         </scene>
     </scenes>
     <resources>
