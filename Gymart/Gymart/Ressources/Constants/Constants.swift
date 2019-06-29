@@ -27,4 +27,13 @@ struct Constants {
         
         static let noEmail = "Entrer une adresse email"
     }
+    
+    struct AlertError {
+        static let signOutError = "Sign Out Error"
+    }
+    
+    struct ActionSheet {
+        static let signOutAction = "Sign Out"
+        static let cancelAction = "Cancel"
+    }
 }

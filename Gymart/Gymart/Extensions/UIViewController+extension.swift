@@ -10,11 +10,25 @@ import UIKit
 
 // MARK: - UIAlert
 extension UIViewController {
-    internal func displayAlert(message: String) {
-        let alertVC = UIAlertController(title: Constants.Alert.title, message: message, preferredStyle: .alert)
+    internal func displayAlert(title: String? = nil, message: String) {
+        var alertTitle = ""
+        if let title = title {
+            alertTitle = title
+        } else {
+            alertTitle = Constants.Alert.title
+        }
+        let alertVC = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: Constants.Alert.okMessage, style: .default, handler: nil)
         alertVC.addAction(okAction)
         present(alertVC, animated: true, completion: nil)
+    }
+    
+    internal func displayActionSheet(action: UIAlertAction) {
+        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheetVC.addAction(action)
+        let cancelAction = UIAlertAction(title:  Constants.ActionSheet.cancelAction, style: .cancel, handler: nil)
+        actionSheetVC.addAction(cancelAction)
+        present(actionSheetVC, animated: true, completion: nil)
     }
 }
 
