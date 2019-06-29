@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="DejaVuSans.ttf">
-            <string>DejaVuSans</string>
+        <array key="DejaVuSans-Oblique.ttf">
+            <string>DejaVuSans-Oblique</string>
+        </array>
+        <array key="DejaVuSansCondensed-Bold.ttf">
+            <string>DejaVuSansCondensed-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -35,28 +38,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5A-wC-fqM">
-                                                    <rect key="frame" x="6" y="6" width="363" height="67.666666666666671"/>
+                                                    <rect key="frame" x="16" y="7.9999999999999964" width="343" height="63.666666666666657"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNC-fZ-gZy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="67.666666666666671"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="63.666666666666664"/>
+                                                            <color key="backgroundColor" red="0.35686274509803922" green="0.90588235294117647" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="wNC-fZ-gZy" secondAttribute="height" multiplier="1:1" id="PQM-4Q-jli"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-Kj-6BC">
-                                                            <rect key="frame" x="75.666666666666657" y="7.9999999999999964" width="279.33333333333337" height="51.666666666666657"/>
+                                                            <rect key="frame" x="71.666666666666657" y="8" width="263.33333333333337" height="47.666666666666664"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Program_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-fS-6zX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128.66666666666666" height="23.666666666666668"/>
-                                                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="19.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
+                                                                    <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-iW-PxR">
-                                                                    <rect key="frame" x="0.0" y="31.666666666666664" width="175" height="20"/>
-                                                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Program_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-iW-PxR">
+                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="175.66666666666666" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                                    <color key="textColor" red="0.74117647058823533" green="0.76470588235294112" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -74,10 +77,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Y5A-wC-fqM" secondAttribute="trailing" constant="6" id="7yF-7l-7bf"/>
-                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="leading" secondItem="EaF-Ok-CWq" secondAttribute="leading" constant="6" id="YE6-nQ-gJf"/>
-                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="top" secondItem="EaF-Ok-CWq" secondAttribute="top" constant="6" id="hLI-Cl-jDF"/>
-                                                <constraint firstAttribute="bottom" secondItem="Y5A-wC-fqM" secondAttribute="bottom" constant="6" id="ykL-nl-ByT"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y5A-wC-fqM" secondAttribute="trailing" constant="16" id="7yF-7l-7bf"/>
+                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="leading" secondItem="EaF-Ok-CWq" secondAttribute="leading" constant="16" id="YE6-nQ-gJf"/>
+                                                <constraint firstItem="Y5A-wC-fqM" firstAttribute="top" secondItem="EaF-Ok-CWq" secondAttribute="top" constant="8" id="hLI-Cl-jDF"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y5A-wC-fqM" secondAttribute="bottom" constant="8" id="ykL-nl-ByT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -89,9 +92,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-wA-uj0">
+                                <rect key="frame" x="301" y="694" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="EVW-j9-RR3"/>
+                                    <constraint firstAttribute="height" constant="44" id="pND-dz-Etm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add"/>
+                                <connections>
+                                    <action selector="addButtonDidTapped" destination="Veg-WV-HDM" eventType="touchUpInside" id="Oty-vd-IZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ije-wA-uj0" firstAttribute="trailing" secondItem="gex-Oi-oB4" secondAttribute="trailing" constant="-30" id="Ap9-h7-Z83"/>
+                            <constraint firstItem="gex-Oi-oB4" firstAttribute="bottom" secondItem="Ije-wA-uj0" secondAttribute="bottom" constant="40" id="JYY-gD-c2c"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="top" secondItem="gex-Oi-oB4" secondAttribute="top" id="L3L-7r-pEo"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="leading" secondItem="gex-Oi-oB4" secondAttribute="leading" id="Wa4-qy-5Qt"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="trailing" secondItem="gex-Oi-oB4" secondAttribute="trailing" id="X7o-sE-g3W"/>
@@ -99,7 +115,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gex-Oi-oB4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Program" id="an2-r3-bbq"/>
+                    <navigationItem key="navigationItem" title="Program" id="an2-r3-bbq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="hMR-9C-dtv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="programTableView" destination="0Cz-vm-GNE" id="KfE-8s-f7f"/>
                     </connections>
@@ -131,4 +151,7 @@
             <point key="canvasLocation" x="193" y="23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="52" height="52"/>
+    </resources>
 </document>

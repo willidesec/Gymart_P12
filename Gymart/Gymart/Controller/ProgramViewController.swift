@@ -30,7 +30,13 @@ class ProgramViewController: UIViewController {
         
         programs = [program1, program2]
     }
-
+    
+    // MARK: - Actions
+    @IBAction func addButtonDidTapped() {
+        
+    }
+    
+    
 }
 
 extension ProgramViewController: UITableViewDataSource {
