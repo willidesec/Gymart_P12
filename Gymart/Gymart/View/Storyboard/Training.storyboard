@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="DejaVuSans-Bold.ttf">
+            <string>DejaVuSans-Bold</string>
+        </array>
         <array key="DejaVuSans-Oblique.ttf">
             <string>DejaVuSans-Oblique</string>
         </array>
@@ -127,7 +130,75 @@
                     <view key="view" contentMode="scaleToFill" id="bdX-V6-enz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="caI-r4-VXi">
+                                <rect key="frame" x="22" y="118" width="331" height="72.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Program's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-Yo-e1i">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="20"/>
+                                        <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QkH-rb-dSA">
+                                        <rect key="frame" x="0.0" y="43.333333333333343" width="331" height="29"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exemple: Full Body" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-jx-3hM">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20"/>
+                                                <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-zr-L6f">
+                                                <rect key="frame" x="0.0" y="28" width="331" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="gz3-5j-b3D"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-eI-ki1">
+                                <rect key="frame" x="22" y="220.33333333333334" width="331" height="72.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE8-Gf-MNR">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="20"/>
+                                        <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xE6-NV-lg3">
+                                        <rect key="frame" x="0.0" y="43.333333333333343" width="331" height="29"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exemple: December 2018" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-XX-go9">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20"/>
+                                                <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X31-lr-r29">
+                                                <rect key="frame" x="0.0" y="28" width="331" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="JqL-Ns-5VS"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yy2-QN-MW6" firstAttribute="trailing" secondItem="Zu1-eI-ki1" secondAttribute="trailing" constant="22" id="75F-wr-vug"/>
+                            <constraint firstItem="Zu1-eI-ki1" firstAttribute="top" secondItem="caI-r4-VXi" secondAttribute="bottom" constant="30" id="Cmg-ZQ-iZ4"/>
+                            <constraint firstItem="Yy2-QN-MW6" firstAttribute="trailing" secondItem="caI-r4-VXi" secondAttribute="trailing" constant="22" id="goA-JH-DUN"/>
+                            <constraint firstItem="Zu1-eI-ki1" firstAttribute="leading" secondItem="Yy2-QN-MW6" secondAttribute="leading" constant="22" id="k5p-DY-MIn"/>
+                            <constraint firstItem="caI-r4-VXi" firstAttribute="top" secondItem="Yy2-QN-MW6" secondAttribute="top" constant="30" id="uD8-Tz-qKh"/>
+                            <constraint firstItem="caI-r4-VXi" firstAttribute="leading" secondItem="Yy2-QN-MW6" secondAttribute="leading" constant="22" id="zVR-zW-W4a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yy2-QN-MW6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Program" id="967-Mk-G9O">
@@ -144,6 +215,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="5Y9-XX-go9" id="Iah-15-xBe"/>
+                        <outlet property="programNameTextField" destination="2lb-jx-3hM" id="aeb-th-IiT"/>
+                        <outletCollection property="separatorViews" destination="jnI-zr-L6f" collectionClass="NSMutableArray" id="49M-Fx-jbq"/>
+                        <outletCollection property="separatorViews" destination="X31-lr-r29" collectionClass="NSMutableArray" id="gDo-ja-5cO"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1959.2" y="855.66502463054189"/>
