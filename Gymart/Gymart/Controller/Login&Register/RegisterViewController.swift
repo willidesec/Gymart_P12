@@ -59,13 +59,14 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        let user: [String: Any] = [
-            "userName": username,
-            "email": email,
-        ]
-        
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if error == nil && authResult != nil {
+                guard let userId = Auth.auth().currentUser?.uid else { return }
+                let user: [String: Any] = [
+                    "userId": userId,
+                    "userName": username,
+                    "email": email
+                ]
                 self.saveUserData(user)
                 self.dismiss(animated: true, completion: nil)
             } else {
