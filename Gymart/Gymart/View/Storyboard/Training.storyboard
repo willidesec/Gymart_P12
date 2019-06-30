@@ -92,22 +92,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-wA-uj0">
-                                <rect key="frame" x="301" y="645" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="EVW-j9-RR3"/>
-                                    <constraint firstAttribute="height" constant="44" id="pND-dz-Etm"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="add"/>
-                                <connections>
-                                    <action selector="addButtonDidTapped" destination="Veg-WV-HDM" eventType="touchUpInside" id="Oty-vd-IZR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ije-wA-uj0" firstAttribute="trailing" secondItem="gex-Oi-oB4" secondAttribute="trailing" constant="-30" id="Ap9-h7-Z83"/>
-                            <constraint firstItem="gex-Oi-oB4" firstAttribute="bottom" secondItem="Ije-wA-uj0" secondAttribute="bottom" constant="40" id="JYY-gD-c2c"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="top" secondItem="gex-Oi-oB4" secondAttribute="top" id="L3L-7r-pEo"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="leading" secondItem="gex-Oi-oB4" secondAttribute="leading" id="Wa4-qy-5Qt"/>
                             <constraint firstItem="0Cz-vm-GNE" firstAttribute="trailing" secondItem="gex-Oi-oB4" secondAttribute="trailing" id="X7o-sE-g3W"/>
@@ -116,8 +103,12 @@
                         <viewLayoutGuide key="safeArea" id="gex-Oi-oB4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Program" id="an2-r3-bbq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="hMR-9C-dtv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hMR-9C-dtv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addItemDidTapped:" destination="Veg-WV-HDM" id="1JU-vE-SIL"/>
+                                <segue destination="CNa-Xf-B6Y" kind="presentation" id="KpR-rW-LfN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -127,6 +118,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwu-QU-fqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018.4" y="22.906403940886701"/>
+        </scene>
+        <!--Add Program-->
+        <scene sceneID="4Mh-NK-5t5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoF-cr-QaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="dN8-Dy-bNX" customClass="AddProgramViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdX-V6-enz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Yy2-QN-MW6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Program" id="967-Mk-G9O">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zdD-cn-DeW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelItemDidTapped:" destination="dN8-Dy-bNX" id="DhC-8G-FdM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wyw-eq-jxr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveItemDidTapped:" destination="dN8-Dy-bNX" id="GsE-Cz-RQU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1959.2" y="855.66502463054189"/>
         </scene>
         <!--Training-->
         <scene sceneID="8qz-m9-m9a">
@@ -152,8 +172,30 @@
             </objects>
             <point key="canvasLocation" x="193" y="23"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XFj-Jx-cyU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CNa-Xf-B6Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Jg-GE-IPM" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dN8-Dy-bNX" kind="relationship" relationship="rootViewController" id="OLu-LH-1jZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLC-1p-dle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="855.66502463054189"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="add" width="52" height="52"/>
-    </resources>
 </document>

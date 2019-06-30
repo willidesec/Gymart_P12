@@ -32,7 +32,7 @@ class ProgramViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func addButtonDidTapped() {
+    @IBAction func addItemDidTapped(_ sender: UIBarButtonItem) {
         
     }
     
