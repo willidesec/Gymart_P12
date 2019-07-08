@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
                     "userName": username,
                     "email": email
                 ]
-                self.saveUserData(user)
+                self.saveUserData(user, id: userId)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error creating user: \(error!.localizedDescription)")
@@ -75,14 +75,8 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    private func saveUserData(_ user: [String: Any]) {
-        ref = db.collection("users").addDocument(data: user, completion: { error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Document added with ID: \(self.ref!.documentID)")
-            }
-        })
+    private func saveUserData(_ user: [String: Any], id: String) {
+        db.collection("users").document(id).setData(user)
     }
     
     private func configureTextField() {
