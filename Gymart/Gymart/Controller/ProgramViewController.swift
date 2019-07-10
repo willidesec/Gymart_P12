@@ -29,13 +29,12 @@ class ProgramViewController: UIViewController {
 //        let program2 = Program(name: "Half Body", description: "May 2019")
 //
 //        programs = [program1, program2]
-        fetchPrograms()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        programs.removeAll()
         fetchPrograms()
     }
     
