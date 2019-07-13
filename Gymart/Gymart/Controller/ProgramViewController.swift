@@ -24,23 +24,13 @@ class ProgramViewController: UIViewController {
         super.viewDidLoad()
 
         configureTableView()
-        
-//        let program1 = Program(name: "Full Body", description: "December 2018")
-//        let program2 = Program(name: "Half Body", description: "May 2019")
-//
-//        programs = [program1, program2]
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         programs.removeAll()
+        programTableView.reloadData()
         fetchPrograms()
-    }
-    
-    // MARK: - Actions
-    @IBAction func addItemDidTapped(_ sender: UIBarButtonItem) {
-        
     }
     
     // MAARK: - Methods
@@ -50,24 +40,12 @@ class ProgramViewController: UIViewController {
         programTableView.separatorStyle = .none
     }
     
-    private func getCurrentUser() -> User? {
-        let currentUser = Auth.auth().currentUser
-        
-        if let currentUser = currentUser {
-            return currentUser
-        } else {
-            return nil
-        }
-    }
-    
     private func fetchPrograms() {
         db = Firestore.firestore()
         
-        guard let currentUser = getCurrentUser() else { return }
+        guard let currentUser = AuthService.getCurrentUser() else { return }
         
-        let usersCollection = db.collection("users")
-        
-        let userDoc = usersCollection.document(currentUser.uid)
+        let userDoc = db.collection("users").document(currentUser.uid)
         
         let programsCollection = userDoc.collection("programs")
         

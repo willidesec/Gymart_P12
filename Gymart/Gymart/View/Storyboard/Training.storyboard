@@ -109,7 +109,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hMR-9C-dtv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="addItemDidTapped:" destination="Veg-WV-HDM" id="1JU-vE-SIL"/>
                                 <segue destination="CNa-Xf-B6Y" kind="presentation" id="KpR-rW-LfN"/>
                             </connections>
                         </barButtonItem>
@@ -125,7 +124,6 @@
         <!--Add Program-->
         <scene sceneID="4Mh-NK-5t5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XoF-cr-QaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dN8-Dy-bNX" customClass="AddProgramViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdX-V6-enz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -222,6 +220,7 @@
                         <outletCollection property="separatorViews" destination="X31-lr-r29" collectionClass="NSMutableArray" id="gDo-ja-5cO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoF-cr-QaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1959.2" y="855.66502463054189"/>
         </scene>

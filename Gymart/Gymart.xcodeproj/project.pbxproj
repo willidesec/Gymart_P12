@@ -15,6 +15,7 @@
 		3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */; };
 		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
 		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
+		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -55,6 +56,7 @@
 		3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
 		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
+		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -122,9 +124,9 @@
 		3F2FADA322AC15300004C720 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
 				3F5A60F622C7C03300D84692 /* Main.storyboard */,
 				3F25403422B6BCE200DB33DC /* Training.storyboard */,
-				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
 				3F5A60F822C7C4C000D84692 /* Profile.storyboard */,
 			);
 			path = Storyboard;
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				30E0618A22C0E905007A1964 /* Program.swift */,
+				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
 				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
+				3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */,
 				3F5A60FD22C7C72B00D84692 /* ProfileViewController.swift in Sources */,
 				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,

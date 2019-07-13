@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class AddProgramViewController: UIViewController {
 
+    // MARK: - Properties
+    var ref: DocumentReference? = nil
+    var db: Firestore!
+    
     // MARK: - IBOutlet
     @IBOutlet var separatorViews: [UIView]!
     @IBOutlet weak var programNameTextField: UITextField!
@@ -25,6 +30,7 @@ class AddProgramViewController: UIViewController {
     // MARK: - IBAction
     @IBAction func saveItemDidTapped(_ sender: UIBarButtonItem) {
         saveNewProgram()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelItemDidTapped(_ sender: UIBarButtonItem) {
@@ -38,13 +44,35 @@ class AddProgramViewController: UIViewController {
             return
         }
         
-        var programDescription: String?
-        if let description = descriptionTextField.text, !description.isEmpty {
-            programDescription = description
+        guard let programDescription = descriptionTextField.text, !description.isEmpty else {
+            print("No description")
+            return
         }
         
-        let newProgram = Program(name: programName, description: programDescription)
         
+        let data: [String: Any] = [
+            "name": programName,
+            "description": programDescription
+        ]
+        
+        saveProgramInFirestore(data)
+        
+    }
+    
+    private func saveProgramInFirestore(_ data: [String: Any]) {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        
+        let userDoc = db.collection("users").document(currentUser.uid)
+        
+        ref = userDoc.collection("programs").addDocument(data: data) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
     }
     
     private func configureSeparatorView() {

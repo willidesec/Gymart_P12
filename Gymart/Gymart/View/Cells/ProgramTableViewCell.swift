@@ -34,6 +34,7 @@ class ProgramTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     private func setupUI() {
+        self.selectionStyle = .none
         containerView.layer.roundedCorner(10)
         containerView.layer.borderColor = UIColor.silver.cgColor
         containerView.layer.borderWidth = 1.0
