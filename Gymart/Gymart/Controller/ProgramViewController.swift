@@ -45,9 +45,7 @@ class ProgramViewController: UIViewController {
         
         guard let currentUser = AuthService.getCurrentUser() else { return }
         
-        let userDoc = db.collection("users").document(currentUser.uid)
-        
-        let programsCollection = userDoc.collection("programs")
+        let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
         
         programsCollection.getDocuments { (querySnapshot, err) in
             if let err = err {
@@ -59,13 +57,29 @@ class ProgramViewController: UIViewController {
                     let data = document.data()
                     guard let name = data["name"] as? String else { return }
                     guard let description = data["description"] as? String else { return }
-                    let program = Program(name: name, description: description)
+                    let program = Program(id: document.documentID, name: name, description: description)
                     
                     self.programs.append(program)
                     self.programTableView.reloadData()
                 }
             }
             
+        }
+    }
+    
+    private func deleteProgramInFirestore(id: String) {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        
+        let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
+        
+        programsCollection.document(id).delete { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+            }
         }
     }
     
@@ -83,6 +97,14 @@ extension ProgramViewController: UITableViewDataSource {
         cell.program = programs[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteProgramInFirestore(id: programs[indexPath.row].id)
+            programs.remove(at: indexPath.row)
+            programTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     
