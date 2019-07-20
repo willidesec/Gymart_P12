@@ -109,7 +109,7 @@ extension ProgramViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Training", bundle:nil)
-        guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: "Workouts") as? WorkoutsViewController else { return }
+        guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: "Workouts") as? WorkoutViewController else { return }
         workoutsVC.programId = programs[indexPath.row].id
         navigationController?.pushViewController(workoutsVC, animated: true)
     }
@@ -118,5 +118,8 @@ extension ProgramViewController: UITableViewDataSource {
 }
 
 extension ProgramViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let heightRow: CGFloat = 80
+        return heightRow
+    }
 }

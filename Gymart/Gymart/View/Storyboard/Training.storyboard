@@ -124,18 +124,71 @@
         <!--Workouts-->
         <scene sceneID="aF3-Rk-u7S">
             <objects>
-                <viewController storyboardIdentifier="Workouts" id="RHO-7f-MMG" customClass="WorkoutsViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Workouts" id="RHO-7f-MMG" customClass="WorkoutViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZF-8M-94g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-h3-5l5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Workout" rowHeight="200" id="Rrw-Pm-IP0" customClass="WorkoutTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rrw-Pm-IP0" id="GEG-EW-UcN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-wG-yfh" userLabel="Container View">
+                                                    <rect key="frame" x="16" y="16" width="343" height="167.66666666666666"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-uB-Xwf">
+                                                            <rect key="frame" x="150.66666666666666" y="73.333333333333329" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="centerY" secondItem="V2l-wG-yfh" secondAttribute="centerY" id="8dX-dZ-Gst"/>
+                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="centerX" secondItem="V2l-wG-yfh" secondAttribute="centerX" id="vGj-RL-8v0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V2l-wG-yfh" firstAttribute="leading" secondItem="GEG-EW-UcN" secondAttribute="leading" constant="16" id="6oL-BQ-goz"/>
+                                                <constraint firstItem="V2l-wG-yfh" firstAttribute="top" secondItem="GEG-EW-UcN" secondAttribute="top" constant="16" id="Na7-z1-2ft"/>
+                                                <constraint firstAttribute="trailing" secondItem="V2l-wG-yfh" secondAttribute="trailing" constant="16" id="kMI-Ba-qGy"/>
+                                                <constraint firstAttribute="bottom" secondItem="V2l-wG-yfh" secondAttribute="bottom" constant="16" id="tfw-Pv-6nx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="containerView" destination="V2l-wG-yfh" id="60i-V3-oJ4"/>
+                                            <outlet property="workoutNameLabel" destination="P3r-uB-Xwf" id="IsN-gC-IZq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b9T-h3-5l5" firstAttribute="leading" secondItem="c62-2U-Bhs" secondAttribute="leading" id="XjD-nL-ORi"/>
+                            <constraint firstItem="b9T-h3-5l5" firstAttribute="top" secondItem="c62-2U-Bhs" secondAttribute="top" id="bIU-O1-h86"/>
+                            <constraint firstItem="c62-2U-Bhs" firstAttribute="bottom" secondItem="b9T-h3-5l5" secondAttribute="bottom" id="eft-hY-kTY"/>
+                            <constraint firstItem="c62-2U-Bhs" firstAttribute="trailing" secondItem="b9T-h3-5l5" secondAttribute="trailing" id="wTp-tx-Daw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c62-2U-Bhs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Workouts" id="WZR-K9-rP4"/>
+                    <connections>
+                        <outlet property="workoutsTableView" destination="b9T-h3-5l5" id="hbd-fg-43S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4df-ch-HlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="23"/>
+            <point key="canvasLocation" x="1869.5999999999999" y="22.906403940886701"/>
         </scene>
         <!--Add Program-->
         <scene sceneID="4Mh-NK-5t5">
