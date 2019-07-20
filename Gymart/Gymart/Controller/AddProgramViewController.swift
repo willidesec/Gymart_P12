@@ -52,7 +52,8 @@ class AddProgramViewController: UIViewController {
         
         let data: [String: Any] = [
             "name": programName,
-            "description": programDescription
+            "description": programDescription,
+            "creationDate": Timestamp(date: Date())
         ]
         
         saveProgramInFirestore(data)
