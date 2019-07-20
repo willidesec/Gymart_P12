@@ -10,6 +10,12 @@ import UIKit
 
 class ProgramTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlet
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var programNameLabel: UILabel!
+    @IBOutlet weak var programDescriptionLabel: UILabel!
+    @IBOutlet weak var tagView: UIView!
+    
     // MARK: - Properties
     var program: Program? {
         didSet {
@@ -18,12 +24,6 @@ class ProgramTableViewCell: UITableViewCell {
             programDescriptionLabel.text = program.description
         }
     }
-    
-    // MARK: - IBOutlet
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var programNameLabel: UILabel!
-    @IBOutlet weak var programDescriptionLabel: UILabel!
-    @IBOutlet weak var tagView: UIView!
     
     // MARK: - Init
     override func awakeFromNib() {
