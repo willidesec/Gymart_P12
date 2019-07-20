@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class WorkoutViewController: UIViewController {
     
     // MARK: - Properties
     var programId: String?
     var workouts = [Workout]()
+    var db: Firestore!
 
     // MARK: - IBOutlet
     @IBOutlet weak var workoutsTableView: UITableView!
@@ -23,11 +25,13 @@ class WorkoutViewController: UIViewController {
         
         configureTableView()
         configureNavigationItem()
-        
-        let workout1 = Workout(id: "1", name: "Pecs")
-        let workout2 = Workout(id: "1", name: "Back")
-        workouts.append(workout1)
-        workouts.append(workout2)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        workouts.removeAll()
+        workoutsTableView.reloadData()
+        fetchWorkouts()
     }
     
     // MARK: - Methods
@@ -40,6 +44,33 @@ class WorkoutViewController: UIViewController {
     private func configureNavigationItem() {
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemTapped))
         navigationItem.rightBarButtonItem = addItem
+    }
+    
+    private func fetchWorkouts() {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        
+        guard let programId = programId else { return }
+        let workoutsCollection = db.collection("users").document(currentUser.uid).collection("programs").document(programId).collection("workouts")
+        
+        workoutsCollection.getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err.localizedDescription)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    let data = document.data()
+                    guard let name = data["name"] as? String else { return }
+                    let workout = Workout(id: document.documentID, name: name)
+                    
+                    self.workouts.append(workout)
+                    self.workoutsTableView.reloadData()
+                }
+            }
+            
+        }
     }
     
     // MARK: - IBAction
