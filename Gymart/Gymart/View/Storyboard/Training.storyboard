@@ -141,27 +141,59 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-wG-yfh" userLabel="Container View">
-                                                    <rect key="frame" x="16" y="16" width="343" height="167.66666666666666"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="183.66666666666666"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-uB-Xwf">
-                                                            <rect key="frame" x="150.66666666666666" y="73.333333333333329" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-uB-Xwf">
+                                                            <rect key="frame" x="26" y="8" width="301" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-PH-GW6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="10" height="183.66666666666666"/>
+                                                            <color key="backgroundColor" red="0.35686274509999999" green="0.90588235289999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="10" id="gYO-ux-bRS"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-G6-KPb">
+                                                            <rect key="frame" x="26" y="36" width="301" height="15"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-fn-EuB">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="KKn-cq-Z36"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="mje-6q-eZ7"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST_WORKOUT_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-3z-qNO">
+                                                                    <rect key="frame" x="23" y="0.0" width="278" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                                    <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="centerY" secondItem="V2l-wG-yfh" secondAttribute="centerY" id="8dX-dZ-Gst"/>
-                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="centerX" secondItem="V2l-wG-yfh" secondAttribute="centerX" id="vGj-RL-8v0"/>
+                                                        <constraint firstItem="wGv-G6-KPb" firstAttribute="top" secondItem="P3r-uB-Xwf" secondAttribute="bottom" constant="8" id="7zR-6T-CuO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="P3r-uB-Xwf" secondAttribute="trailing" constant="16" id="C5C-t3-OR5"/>
+                                                        <constraint firstItem="sLR-PH-GW6" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" id="T39-sp-Bob"/>
+                                                        <constraint firstItem="wGv-G6-KPb" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="byt-cN-U2y"/>
+                                                        <constraint firstAttribute="bottom" secondItem="sLR-PH-GW6" secondAttribute="bottom" id="dS1-DI-6WA"/>
+                                                        <constraint firstItem="sLR-PH-GW6" firstAttribute="leading" secondItem="V2l-wG-yfh" secondAttribute="leading" id="heY-Dk-h0e"/>
+                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" constant="8" id="p56-bQ-dSS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wGv-G6-KPb" secondAttribute="trailing" constant="16" id="red-gv-xOB"/>
+                                                        <constraint firstItem="P3r-uB-Xwf" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="tGw-8f-rg5"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="V2l-wG-yfh" firstAttribute="leading" secondItem="GEG-EW-UcN" secondAttribute="leading" constant="16" id="6oL-BQ-goz"/>
-                                                <constraint firstItem="V2l-wG-yfh" firstAttribute="top" secondItem="GEG-EW-UcN" secondAttribute="top" constant="16" id="Na7-z1-2ft"/>
+                                                <constraint firstItem="V2l-wG-yfh" firstAttribute="top" secondItem="GEG-EW-UcN" secondAttribute="top" constant="8" id="Na7-z1-2ft"/>
                                                 <constraint firstAttribute="trailing" secondItem="V2l-wG-yfh" secondAttribute="trailing" constant="16" id="kMI-Ba-qGy"/>
-                                                <constraint firstAttribute="bottom" secondItem="V2l-wG-yfh" secondAttribute="bottom" constant="16" id="tfw-Pv-6nx"/>
+                                                <constraint firstAttribute="bottom" secondItem="V2l-wG-yfh" secondAttribute="bottom" constant="8" id="tfw-Pv-6nx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -343,5 +375,8 @@
             <point key="canvasLocation" x="1016.8" y="855.66502463054189"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock" width="15" height="15"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

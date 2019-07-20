@@ -22,9 +22,10 @@ class WorkoutViewController: UIViewController {
         super.viewDidLoad()
         
         configureTableView()
+        configureNavigationItem()
         
         let workout1 = Workout(id: "1", name: "Pecs")
-        let workout2 = Workout(id: "1", name: "back")
+        let workout2 = Workout(id: "1", name: "Back")
         workouts.append(workout1)
         workouts.append(workout2)
     }
@@ -34,6 +35,16 @@ class WorkoutViewController: UIViewController {
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
         workoutsTableView.separatorStyle = .none
+    }
+    
+    private func configureNavigationItem() {
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemTapped))
+        navigationItem.rightBarButtonItem = addItem
+    }
+    
+    // MARK: - IBAction
+    @objc func addItemTapped() {
+        
     }
 
 }
