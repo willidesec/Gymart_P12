@@ -121,6 +121,22 @@
             </objects>
             <point key="canvasLocation" x="1018.4" y="22.906403940886701"/>
         </scene>
+        <!--Workouts-->
+        <scene sceneID="aF3-Rk-u7S">
+            <objects>
+                <viewController storyboardIdentifier="Workouts" id="RHO-7f-MMG" customClass="WorkoutsViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZF-8M-94g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="c62-2U-Bhs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Workouts" id="WZR-K9-rP4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4df-ch-HlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="23"/>
+        </scene>
         <!--Add Program-->
         <scene sceneID="4Mh-NK-5t5">
             <objects>
@@ -274,4 +290,5 @@
             <point key="canvasLocation" x="1016.8" y="855.66502463054189"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -107,6 +107,13 @@ extension ProgramViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Training", bundle:nil)
+        guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: "Workouts") as? WorkoutsViewController else { return }
+        workoutsVC.programId = programs[indexPath.row].id
+        navigationController?.pushViewController(workoutsVC, animated: true)
+    }
+    
     
 }
 
