@@ -145,6 +145,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-uB-Xwf">
                                                             <rect key="frame" x="26" y="8" width="301" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="Vjk-vM-8df"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
                                                             <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -174,18 +177,25 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tul-1U-uQt" userLabel="Exercices Stack View">
+                                                            <rect key="frame" x="26" y="59.000000000000007" width="301" height="116.66666666666669"/>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="wGv-G6-KPb" firstAttribute="top" secondItem="P3r-uB-Xwf" secondAttribute="bottom" constant="8" id="7zR-6T-CuO"/>
+                                                        <constraint firstItem="Tul-1U-uQt" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="9OR-z1-F2Q"/>
                                                         <constraint firstAttribute="trailing" secondItem="P3r-uB-Xwf" secondAttribute="trailing" constant="16" id="C5C-t3-OR5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tul-1U-uQt" secondAttribute="trailing" constant="16" id="QNg-hs-4im"/>
                                                         <constraint firstItem="sLR-PH-GW6" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" id="T39-sp-Bob"/>
+                                                        <constraint firstItem="Tul-1U-uQt" firstAttribute="top" secondItem="wGv-G6-KPb" secondAttribute="bottom" constant="8" id="Yht-01-YoL"/>
                                                         <constraint firstItem="wGv-G6-KPb" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="byt-cN-U2y"/>
                                                         <constraint firstAttribute="bottom" secondItem="sLR-PH-GW6" secondAttribute="bottom" id="dS1-DI-6WA"/>
                                                         <constraint firstItem="sLR-PH-GW6" firstAttribute="leading" secondItem="V2l-wG-yfh" secondAttribute="leading" id="heY-Dk-h0e"/>
                                                         <constraint firstItem="P3r-uB-Xwf" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" constant="8" id="p56-bQ-dSS"/>
                                                         <constraint firstAttribute="trailing" secondItem="wGv-G6-KPb" secondAttribute="trailing" constant="16" id="red-gv-xOB"/>
                                                         <constraint firstItem="P3r-uB-Xwf" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="tGw-8f-rg5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Tul-1U-uQt" secondAttribute="bottom" constant="8" id="xMz-BA-zgp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -198,6 +208,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="containerView" destination="V2l-wG-yfh" id="60i-V3-oJ4"/>
+                                            <outlet property="exercicesStackView" destination="Tul-1U-uQt" id="bMc-1V-ggH"/>
                                             <outlet property="workoutNameLabel" destination="P3r-uB-Xwf" id="IsN-gC-IZq"/>
                                         </connections>
                                     </tableViewCell>

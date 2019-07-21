@@ -16,6 +16,7 @@
 		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
 		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
 		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
+		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -60,6 +61,7 @@
 		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
 		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
 		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				30E0618A22C0E905007A1964 /* Program.swift */,
 				3FB7163722E37D8800A44FA1 /* Workout.swift */,
+				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
 				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 			);
 			path = Model;
@@ -487,6 +490,7 @@
 			files = (
 				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
+				3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */,
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,

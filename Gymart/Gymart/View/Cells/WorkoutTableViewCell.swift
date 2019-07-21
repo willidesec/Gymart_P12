@@ -13,12 +13,23 @@ class WorkoutTableViewCell: UITableViewCell {
     // MARK: - IBOutlet
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var exercicesStackView: UIStackView!
     
     // MARK: - Properties
+    let completeView = UIView()
+    
     var workout: Workout? {
         didSet {
             guard let workout = workout else { return }
             workoutNameLabel.text = workout.name
+            
+            workout.exercices.forEach { (exercice) in
+                let label = UILabel()
+                label.font = UIFont.mainRegularFont(size: 17)
+                label.text = exercice.name
+                exercicesStackView.addArrangedSubview(label)
+            }
+            exercicesStackView.addArrangedSubview(completeView)
         }
     }
     

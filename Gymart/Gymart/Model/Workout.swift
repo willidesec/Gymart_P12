@@ -11,6 +11,7 @@ import Foundation
 struct Workout {
     let id: String
     let name: String
+    var exercices = [Exercice]()
     
     init(id: String, name: String) {
         self.id = id
