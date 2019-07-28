@@ -9,6 +9,5 @@
 import Foundation
 
 struct Exercice {
-    let id: String
     let name: String
 }

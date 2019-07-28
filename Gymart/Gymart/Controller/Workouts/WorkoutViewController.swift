@@ -14,7 +14,6 @@ class WorkoutViewController: UIViewController {
     // MARK: - Properties
     var programId: String?
     var workouts = [Workout]()
-    var exercices = [Exercice]()
     var db: Firestore!
 
     // MARK: - IBOutlet
@@ -64,44 +63,20 @@ class WorkoutViewController: UIViewController {
                     
                     let data = document.data()
                     guard let name = data["name"] as? String else { return }
+                    guard let exercicesData = data["exercices"] as? [[String: String]] else { return }
                     var workout = Workout(id: document.documentID, name: name)
-                    
-                    self.fetchExerciceFromWorkout(id: workout.id)
-                    
-                    workout.exercices = self.exercices
+
+                    exercicesData.forEach({ (exo) in
+                        guard let name = exo["name"] else { return }
+                        let exercice = Exercice(name: name)
+                        workout.exercices.append(exercice)
+                    })
                     
                     self.workouts.append(workout)
                     self.workoutsTableView.reloadData()
                 }
             }
-            
         }
-    }
-    
-    private func fetchExerciceFromWorkout(id: String) {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        
-        guard let programId = programId else { return }
-        let workoutsCollection = db.collection("users").document(currentUser.uid).collection("programs").document(programId).collection("workouts")
-        let exercicesCollection = workoutsCollection.document(id).collection("exercices")
-        
-        
-        exercicesCollection.getDocuments(completion: { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                    let data = document.data()
-                    guard let name = data["name"] as? String else { return }
-                    let exercice = Exercice(id: document.documentID, name: name)
-                    
-                    self.exercices.append(exercice)
-                    self.workoutsTableView.reloadData()
-                }
-            }
-        })
     }
     
     // MARK: - IBAction
