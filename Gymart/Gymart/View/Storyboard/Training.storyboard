@@ -16,6 +16,9 @@
         <array key="DejaVuSans-Oblique.ttf">
             <string>DejaVuSans-Oblique</string>
         </array>
+        <array key="DejaVuSans.ttf">
+            <string>DejaVuSans</string>
+        </array>
         <array key="DejaVuSansCondensed-Bold.ttf">
             <string>DejaVuSansCondensed-Bold</string>
         </array>
@@ -160,7 +163,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-G6-KPb">
-                                                            <rect key="frame" x="26" y="36" width="301" height="15"/>
+                                                            <rect key="frame" x="26" y="33" width="301" height="15"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-fn-EuB">
                                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -177,25 +180,53 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tul-1U-uQt" userLabel="Exercices Stack View">
-                                                            <rect key="frame" x="26" y="59.000000000000007" width="301" height="116.66666666666669"/>
-                                                        </stackView>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Aq-Hs8">
+                                                            <rect key="frame" x="26" y="56.000000000000007" width="301" height="127.66666666666669"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciceCell" rowHeight="30" id="t2P-m7-IgT" customClass="ExercicesTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="28" width="301" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2P-m7-IgT" id="cG0-zO-qFj">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="301" height="29.666666666666668"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCq-dL-OTF">
+                                                                                <rect key="frame" x="0.0" y="5" width="301" height="19.666666666666668"/>
+                                                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="kCq-dL-OTF" firstAttribute="leading" secondItem="cG0-zO-qFj" secondAttribute="leading" id="Hfp-Ls-vgp"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="kCq-dL-OTF" secondAttribute="bottom" constant="5" id="Jaz-9g-Ea3"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="kCq-dL-OTF" secondAttribute="trailing" id="Zo7-fb-GSf"/>
+                                                                            <constraint firstItem="kCq-dL-OTF" firstAttribute="top" secondItem="cG0-zO-qFj" secondAttribute="top" constant="5" id="e2a-MC-3qu"/>
+                                                                        </constraints>
+                                                                    </tableViewCellContentView>
+                                                                    <connections>
+                                                                        <outlet property="exerciceNameLabel" destination="kCq-dL-OTF" id="4sL-28-rrn"/>
+                                                                    </connections>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                        </tableView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="wGv-G6-KPb" firstAttribute="top" secondItem="P3r-uB-Xwf" secondAttribute="bottom" constant="8" id="7zR-6T-CuO"/>
-                                                        <constraint firstItem="Tul-1U-uQt" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="9OR-z1-F2Q"/>
+                                                        <constraint firstItem="wGv-G6-KPb" firstAttribute="top" secondItem="P3r-uB-Xwf" secondAttribute="bottom" constant="5" id="7zR-6T-CuO"/>
+                                                        <constraint firstItem="Imf-Aq-Hs8" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="B03-B3-4Le"/>
                                                         <constraint firstAttribute="trailing" secondItem="P3r-uB-Xwf" secondAttribute="trailing" constant="16" id="C5C-t3-OR5"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Tul-1U-uQt" secondAttribute="trailing" constant="16" id="QNg-hs-4im"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Imf-Aq-Hs8" secondAttribute="trailing" constant="16" id="Laj-1z-UjA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Imf-Aq-Hs8" secondAttribute="bottom" id="PlF-Fu-fIC"/>
                                                         <constraint firstItem="sLR-PH-GW6" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" id="T39-sp-Bob"/>
-                                                        <constraint firstItem="Tul-1U-uQt" firstAttribute="top" secondItem="wGv-G6-KPb" secondAttribute="bottom" constant="8" id="Yht-01-YoL"/>
+                                                        <constraint firstItem="Imf-Aq-Hs8" firstAttribute="top" secondItem="wGv-G6-KPb" secondAttribute="bottom" constant="8" id="Vyl-cp-Dat"/>
                                                         <constraint firstItem="wGv-G6-KPb" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="byt-cN-U2y"/>
                                                         <constraint firstAttribute="bottom" secondItem="sLR-PH-GW6" secondAttribute="bottom" id="dS1-DI-6WA"/>
                                                         <constraint firstItem="sLR-PH-GW6" firstAttribute="leading" secondItem="V2l-wG-yfh" secondAttribute="leading" id="heY-Dk-h0e"/>
                                                         <constraint firstItem="P3r-uB-Xwf" firstAttribute="top" secondItem="V2l-wG-yfh" secondAttribute="top" constant="8" id="p56-bQ-dSS"/>
                                                         <constraint firstAttribute="trailing" secondItem="wGv-G6-KPb" secondAttribute="trailing" constant="16" id="red-gv-xOB"/>
                                                         <constraint firstItem="P3r-uB-Xwf" firstAttribute="leading" secondItem="sLR-PH-GW6" secondAttribute="trailing" constant="16" id="tGw-8f-rg5"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Tul-1U-uQt" secondAttribute="bottom" constant="8" id="xMz-BA-zgp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -208,7 +239,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="containerView" destination="V2l-wG-yfh" id="60i-V3-oJ4"/>
-                                            <outlet property="exercicesStackView" destination="Tul-1U-uQt" id="bMc-1V-ggH"/>
+                                            <outlet property="exercicesTableView" destination="Imf-Aq-Hs8" id="wl8-Xs-7PB"/>
                                             <outlet property="workoutNameLabel" destination="P3r-uB-Xwf" id="IsN-gC-IZq"/>
                                         </connections>
                                     </tableViewCell>

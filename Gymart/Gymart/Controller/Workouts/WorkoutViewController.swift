@@ -36,6 +36,7 @@ class WorkoutViewController: UIViewController {
     
     // MARK: - Methods
     private func configureTableView() {
+//        workoutsTableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: WorkoutTableViewCell.identifier)
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
         workoutsTableView.separatorStyle = .none
