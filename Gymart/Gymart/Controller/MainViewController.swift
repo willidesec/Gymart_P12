@@ -12,6 +12,7 @@ import FirebaseAuth
 class MainViewController: UITabBarController {
 
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +20,7 @@ class MainViewController: UITabBarController {
     }
     
     // MARK: - Methods
+    
     private func checkIfUserLoggedIn() {
         DispatchQueue.main.async {
             if Auth.auth().currentUser == nil {

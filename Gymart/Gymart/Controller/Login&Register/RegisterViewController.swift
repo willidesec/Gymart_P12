@@ -12,15 +12,18 @@ import Firebase
 class RegisterViewController: UIViewController {
     
     // MARK: - Properties
+    
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
 
     // MARK: - IBOutlet
+    
     @IBOutlet weak var userNameInput: UserInputView!
     @IBOutlet weak var emailUserInput: UserInputView!
     @IBOutlet weak var passwordUserInput: UserInputView!
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +36,7 @@ class RegisterViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    
     @IBAction func cancelButtonDidTapped() {
         dismiss(animated: true, completion: nil)
     }
@@ -42,6 +46,7 @@ class RegisterViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
     private func createUserAccount() {
         guard let username = userNameInput.textField.text, !username.isEmpty else {
             // TODO: Alert

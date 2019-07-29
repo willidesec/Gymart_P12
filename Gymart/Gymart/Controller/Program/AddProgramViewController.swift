@@ -12,15 +12,18 @@ import Firebase
 class AddProgramViewController: UIViewController {
 
     // MARK: - Properties
+    
     var ref: DocumentReference? = nil
     var db: Firestore!
     
     // MARK: - IBOutlet
+    
     @IBOutlet var separatorViews: [UIView]!
     @IBOutlet weak var programNameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +31,7 @@ class AddProgramViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    
     @IBAction func saveItemDidTapped(_ sender: UIBarButtonItem) {
         saveNewProgram()
         dismiss(animated: true, completion: nil)
@@ -38,6 +42,7 @@ class AddProgramViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
     private func saveNewProgram() {
         guard let programName = programNameTextField.text, !programName.isEmpty else {
             print("No Program Name")

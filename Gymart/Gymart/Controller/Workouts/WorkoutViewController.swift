@@ -12,14 +12,17 @@ import FirebaseFirestore
 class WorkoutViewController: UIViewController {
     
     // MARK: - Properties
+    
     var programId: String?
     var workouts = [Workout]()
     var db: Firestore!
 
     // MARK: - IBOutlet
+    
     @IBOutlet weak var workoutsTableView: UITableView!
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +38,8 @@ class WorkoutViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
     private func configureTableView() {
-//        workoutsTableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: WorkoutTableViewCell.identifier)
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
         workoutsTableView.separatorStyle = .none
@@ -81,6 +84,7 @@ class WorkoutViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    
     @objc func addItemTapped() {
         
     }
@@ -88,6 +92,7 @@ class WorkoutViewController: UIViewController {
 }
 
 // MARK: - Extensions
+
 extension WorkoutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return workouts.count

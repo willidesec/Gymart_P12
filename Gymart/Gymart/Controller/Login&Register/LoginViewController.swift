@@ -12,11 +12,13 @@ import Firebase
 class LoginViewController: UIViewController {
     
     // MARK: - Outlets
+    
     @IBOutlet weak var emailUserInput: UserInputView!
     @IBOutlet weak var passwordUserInput: UserInputView!
     @IBOutlet weak var logInButton: LoginButton!
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    
     @IBAction func logInButtonDidTapped() {
         logIn()
         
@@ -36,6 +39,7 @@ class LoginViewController: UIViewController {
     
     
     // MARK: - Methods
+    
     private func logIn() {
         guard let email = emailUserInput.textField.text, !email.isEmpty else {
             displayAlert(message: Constants.Alert.noEmail)

@@ -15,12 +15,14 @@ class ProfileViewController: UIViewController {
     
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     // MARK: - IBAction
+    
     @IBAction func signOutItemDidTapped(_ sender: UIBarButtonItem) {
         let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { (action) in
             do {

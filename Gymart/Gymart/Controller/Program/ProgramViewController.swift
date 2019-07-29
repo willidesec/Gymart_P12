@@ -12,14 +12,17 @@ import FirebaseFirestore
 class ProgramViewController: UIViewController {
     
     // MARK: - Properties
+    
     var programs = [Program]()
     var db: Firestore!
 
     // MARK: - IBOutlet
+    
     @IBOutlet weak var programTableView: UITableView!
     
     
     // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +37,7 @@ class ProgramViewController: UIViewController {
     }
     
     // MAARK: - Methods
+    
     fileprivate func configureTableView() {
         programTableView.delegate = self
         programTableView.dataSource = self
@@ -86,6 +90,7 @@ class ProgramViewController: UIViewController {
 }
 
 // MARK: - Extensions
+
 extension ProgramViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return programs.count

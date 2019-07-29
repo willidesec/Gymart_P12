@@ -11,12 +11,14 @@ import UIKit
 class ProgramTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var programNameLabel: UILabel!
     @IBOutlet weak var programDescriptionLabel: UILabel!
     @IBOutlet weak var tagView: UIView!
     
     // MARK: - Properties
+    
     var program: Program? {
         didSet {
             guard let program = program else { return }
@@ -26,6 +28,7 @@ class ProgramTableViewCell: UITableViewCell {
     }
     
     // MARK: - Init
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -33,6 +36,7 @@ class ProgramTableViewCell: UITableViewCell {
     }
     
     // MARK: - Methods
+    
     private func setupUI() {
         self.selectionStyle = .none
         containerView.layer.roundedCorner(10)

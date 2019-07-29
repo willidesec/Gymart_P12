@@ -11,17 +11,18 @@ import UIKit
 class WorkoutTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlet
+    
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var exercicesTableView: UITableView!
     
     
     // MARK: - Properties
+    
     let completeView = UIView()
     
     var workout: Workout? {
         didSet {
-//            guard let workout = workout else { return }
             workoutNameLabel.text = workout?.name
             
         }
@@ -35,11 +36,11 @@ class WorkoutTableViewCell: UITableViewCell {
     }
 
     // MARK: - Methods
+    
     private func configureExercicesTableView() {
         exercicesTableView.delegate = self
         exercicesTableView.dataSource = self
         exercicesTableView.separatorStyle = .none
-//        exercicesTableView.register(ExercicesTableViewCell.self, forCellReuseIdentifier: ExercicesTableViewCell.identifier)
     }
     
     private func setupUI() {
@@ -51,6 +52,8 @@ class WorkoutTableViewCell: UITableViewCell {
     }
 
 }
+
+// MARK: - Extensions
 
 extension WorkoutTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

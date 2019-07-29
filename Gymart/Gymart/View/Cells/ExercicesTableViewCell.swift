@@ -10,7 +10,11 @@ import UIKit
 
 class ExercicesTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var exerciceNameLabel: UILabel!
+    
+    // MARK: - Properties
     
     var exercice: Exercice? {
         didSet {
