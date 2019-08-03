@@ -25,16 +25,12 @@ class WorkoutTableViewCell: UITableViewCell {
         didSet {
             workoutNameLabel.text = workout?.name
             
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            
             if let lastWorkoutDate = workout?.lastWorkoutDate {
-                let stringDate = formatter.string(from: lastWorkoutDate)
-                lastWorkoutDateLabel.text = stringDate
+                let days = lastWorkoutDate.numberOfDaysFromNow
+                lastWorkoutDateLabel.text = "\(days) days ago"
             } else {
                 lastWorkoutDateLabel.text = Constants.Label.noTraining
             }
-            
         }
     }
     
