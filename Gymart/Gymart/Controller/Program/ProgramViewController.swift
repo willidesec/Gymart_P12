@@ -26,6 +26,7 @@ class ProgramViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureFirestoreDataBase()
         configureTableView()
     }
     
@@ -44,12 +45,14 @@ class ProgramViewController: UIViewController {
         programTableView.separatorStyle = .none
     }
     
-    private func fetchPrograms() {
+    private func configureFirestoreDataBase() {
         db = Firestore.firestore()
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
-        
+    }
+    
+    private func fetchPrograms() {
         guard let currentUser = AuthService.getCurrentUser() else { return }
         
         let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
@@ -64,7 +67,9 @@ class ProgramViewController: UIViewController {
                     let data = document.data()
                     guard let name = data["name"] as? String else { return }
                     guard let description = data["description"] as? String else { return }
-                    let program = Program(id: document.documentID, name: name, description: description)
+                    guard let creationDate = data["creationDate"] as? Timestamp else { return }
+                    let date = creationDate.dateValue()
+                    let program = Program(id: document.documentID, name: name, description: description, creationDate: date)
                     
                     self.programs.append(program)
                     self.programTableView.reloadData()
@@ -75,8 +80,6 @@ class ProgramViewController: UIViewController {
     }
     
     private func deleteProgramInFirestore(id: String) {
-        db = Firestore.firestore()
-        
         guard let currentUser = AuthService.getCurrentUser() else { return }
         
         let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")

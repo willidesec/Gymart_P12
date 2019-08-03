@@ -20,6 +20,7 @@
 		3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */; };
 		3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */; };
 		3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */; };
+		3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */; };
 		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
 		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
 		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
@@ -68,6 +69,7 @@
 		3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
 		3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesTableViewCell.swift; sourceTree = "<group>"; };
 		3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSerializableProtocol.swift; sourceTree = "<group>"; };
 		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
 		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		3F3FB25B22A068B300D22D36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */,
 				30E0618A22C0E905007A1964 /* Program.swift */,
 				3FB7163722E37D8800A44FA1 /* Workout.swift */,
 				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
@@ -522,6 +525,7 @@
 				3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */,
 				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,
 				3F2FADC822AC35760004C720 /* Constants.swift in Sources */,
+				3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */,
 				3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
