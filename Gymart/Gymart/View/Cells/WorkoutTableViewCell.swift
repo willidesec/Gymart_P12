@@ -15,7 +15,7 @@ class WorkoutTableViewCell: UITableViewCell {
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var exercicesTableView: UITableView!
-    
+    @IBOutlet weak var lastWorkoutDateLabel: UILabel!
     
     // MARK: - Properties
     
@@ -24,6 +24,16 @@ class WorkoutTableViewCell: UITableViewCell {
     var workout: Workout? {
         didSet {
             workoutNameLabel.text = workout?.name
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            if let lastWorkoutDate = workout?.lastWorkoutDate {
+                let stringDate = formatter.string(from: lastWorkoutDate)
+                lastWorkoutDateLabel.text = stringDate
+            } else {
+                lastWorkoutDateLabel.text = Constants.Label.noTraining
+            }
             
         }
     }

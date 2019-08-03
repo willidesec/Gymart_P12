@@ -65,11 +65,21 @@ class WorkoutViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     
+                    // Workout's Name
                     let data = document.data()
                     guard let name = data["name"] as? String else { return }
-                    guard let exercicesData = data["exercices"] as? [[String: Any]] else { return }
-                    var workout = Workout(id: document.documentID, name: name)
+                    
+                    // Workout's Date
+                    var date: Date? = nil
+                    if let lastWorkoutData = data["lastWorkoutDate"] as? Timestamp {
+                        date = lastWorkoutData.dateValue()
+                    }
+                    
+                    var workout = Workout(id: document.documentID, name: name, lastWorkoutDate: date)
 
+                    // Workout's Exercices
+                    guard let exercicesData = data["exercices"] as? [[String: Any]] else { return }
+                    
                     exercicesData.forEach({ (exo) in
                         guard let name = exo["name"] as? String else { return }
                         guard let sets = exo["sets"] as? Int else { return }

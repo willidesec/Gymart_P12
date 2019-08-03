@@ -162,26 +162,29 @@
                                                                 <constraint firstAttribute="width" constant="10" id="gYO-ux-bRS"/>
                                                             </constraints>
                                                         </view>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-G6-KPb">
-                                                            <rect key="frame" x="26" y="33" width="301" height="15"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-G6-KPb">
+                                                            <rect key="frame" x="26" y="33" width="301" height="20"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-fn-EuB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="2.6666666666666643" width="15" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="15" id="KKn-cq-Z36"/>
                                                                         <constraint firstAttribute="height" constant="15" id="mje-6q-eZ7"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST_WORKOUT_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-3z-qNO">
-                                                                    <rect key="frame" x="23" y="0.0" width="278" height="15"/>
+                                                                    <rect key="frame" x="23" y="0.0" width="278" height="20"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="z0H-Hm-bgo"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Aq-Hs8">
-                                                            <rect key="frame" x="26" y="56.000000000000007" width="301" height="127.66666666666669"/>
+                                                            <rect key="frame" x="26" y="61.000000000000007" width="301" height="122.66666666666669"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <prototypes>
                                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExercicesTableViewCell" rowHeight="30" id="t2P-m7-IgT" customClass="ExercicesTableViewCell" customModule="Gymart" customModuleProvider="target">
@@ -240,6 +243,7 @@
                                         <connections>
                                             <outlet property="containerView" destination="V2l-wG-yfh" id="60i-V3-oJ4"/>
                                             <outlet property="exercicesTableView" destination="Imf-Aq-Hs8" id="wl8-Xs-7PB"/>
+                                            <outlet property="lastWorkoutDateLabel" destination="Pay-3z-qNO" id="4ZM-7x-WP0"/>
                                             <outlet property="workoutNameLabel" destination="P3r-uB-Xwf" id="IsN-gC-IZq"/>
                                         </connections>
                                     </tableViewCell>

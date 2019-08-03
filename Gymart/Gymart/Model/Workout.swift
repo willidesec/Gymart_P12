@@ -11,10 +11,12 @@ import Foundation
 struct Workout {
     let id: String
     let name: String
+    var lastWorkoutDate: Date?
     var exercices = [Exercice]()
     
-    init(id: String, name: String) {
+    init(id: String, name: String, lastWorkoutDate: Date?) {
         self.id = id
         self.name = name
+        self.lastWorkoutDate = lastWorkoutDate
     }
 }

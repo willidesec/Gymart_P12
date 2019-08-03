@@ -21,6 +21,10 @@ struct Constants {
         static let password = "Password"
     }
     
+    struct Label {
+        static let noTraining = "No training yet for this workout"
+    }
+    
     struct Alert {
         static let title = "Oups"
         static let okMessage = "Ok"
