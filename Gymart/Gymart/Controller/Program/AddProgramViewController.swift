@@ -13,7 +13,6 @@ class AddProgramViewController: UIViewController {
 
     // MARK: - Properties
     
-    var ref: DocumentReference? = nil
     var db: Firestore!
     
     // MARK: - IBOutlet
@@ -53,25 +52,23 @@ class AddProgramViewController: UIViewController {
             print("No description")
             return
         }
+        let identifier = UUID().uuidString
+        let newProgram = Program(id: identifier, name: programName, description: programDescription, creationDate: Date())
         
-        let newProgram = Program(id: "", name: programName, description: programDescription, creationDate: Date())
-        
-        saveProgramInFirestore(newProgram.dictionary)
+        saveProgramInFirestore(id: identifier, data: newProgram.dictionary)
         
     }
     
-    private func saveProgramInFirestore(_ data: [String: Any]) {
+    private func saveProgramInFirestore(id: String, data: [String: Any]) {
         db = Firestore.firestore()
         
         guard let currentUser = AuthService.getCurrentUser() else { return }
-        
-        let userDoc = db.collection("users").document(currentUser.uid)
-        
-        ref = userDoc.collection("programs").addDocument(data: data) { err in
+        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
+        programsCollection.document(id).setData(data) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(self.ref!.documentID)")
+                print("Document added with success")
             }
         }
     }

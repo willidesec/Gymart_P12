@@ -28,14 +28,15 @@ class ProgramViewController: UIViewController {
 
         configureFirestoreDataBase()
         configureTableView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        programs.removeAll()
-        programTableView.reloadData()
         fetchPrograms()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        programs.removeAll()
+//        programTableView.reloadData()
+//        fetchPrograms()
+//    }
     
     // MAARK: - Methods
     
@@ -55,27 +56,17 @@ class ProgramViewController: UIViewController {
     private func fetchPrograms() {
         guard let currentUser = AuthService.getCurrentUser() else { return }
         
-        let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
+        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
         
         programsCollection.getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err.localizedDescription)")
             } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                    let data = document.data()
-                    guard let name = data["name"] as? String else { return }
-                    guard let description = data["description"] as? String else { return }
-                    guard let creationDate = data["creationDate"] as? Timestamp else { return }
-                    let date = creationDate.dateValue()
-                    let program = Program(id: document.documentID, name: name, description: description, creationDate: date)
-                    
-                    self.programs.append(program)
+                self.programs = querySnapshot!.documents.compactMap({Program(dictionary: $0.data())})
+                DispatchQueue.main.async {
                     self.programTableView.reloadData()
                 }
             }
-            
         }
     }
     

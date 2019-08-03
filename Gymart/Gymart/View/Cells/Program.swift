@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Program {
     let id: String
@@ -28,10 +29,13 @@ extension Program: DocumentSerializableProtocol {
     init?(dictionary: [String : Any]) {
         guard let id = dictionary["id"] as? String,
             let name = dictionary["name"] as? String,
-            let description = dictionary["description"] as? String,
-            let creationDate = dictionary["creationDate"] as? Date else { return nil }
+            let description = dictionary["description"] as? String else { return nil }
+        var date = Date()
+        if let creationDate = dictionary["creationDate"] as? Timestamp {
+            date = creationDate.dateValue()
+        }
         
-        self.init(id: id, name: name, description: description, creationDate: creationDate)
+        self.init(id: id, name: name, description: description, creationDate: date)
     }
 }
 
