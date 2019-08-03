@@ -10,4 +10,5 @@ import Foundation
 
 struct Exercice {
     let name: String
+    let sets: Int
 }

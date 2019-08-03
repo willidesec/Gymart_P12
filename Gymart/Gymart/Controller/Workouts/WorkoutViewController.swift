@@ -67,12 +67,13 @@ class WorkoutViewController: UIViewController {
                     
                     let data = document.data()
                     guard let name = data["name"] as? String else { return }
-                    guard let exercicesData = data["exercices"] as? [[String: String]] else { return }
+                    guard let exercicesData = data["exercices"] as? [[String: Any]] else { return }
                     var workout = Workout(id: document.documentID, name: name)
 
                     exercicesData.forEach({ (exo) in
-                        guard let name = exo["name"] else { return }
-                        let exercice = Exercice(name: name)
+                        guard let name = exo["name"] as? String else { return }
+                        guard let sets = exo["sets"] as? Int else { return }
+                        let exercice = Exercice(name: name, sets: sets)
                         workout.exercices.append(exercice)
                     })
                     
@@ -99,7 +100,7 @@ extension WorkoutViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Workout", for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkoutTableViewCell.identifier, for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
         
         cell.workout = workouts[indexPath.row]
         

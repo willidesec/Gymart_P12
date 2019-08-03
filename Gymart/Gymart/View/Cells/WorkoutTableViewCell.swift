@@ -61,7 +61,7 @@ extension WorkoutTableViewCell: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciceCell") as? ExercicesTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExercicesTableViewCell.identifier) as? ExercicesTableViewCell else { return UITableViewCell() }
         
         cell.exercice = workout?.exercices[indexPath.row]
         

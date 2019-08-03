@@ -18,7 +18,24 @@ class ExercicesTableViewCell: UITableViewCell {
     
     var exercice: Exercice? {
         didSet {
-            exerciceNameLabel.text = exercice?.name
+            guard let exerciceName = exercice?.name else { return }
+            guard let exerciceSets = exercice?.sets else { return }
+            exerciceNameLabel.text = "\(exerciceSets) x \(exerciceName)"
         }
+    }
+    
+    // MARK: - View Life Cycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupUI()
+    }
+    
+    
+    // MARK: - Methods
+    
+    private func setupUI() {
+        self.selectionStyle = .none
     }
 }
