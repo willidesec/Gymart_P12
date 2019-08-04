@@ -30,6 +30,7 @@ extension Program: DocumentSerializableProtocol {
         guard let id = dictionary["id"] as? String,
             let name = dictionary["name"] as? String,
             let description = dictionary["description"] as? String else { return nil }
+        
         var date = Date()
         if let creationDate = dictionary["creationDate"] as? Timestamp {
             date = creationDate.dateValue()

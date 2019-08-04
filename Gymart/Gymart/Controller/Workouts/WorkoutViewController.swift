@@ -28,6 +28,7 @@ class WorkoutViewController: UIViewController {
         
         configureTableView()
         configureNavigationItem()
+        fetchWorkouts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,40 +55,16 @@ class WorkoutViewController: UIViewController {
         db = Firestore.firestore()
         
         guard let currentUser = AuthService.getCurrentUser() else { return }
-        
         guard let programId = programId else { return }
-        let workoutsCollection = db.collection("users").document(currentUser.uid).collection("programs").document(programId).collection("workouts")
+        
+        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
         
         workoutsCollection.getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err.localizedDescription)")
             } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                    // Workout's Name
-                    let data = document.data()
-                    guard let name = data["name"] as? String else { return }
-                    
-                    // Workout's Date
-                    var date: Date? = nil
-                    if let lastWorkoutData = data["lastWorkoutDate"] as? Timestamp {
-                        date = lastWorkoutData.dateValue()
-                    }
-                    
-                    var workout = Workout(id: document.documentID, name: name, lastWorkoutDate: date)
-
-                    // Workout's Exercices
-                    guard let exercicesData = data["exercices"] as? [[String: Any]] else { return }
-                    
-                    exercicesData.forEach({ (exo) in
-                        guard let name = exo["name"] as? String else { return }
-                        guard let sets = exo["sets"] as? Int else { return }
-                        let exercice = Exercice(name: name, sets: sets)
-                        workout.exercices.append(exercice)
-                    })
-                    
-                    self.workouts.append(workout)
+                self.workouts = querySnapshot!.documents.compactMap({Workout(dictionary: $0.data())})
+                DispatchQueue.main.async {
                     self.workoutsTableView.reloadData()
                 }
             }
