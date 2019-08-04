@@ -29,13 +29,7 @@ class WorkoutViewController: UIViewController {
         configureTableView()
         configureNavigationItem()
         fetchWorkouts()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        workouts.removeAll()
-        workoutsTableView.reloadData()
-        fetchWorkouts()
+        checkForUpdates()
     }
     
     // MARK: - Methods
@@ -68,6 +62,44 @@ class WorkoutViewController: UIViewController {
                     self.workoutsTableView.reloadData()
                 }
             }
+        }
+    }
+    
+    private func checkForUpdates() {
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        guard let programId = programId else { return }
+        
+        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
+        
+        workoutsCollection.addSnapshotListener { (querySnapshot, error) in
+            guard let snapshot = querySnapshot else { return }
+            
+            snapshot.documentChanges.forEach({ (diff) in
+                if diff.type == .added {
+                    if let workout = Workout(dictionary: diff.document.data()) {
+                        self.workouts.append(workout)
+                        DispatchQueue.main.async {
+                            self.workoutsTableView.reloadData()
+                        }
+                    }
+                } else if diff.type == .removed {
+                    let docId = diff.document.documentID
+                    var currentIndex: Int?
+                    var index = 0
+                    self.workouts.forEach({ (workout) in
+                        if workout.id == docId {
+                            currentIndex = index
+                        }
+                        index += 1
+                    })
+                    if let index = currentIndex {
+                        self.workouts.remove(at: index)
+                        DispatchQueue.main.async {
+                            self.workoutsTableView.reloadData()
+                        }
+                    }
+                }
+            })
         }
     }
     

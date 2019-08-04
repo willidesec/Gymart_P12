@@ -80,7 +80,6 @@ class ProgramViewController: UIViewController {
                         }
                     }
                 }
-                
             })
         }
     }
