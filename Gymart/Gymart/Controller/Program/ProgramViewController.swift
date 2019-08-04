@@ -29,14 +29,8 @@ class ProgramViewController: UIViewController {
         configureFirestoreDataBase()
         configureTableView()
         fetchPrograms()
+        checkForUpdates()
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        programs.removeAll()
-//        programTableView.reloadData()
-//        fetchPrograms()
-//    }
     
     // MAARK: - Methods
     
@@ -51,6 +45,44 @@ class ProgramViewController: UIViewController {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+    }
+    
+    private func checkForUpdates() {
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        
+        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
+        
+        programsCollection.addSnapshotListener { (querySnapshot, error) in
+            guard let snapshot = querySnapshot else { return }
+            
+            snapshot.documentChanges.forEach({ (diff) in
+                if diff.type == .added {
+                    if let program = Program(dictionary: diff.document.data()) {
+                        self.programs.append(program)
+                        DispatchQueue.main.async {
+                            self.programTableView.reloadData()
+                        }
+                    }
+                } else if diff.type == .removed {
+                    let docId = diff.document.documentID
+                    var currentIndex: Int?
+                    var index = 0
+                    self.programs.forEach({ (program) in
+                        if program.id == docId {
+                            currentIndex = index
+                        }
+                        index += 1
+                    })
+                    if let index = currentIndex {
+                        self.programs.remove(at: index)
+                        DispatchQueue.main.async {
+                            self.programTableView.reloadData()
+                        }
+                    }
+                }
+                
+            })
+        }
     }
     
     private func fetchPrograms() {
