@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseFirestore
+import Firebase
 
 class WorkoutViewController: UIViewController {
     
@@ -16,6 +16,7 @@ class WorkoutViewController: UIViewController {
     var programId: String?
     var workouts = [Workout]()
     var db: Firestore!
+    var workoutListener: ListenerRegistration?
 
     // MARK: - IBOutlet
     
@@ -71,7 +72,7 @@ class WorkoutViewController: UIViewController {
         
         let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
         
-        workoutsCollection.addSnapshotListener { (querySnapshot, error) in
+        workoutsCollection.whereField("creationDate", isGreaterThan: Date()).addSnapshotListener { (querySnapshot, error) in
             guard let snapshot = querySnapshot else { return }
             
             snapshot.documentChanges.forEach({ (diff) in
@@ -82,24 +83,23 @@ class WorkoutViewController: UIViewController {
                             self.workoutsTableView.reloadData()
                         }
                     }
-                } else if diff.type == .removed {
-                    let docId = diff.document.documentID
-                    var currentIndex: Int?
-                    var index = 0
-                    self.workouts.forEach({ (workout) in
-                        if workout.id == docId {
-                            currentIndex = index
-                        }
-                        index += 1
-                    })
-                    if let index = currentIndex {
-                        self.workouts.remove(at: index)
-                        DispatchQueue.main.async {
-                            self.workoutsTableView.reloadData()
-                        }
-                    }
                 }
             })
+        }
+    }
+    
+    private func deleteWorkoutInFirestore(id: String) {
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        guard let programId = programId else { return }
+        
+        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
+        
+        workoutsCollection.document(id).delete { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+            }
         }
     }
     
@@ -128,9 +128,9 @@ extension WorkoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            deleteProgramInFirestore(id: programs[indexPath.row].id)
-//            programs.remove(at: indexPath.row)
-//            programTableView.deleteRows(at: [indexPath], with: .automatic)
+//            deleteWorkoutInFirestore(id: workouts[indexPath.row].id)
+//            workouts.remove(at: indexPath.row)
+//            workoutsTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     

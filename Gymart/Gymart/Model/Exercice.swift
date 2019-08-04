@@ -11,4 +11,20 @@ import Foundation
 struct Exercice {
     let name: String
     let sets: Int
+    
+    var dictionary: [String: Any] {
+        return [
+            "name": name,
+            "sets": sets
+        ]
+    }
+}
+
+extension Exercice: DocumentSerializableProtocol {
+    init?(dictionary: [String : Any]) {
+        guard let name = dictionary["name"] as? String,
+            let sets = dictionary["sets"] as? Int else { return nil }
+        
+        self.init(name: name, sets: sets)
+    }
 }

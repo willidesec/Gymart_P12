@@ -54,15 +54,10 @@ extension Workout: DocumentSerializableProtocol {
             dateOfWorkout = lastWorkoutDate.dateValue()
         }
         
-        guard let exercices = dictionary["exercices"] as? [[String: Any]] else { return nil }
-        
         self.init(id: id, name: name, creationDate: date, lastWorkoutDate: dateOfWorkout)
         
-        exercices.forEach({ (exo) in
-            guard let name = exo["name"] as? String else { return }
-            guard let sets = exo["sets"] as? Int else { return }
-            let exercice = Exercice(name: name, sets: sets)
-            self.exercices.append(exercice)
-        })
+        guard let exercicesData = dictionary["exercices"] as? [[String: Any]] else { return nil }
+        
+        exercices = exercicesData.compactMap({Exercice(dictionary: $0)})
     }
 }
