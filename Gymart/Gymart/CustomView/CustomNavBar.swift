@@ -11,5 +11,6 @@ import UIKit
 class CustomNavBar: UINavigationBar {
     override func awakeFromNib() {
         self.barTintColor = UIColor.blue
+        self.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

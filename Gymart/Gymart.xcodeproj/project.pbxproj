@@ -52,6 +52,8 @@
 		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
 		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
 		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
+		3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */; };
+		3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */; };
 		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceTableViewCell.swift; sourceTree = "<group>"; };
 		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
 		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
 		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,7 @@
 				303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */,
 				3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */,
 				3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */,
+				3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 		3FB7163422E335D000A44FA1 /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */,
 				3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */,
 			);
 			path = Workouts;
@@ -508,6 +514,7 @@
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */,
+				3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */,
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
 				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
@@ -516,6 +523,7 @@
 				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
+				3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,

@@ -106,7 +106,9 @@ class WorkoutViewController: UIViewController {
     // MARK: - IBAction
     
     @objc func addItemTapped() {
-        
+        let storyboard = UIStoryboard(name: "Training", bundle: nil)
+        guard let addWorkoutVC = storyboard.instantiateViewController(withIdentifier: "AddWorkout") as? UINavigationController else { return }
+        present(addWorkoutVC, animated: true, completion: nil)
     }
 
 }

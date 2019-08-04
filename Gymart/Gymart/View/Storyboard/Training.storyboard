@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4df-ch-HlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5999999999999" y="22.906403940886701"/>
+            <point key="canvasLocation" x="1910" y="23"/>
         </scene>
         <!--Add Program-->
         <scene sceneID="4Mh-NK-5t5">
@@ -369,7 +369,197 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoF-cr-QaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959.2" y="855.66502463054189"/>
+            <point key="canvasLocation" x="1018" y="856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l62-P0-nKF">
+            <objects>
+                <navigationController storyboardIdentifier="AddWorkout" id="rZ6-yx-HPe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kED-EC-7r1" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sgA-iS-tb5" kind="relationship" relationship="rootViewController" id="8v6-tD-JMb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Ed-An5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="856"/>
+        </scene>
+        <!--Add Workout-->
+        <scene sceneID="SnQ-tQ-01T">
+            <objects>
+                <viewController id="sgA-iS-tb5" customClass="AddWorkoutViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIv-OU-tN4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FD5-Er-BKu">
+                                <rect key="frame" x="22" y="118" width="331" height="72.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS0-CH-kHu">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="20"/>
+                                        <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qq8-Df-rYb">
+                                        <rect key="frame" x="0.0" y="43.333333333333343" width="331" height="29"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exemple: Pectoraux" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-LJ-8gL">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="20"/>
+                                                <color key="tintColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-x1-1AI">
+                                                <rect key="frame" x="0.0" y="28" width="331" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="8K4-dd-XPT"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-xT-iie">
+                                <rect key="frame" x="0.0" y="349.33333333333326" width="375" height="428.66666666666674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddExerciceTableViewCell" id="XKu-jI-BxG" customClass="AddExerciceTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XKu-jI-BxG" id="wjf-kp-dNq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-Oq-lB9">
+                                                    <rect key="frame" x="22" y="12" width="139.66666666666666" height="20"/>
+                                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nba-3y-evr">
+                                                    <rect key="frame" x="297.66666666666669" y="12" width="55.333333333333314" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPA-CJ-Vu5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-lr-XYI">
+                                                            <rect key="frame" x="18.333333333333314" y="0.0" width="37" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nba-3y-evr" secondAttribute="trailing" constant="22" id="3Rc-7Q-WYV"/>
+                                                <constraint firstItem="Oe6-Oq-lB9" firstAttribute="leading" secondItem="wjf-kp-dNq" secondAttribute="leading" constant="22" id="5g6-UJ-m1c"/>
+                                                <constraint firstItem="nba-3y-evr" firstAttribute="centerY" secondItem="wjf-kp-dNq" secondAttribute="centerY" id="Vrs-qW-kgy"/>
+                                                <constraint firstItem="Oe6-Oq-lB9" firstAttribute="centerY" secondItem="wjf-kp-dNq" secondAttribute="centerY" id="ap9-py-oYb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exerciceNameLabel" destination="Oe6-Oq-lB9" id="qrD-1e-EN5"/>
+                                            <outlet property="setsLabel" destination="Jmk-lr-XYI" id="LyA-4g-8J0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-mB-ozd">
+                                <rect key="frame" x="22" y="230.33333333333337" width="331" height="89"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sTF-HG-lCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercice's Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-oO-YLT">
+                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
+                                                <color key="tintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-qC-U0l">
+                                                <rect key="frame" x="252.66666666666671" y="0.0" width="10.333333333333343" height="30"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-DV-MMJ">
+                                                <rect key="frame" x="271" y="0.0" width="60" height="30"/>
+                                                <color key="tintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="iwR-b2-Kfq"/>
+                                                </constraints>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X82-8q-IAR" customClass="LoginButton" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.999999999999972" width="331" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fxQ-fk-bjp"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Exercice"/>
+                                        <connections>
+                                            <action selector="addExerciceButtonDidTapped" destination="sgA-iS-tb5" eventType="touchUpInside" id="jRx-41-vZ1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0dG-mB-ozd" firstAttribute="top" secondItem="FD5-Er-BKu" secondAttribute="bottom" constant="40" id="0xH-el-hbc"/>
+                            <constraint firstItem="Lat-xT-iie" firstAttribute="leading" secondItem="Yny-M0-hcR" secondAttribute="leading" id="AKh-L0-pUp"/>
+                            <constraint firstItem="Lat-xT-iie" firstAttribute="top" secondItem="0dG-mB-ozd" secondAttribute="bottom" constant="30" id="H6w-DI-JP4"/>
+                            <constraint firstItem="FD5-Er-BKu" firstAttribute="top" secondItem="Yny-M0-hcR" secondAttribute="top" constant="30" id="N0c-or-DcO"/>
+                            <constraint firstItem="Yny-M0-hcR" firstAttribute="trailing" secondItem="0dG-mB-ozd" secondAttribute="trailing" constant="22" id="OYQ-ly-ZCc"/>
+                            <constraint firstItem="Yny-M0-hcR" firstAttribute="trailing" secondItem="FD5-Er-BKu" secondAttribute="trailing" constant="22" id="UAg-1V-OcV"/>
+                            <constraint firstItem="FD5-Er-BKu" firstAttribute="leading" secondItem="Yny-M0-hcR" secondAttribute="leading" constant="22" id="bVQ-HR-Kh4"/>
+                            <constraint firstItem="Yny-M0-hcR" firstAttribute="bottom" secondItem="Lat-xT-iie" secondAttribute="bottom" id="gUs-3s-jVu"/>
+                            <constraint firstItem="0dG-mB-ozd" firstAttribute="leading" secondItem="Yny-M0-hcR" secondAttribute="leading" constant="22" id="kRy-bY-4W0"/>
+                            <constraint firstItem="Yny-M0-hcR" firstAttribute="trailing" secondItem="Lat-xT-iie" secondAttribute="trailing" id="msX-7J-kaY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yny-M0-hcR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Workout" id="LFi-0b-QGO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xR2-3Q-AmQ">
+                            <connections>
+                                <action selector="cancelButtonDidTapped:" destination="sgA-iS-tb5" id="SL2-RZ-XkZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kZv-VA-XWq">
+                            <connections>
+                                <action selector="saveButtonDidTapped:" destination="sgA-iS-tb5" id="BPZ-B4-Yag"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="exerciceNameTextField" destination="5aD-oO-YLT" id="2kk-zS-uSl"/>
+                        <outlet property="exerciceTableView" destination="Lat-xT-iie" id="ric-Z8-up6"/>
+                        <outlet property="numberOfSetsTextField" destination="Rht-DV-MMJ" id="OpA-g8-JSx"/>
+                        <outlet property="separatorView" destination="BC0-x1-1AI" id="uJ8-6B-sgV"/>
+                        <outlet property="workoutNameTextField" destination="Dif-LJ-8gL" id="wVE-uq-28G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOk-3p-QW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757.5999999999999" y="855.66502463054189"/>
         </scene>
         <!--Training-->
         <scene sceneID="8qz-m9-m9a">
@@ -418,7 +608,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLC-1p-dle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016.8" y="855.66502463054189"/>
+            <point key="canvasLocation" x="276" y="856"/>
         </scene>
     </scenes>
     <resources>

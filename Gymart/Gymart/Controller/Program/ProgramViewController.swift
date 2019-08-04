@@ -33,7 +33,7 @@ class ProgramViewController: UIViewController {
         checkForUpdates()
     }
     
-    // MAARK: - Methods
+    // MARK: - Methods
     
     fileprivate func configureTableView() {
         programTableView.delegate = self

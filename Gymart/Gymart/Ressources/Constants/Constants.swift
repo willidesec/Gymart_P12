@@ -40,4 +40,8 @@ struct Constants {
         static let signOutAction = "Sign Out"
         static let cancelAction = "Cancel"
     }
+    
+    struct FooterView {
+        static let noExercices = "No exercices yet\n Add some 🏋🏻‍♂️"
+    }
 }
