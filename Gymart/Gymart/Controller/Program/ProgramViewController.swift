@@ -29,8 +29,15 @@ class ProgramViewController: UIViewController {
 
         configureFirestoreDataBase()
         configureTableView()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         fetchPrograms()
-        checkForUpdates()
+//        checkForUpdates()
     }
     
     // MARK: - Methods
