@@ -17,7 +17,7 @@ class TrainingActionButton: UIButton {
     }
     
     private func setupUI() {
-        titleLabel?.font = UIFont.mainCondensedBoldFont(size: 16)
+        titleLabel?.font = UIFont.mainRegularFont(size: 16)
         setTitleColor(.white, for: .normal)
         backgroundColor = UIColor.green
         layer.roundedCorner(11)

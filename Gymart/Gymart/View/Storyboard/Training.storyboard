@@ -317,22 +317,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q0M-C9-fqt">
+                                <rect key="frame" x="16" y="146.66666666666669" width="343" height="570.33333333333326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6y-Jq-suP" customClass="TrainingActionButton" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="16" y="727" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="WDM-oX-MaL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="CANCEL_BUTTON">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonDidTapped" destination="N4Q-hZ-CCi" eventType="touchUpInside" id="rny-gY-a41"/>
+                                    <action selector="doneButtonDidTapped" destination="N4Q-hZ-CCi" eventType="touchUpInside" id="Hjh-1o-1RL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="b1I-hx-kgm" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="1ZS-N2-woE"/>
+                            <constraint firstItem="q0M-C9-fqt" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="8KQ-4W-Am1"/>
                             <constraint firstItem="b1I-hx-kgm" firstAttribute="centerX" secondItem="yug-S3-cRS" secondAttribute="centerX" id="Djg-GB-0Cz"/>
                             <constraint firstItem="srg-NQ-zCE" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="Dyt-3J-S3c"/>
                             <constraint firstItem="Qcb-0f-b9o" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="GeN-Vs-Mlm"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="bottom" secondItem="W6y-Jq-suP" secondAttribute="bottom" constant="16" id="KYs-9z-Ou5"/>
+                            <constraint firstItem="W6y-Jq-suP" firstAttribute="top" secondItem="q0M-C9-fqt" secondAttribute="bottom" constant="10" id="L3S-0O-zb6"/>
                             <constraint firstItem="Qcb-0f-b9o" firstAttribute="top" secondItem="srg-NQ-zCE" secondAttribute="bottom" constant="16" id="gX4-wj-Lw5"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="W6y-Jq-suP" secondAttribute="trailing" constant="16" id="hxv-iD-7nx"/>
+                            <constraint firstItem="q0M-C9-fqt" firstAttribute="top" secondItem="Qcb-0f-b9o" secondAttribute="bottom" constant="10" id="iiR-GC-w3g"/>
                             <constraint firstItem="hzS-w1-WAP" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="jXW-s4-45i"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="q0M-C9-fqt" secondAttribute="trailing" constant="16" id="jsL-g3-jLu"/>
                             <constraint firstItem="srg-NQ-zCE" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="sBW-Wz-EKm"/>
                             <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="Qcb-0f-b9o" secondAttribute="trailing" constant="30" id="xzy-Xr-MxA"/>
+                            <constraint firstItem="W6y-Jq-suP" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="yWe-hY-7XY"/>
                             <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="hzS-w1-WAP" secondAttribute="trailing" constant="16" id="ypn-Mz-F8B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FWR-uk-bRl"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="W6y-Jq-suP" id="5k8-cI-Sk7"/>
                         <outlet property="doneButton" destination="hzS-w1-WAP" id="XFC-gd-qOz"/>
                         <outlet property="timerLabel" destination="b1I-hx-kgm" id="AZG-8C-e0Q"/>
                     </connections>

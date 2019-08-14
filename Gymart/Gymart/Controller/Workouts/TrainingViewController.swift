@@ -14,7 +14,7 @@ class TrainingViewController: UIViewController {
 
     var isTimerRunning = false
     var timer = Timer()
-    var counter = 0
+    var counter: Int = 0
     var programId: String?
     var workoutId: String?
     
@@ -22,6 +22,7 @@ class TrainingViewController: UIViewController {
     
     @IBOutlet weak var doneButton: TrainingActionButton!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var cancelButton: TrainingActionButton!
     
     // MARK: - View Life Cycle
     
@@ -43,6 +44,9 @@ class TrainingViewController: UIViewController {
         
     }
     
+    @IBAction func cancelButtonDidTapped() {
+        
+    }
     
     // MARK: - Methods
     
@@ -52,6 +56,10 @@ class TrainingViewController: UIViewController {
     
     private func setupUI() {
         doneButton.setTitle("Done", for: .normal)
+        doneButton.titleLabel?.font = UIFont.mainCondensedBoldFont(size: 16)
+        
+        cancelButton.backgroundColor = UIColor.pastelRed
+        cancelButton.setTitle("Cancel workout", for: .normal)
     }
     
     private func launchTimer() {
