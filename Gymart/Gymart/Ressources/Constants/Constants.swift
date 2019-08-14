@@ -13,6 +13,7 @@ struct Constants {
     struct App {
         static let mainRegularFont = "DejaVuSans"
         static let mainObliqueFont = "DejaVuSans-Oblique"
+        static let mainCondensedBoldFont = "DejaVuSansCondensed-Bold"
     }
     
     struct Navigation {

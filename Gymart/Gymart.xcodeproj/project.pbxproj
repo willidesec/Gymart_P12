@@ -39,6 +39,7 @@
 		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
 		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
 		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
+		3F3029E02304584200EF8972 /* TrainingRegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
@@ -92,6 +93,7 @@
 		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
 		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularButton.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				3F2FADC022AC2F300004C720 /* LoginButton.swift */,
 				3FDC844523041E4600F65DEF /* TrainingActionButton.swift */,
+				3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */,
 				3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */,
 				3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */,
 			);
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3029E02304584200EF8972 /* TrainingRegularButton.swift in Sources */,
 				3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */,
 				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,

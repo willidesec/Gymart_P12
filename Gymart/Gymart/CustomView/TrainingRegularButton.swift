@@ -1,5 +1,5 @@
 //
-//  TrainingActionButton.swift
+//  TrainingRegularButton.swift
 //  Gymart
 //
 //  Created by William on 14/08/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrainingActionButton: UIButton {
+class TrainingRegularButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,9 +17,9 @@ class TrainingActionButton: UIButton {
     }
     
     private func setupUI() {
-        titleLabel?.font = UIFont.mainCondensedBoldFont(size: 16)
-        setTitleColor(.white, for: .normal)
-        backgroundColor = UIColor.green
-        layer.roundedCorner(11)
+//        titleLabel?.font = UIFont.mainCondensedBoldFont(size: 16)
+//        setTitleColor(.white, for: .normal)
+        backgroundColor = UIColor.grey
+        layer.roundedCorner(8)
     }
 }

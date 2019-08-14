@@ -17,6 +17,10 @@ extension UIColor {
         return UIColor(red: 189.0 / 255.0, green: 195.0 / 255.0, blue: 199.0 / 255.0, alpha: 1.0)
     }
     
+    static var grey: UIColor {
+        return UIColor(red: 236.0 / 255.0, green: 240.0 / 255.0, blue: 241.0 / 255.0, alpha: 1.0)
+    }
+    
     static var green: UIColor {
         return UIColor(red: 91.0 / 255.0, green: 231.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)
     }

@@ -57,13 +57,13 @@
                                                             <rect key="frame" x="71.666666666666657" y="8" width="263.33333333333337" height="47.666666666666664"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Program_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-fS-6zX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="19.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="19.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Program_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-iW-PxR">
-                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="175.66666666666666" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="158.66666666666666" height="20"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.74117647058823533" green="0.76470588235294112" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -277,22 +277,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzS-w1-WAP" customClass="TrainingActionButton" customModule="Gymart" customModuleProvider="target">
-                                <rect key="frame" x="250" y="64" width="109" height="30"/>
+                                <rect key="frame" x="259" y="60" width="100" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XrA-2g-Pmj"/>
+                                    <constraint firstAttribute="height" constant="35" id="XrA-2g-Pmj"/>
+                                    <constraint firstAttribute="width" constant="100" id="fM3-7X-6KO"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="DONE_BUTTON">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonDidTapped" destination="N4Q-hZ-CCi" eventType="touchUpInside" id="iMw-8O-ss4"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srg-NQ-zCE" customClass="TrainingRegularButton" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="50" height="35"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Y23-Ms-Cvi"/>
+                                    <constraint firstAttribute="height" constant="35" id="xSm-0K-zvi"/>
+                                </constraints>
+                                <state key="normal" image="stopwatch"/>
+                                <connections>
+                                    <action selector="stopwatchButtonDidTapped" destination="N4Q-hZ-CCi" eventType="touchUpInside" id="Loq-04-RIK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1I-hx-kgm">
+                                <rect key="frame" x="168.33333333333334" y="60" width="38.333333333333343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IuQ-Vd-B54"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                <color key="textColor" white="0.30186130494287572" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcb-0f-b9o">
+                                <rect key="frame" x="16" y="111" width="329" height="25.666666666666657"/>
+                                <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hzS-w1-WAP" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="20" id="jXW-s4-45i"/>
+                            <constraint firstItem="b1I-hx-kgm" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="1ZS-N2-woE"/>
+                            <constraint firstItem="b1I-hx-kgm" firstAttribute="centerX" secondItem="yug-S3-cRS" secondAttribute="centerX" id="Djg-GB-0Cz"/>
+                            <constraint firstItem="srg-NQ-zCE" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="Dyt-3J-S3c"/>
+                            <constraint firstItem="Qcb-0f-b9o" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="GeN-Vs-Mlm"/>
+                            <constraint firstItem="Qcb-0f-b9o" firstAttribute="top" secondItem="srg-NQ-zCE" secondAttribute="bottom" constant="16" id="gX4-wj-Lw5"/>
+                            <constraint firstItem="hzS-w1-WAP" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="jXW-s4-45i"/>
+                            <constraint firstItem="srg-NQ-zCE" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="sBW-Wz-EKm"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="Qcb-0f-b9o" secondAttribute="trailing" constant="30" id="xzy-Xr-MxA"/>
                             <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="hzS-w1-WAP" secondAttribute="trailing" constant="16" id="ypn-Mz-F8B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FWR-uk-bRl"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="hzS-w1-WAP" id="XFC-gd-qOz"/>
+                        <outlet property="timerLabel" destination="b1I-hx-kgm" id="AZG-8C-e0Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wym-Rd-MTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,14 +559,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercice's Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-oO-YLT">
-                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="246" height="30"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-qC-U0l">
-                                                <rect key="frame" x="252.66666666666671" y="0.0" width="10.333333333333343" height="30"/>
+                                                <rect key="frame" x="254" y="0.0" width="9" height="30"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -644,6 +687,7 @@
     </scenes>
     <resources>
         <image name="Clock" width="15" height="15"/>
+        <image name="stopwatch" width="16" height="20"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

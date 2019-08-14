@@ -18,4 +18,8 @@ extension UIFont {
     class func mainObliqueFont(size: CGFloat) -> UIFont {
         return UIFont(name: Constants.App.mainObliqueFont, size: size)!
     }
+    
+    class func mainCondensedBoldFont(size: CGFloat) -> UIFont {
+        return UIFont(name: Constants.App.mainCondensedBoldFont, size: size)!
+    }
 }
