@@ -10,6 +10,11 @@ import UIKit
 
 // MARK: - UIAlert
 extension UIViewController {
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
     internal func displayAlert(title: String? = nil, message: String) {
         var alertTitle = ""
         if let title = title {

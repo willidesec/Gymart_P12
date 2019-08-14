@@ -37,11 +37,6 @@ class ProfileViewController: UIViewController {
         }
         
         displayActionSheet(action: signOutAction)
-        
-        
-        
-        
-        
     }
     
     

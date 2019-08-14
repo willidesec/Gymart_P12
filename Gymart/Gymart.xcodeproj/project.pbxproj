@@ -52,6 +52,7 @@
 		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
 		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
 		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
+		3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC8441230413D900F65DEF /* TrainingViewController.swift */; };
 		3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */; };
 		3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */; };
 		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
@@ -105,6 +106,7 @@
 		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3FDC8441230413D900F65DEF /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceTableViewCell.swift; sourceTree = "<group>"; };
 		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */,
 				3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */,
+				3FDC8441230413D900F65DEF /* TrainingViewController.swift */,
 			);
 			path = Workouts;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */,
 				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
 				3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */,
