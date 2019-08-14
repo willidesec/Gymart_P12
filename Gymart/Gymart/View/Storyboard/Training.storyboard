@@ -57,7 +57,7 @@
                                                             <rect key="frame" x="71.666666666666657" y="8" width="263.33333333333337" height="47.666666666666664"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Program_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-fS-6zX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="19.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="19.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
         <!--Workouts-->
         <scene sceneID="aF3-Rk-u7S">
             <objects>
-                <viewController storyboardIdentifier="Workouts" id="RHO-7f-MMG" customClass="WorkoutViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkoutViewController" id="RHO-7f-MMG" customClass="WorkoutViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZF-8M-94g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +275,22 @@
                     <view key="view" contentMode="scaleToFill" id="yug-S3-cRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.95686274510000002" green="0.36078431370000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzS-w1-WAP" customClass="TrainingActionButton" customModule="Gymart" customModuleProvider="target">
+                                <rect key="frame" x="250" y="64" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XrA-2g-Pmj"/>
+                                </constraints>
+                                <state key="normal" title="DONE_BUTTON">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hzS-w1-WAP" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="20" id="jXW-s4-45i"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="hzS-w1-WAP" secondAttribute="trailing" constant="16" id="ypn-Mz-F8B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FWR-uk-bRl"/>
                     </view>
                 </viewController>
@@ -457,22 +472,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-Oq-lB9">
-                                                    <rect key="frame" x="22" y="12" width="139.66666666666666" height="20"/>
+                                                    <rect key="frame" x="22.000000000000007" y="12" width="126.66666666666669" height="20"/>
                                                     <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nba-3y-evr">
-                                                    <rect key="frame" x="297.66666666666669" y="12" width="55.333333333333314" height="20"/>
+                                                    <rect key="frame" x="302" y="12" width="51" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPA-CJ-Vu5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="9" height="20"/>
                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-lr-XYI">
-                                                            <rect key="frame" x="18.333333333333314" y="0.0" width="37" height="20"/>
+                                                            <rect key="frame" x="17" y="0.0" width="34" height="20"/>
                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -502,9 +517,9 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercice's Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-oO-YLT">
                                                 <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
-                                                <color key="tintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="20"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-qC-U0l">

@@ -15,6 +15,10 @@ struct Constants {
         static let mainObliqueFont = "DejaVuSans-Oblique"
     }
     
+    struct Navigation {
+        static let trainingTitle = "Training"
+    }
+    
     struct Placeholder {
         static let userName = "User Name"
         static let email = "Email"

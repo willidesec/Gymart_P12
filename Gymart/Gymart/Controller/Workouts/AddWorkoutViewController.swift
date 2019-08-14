@@ -77,6 +77,7 @@ class AddWorkoutViewController: UIViewController {
         let exercice = Exercice(name: exerciceName, sets: numberOfSets)
         exercices.append(exercice)
         exerciceTableView.reloadData()
+        removeInputInTextFields()
     }
     
     private func saveNewWorkout() {
@@ -109,6 +110,12 @@ class AddWorkoutViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    private func removeInputInTextFields() {
+        exerciceNameTextField.text = ""
+        numberOfSetsTextField.text = ""
+        exerciceNameTextField.becomeFirstResponder()
     }
 
 }

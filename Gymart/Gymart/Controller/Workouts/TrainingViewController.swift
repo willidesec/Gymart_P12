@@ -16,6 +16,15 @@ class TrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavigationBar()
+        setupUI()
+    }
+    
+    private func configureNavigationBar() {
+        navigationItem.title = Constants.Navigation.trainingTitle
+    }
+    
+    private func setupUI() {
         
     }
 

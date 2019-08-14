@@ -11,6 +11,7 @@ import UIKit
 class LoginButton: UIButton {
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         setupUI()
     }
     

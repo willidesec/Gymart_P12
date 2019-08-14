@@ -113,9 +113,9 @@ extension WorkoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            deleteWorkoutInFirestore(id: workouts[indexPath.row].id)
-//            workouts.remove(at: indexPath.row)
-//            workoutsTableView.deleteRows(at: [indexPath], with: .automatic)
+            deleteWorkoutInFirestore(id: workouts[indexPath.row].id)
+            workouts.remove(at: indexPath.row)
+            workoutsTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
