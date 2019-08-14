@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TrainingViewController: UIViewController {
     
@@ -17,12 +18,14 @@ class TrainingViewController: UIViewController {
     var counter: Int = 0
     var programId: String?
     var workoutId: String?
+    var db: Firestore!
     
     // MARK: - IBOutlet
     
     @IBOutlet weak var doneButton: TrainingActionButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var cancelButton: TrainingActionButton!
+    @IBOutlet weak var workoutNameLabel: UILabel!
     
     // MARK: - View Life Cycle
     
@@ -32,6 +35,7 @@ class TrainingViewController: UIViewController {
         configureNavigationBar()
         setupUI()
         launchTimer()
+        fetchWorkout()
     }
     
     // MARK: - IBAction
@@ -49,6 +53,31 @@ class TrainingViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
+    private func fetchWorkout() {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        guard let programId = programId else { return }
+        guard let workoutId = workoutId else { return }
+        
+        let workoutDocument = db.document("users/\(currentUser.uid)/programs/\(programId)/workouts/\(workoutId)")
+        
+        workoutDocument.getDocument { (document, error) in
+            if let workout = document.flatMap({
+                $0.data().flatMap({ (data) in
+                    return Workout(dictionary: data)
+                })
+            }) {
+                print("Workout: \(workout)")
+                
+                self.workoutNameLabel.text = workout.name
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
     
     private func configureNavigationBar() {
         navigationItem.title = Constants.Navigation.trainingTitle
