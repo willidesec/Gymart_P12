@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class AddWorkoutViewController: UIViewController {
 
     // MARK: - Properties
     
+    var db: Firestore!
     var exercices = [Exercice]()
+    var programId: String?
     
     // MARK: - IBOutlet
     @IBOutlet weak var workoutNameTextField: UITextField!
@@ -26,7 +29,7 @@ class AddWorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureSeparatorView()
         configureTableView()
     }
@@ -38,14 +41,15 @@ class AddWorkoutViewController: UIViewController {
     }
     
     @IBAction func saveButtonDidTapped(_ sender: UIBarButtonItem) {
+        saveNewWorkout()
     }
     
     @IBAction func addExerciceButtonDidTapped() {
         addExerciceToTableView()
     }
     
-    
     // MARK: - Methods
+    
     private func configureSeparatorView() {
         separatorView.layer.borderColor = UIColor.silver.cgColor
         separatorView.layer.borderWidth = 1
@@ -73,6 +77,38 @@ class AddWorkoutViewController: UIViewController {
         let exercice = Exercice(name: exerciceName, sets: numberOfSets)
         exercices.append(exercice)
         exerciceTableView.reloadData()
+    }
+    
+    private func saveNewWorkout() {
+        guard let workoutName = workoutNameTextField.text, !workoutName.isEmpty else {
+            displayAlert(message: "Enter a name for the Workout")
+            return
+        }
+        
+        if exercices.isEmpty {
+            displayAlert(message: "Add at least one exercice")
+        } else {
+            let identifier = UUID().uuidString
+            let newWorkout = Workout(id: identifier, name: workoutName, creationDate: Date(), exercices: exercices)
+            saveWorkoutInFirestore(id: identifier, data: newWorkout.dictionary)
+        }
+    }
+    
+    private func saveWorkoutInFirestore(id: String, data: [String: Any]) {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        guard let programId = programId else { return }
+        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
+        
+        workoutsCollection.document(id).setData(data) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with succes")
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 
 }

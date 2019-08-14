@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class WorkoutViewController: UIViewController {
     
@@ -16,7 +16,6 @@ class WorkoutViewController: UIViewController {
     var programId: String?
     var workouts = [Workout]()
     var db: Firestore!
-    var workoutListener: ListenerRegistration?
 
     // MARK: - IBOutlet
     
@@ -29,8 +28,12 @@ class WorkoutViewController: UIViewController {
         
         configureTableView()
         configureNavigationItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         fetchWorkouts()
-        checkForUpdates()
     }
     
     // MARK: - Methods
@@ -66,28 +69,6 @@ class WorkoutViewController: UIViewController {
         }
     }
     
-    private func checkForUpdates() {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        guard let programId = programId else { return }
-        
-        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
-        
-        workoutsCollection.whereField("creationDate", isGreaterThan: Date()).addSnapshotListener { (querySnapshot, error) in
-            guard let snapshot = querySnapshot else { return }
-            
-            snapshot.documentChanges.forEach({ (diff) in
-                if diff.type == .added {
-                    if let workout = Workout(dictionary: diff.document.data()) {
-                        self.workouts.append(workout)
-                        DispatchQueue.main.async {
-                            self.workoutsTableView.reloadData()
-                        }
-                    }
-                }
-            })
-        }
-    }
-    
     private func deleteWorkoutInFirestore(id: String) {
         guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
@@ -107,8 +88,10 @@ class WorkoutViewController: UIViewController {
     
     @objc func addItemTapped() {
         let storyboard = UIStoryboard(name: "Training", bundle: nil)
-        guard let addWorkoutVC = storyboard.instantiateViewController(withIdentifier: "AddWorkout") as? UINavigationController else { return }
-        present(addWorkoutVC, animated: true, completion: nil)
+        guard let addWorkoutNavigationController = storyboard.instantiateViewController(withIdentifier: "AddWorkout") as? UINavigationController else { return }
+        guard let addWorkoutVC = addWorkoutNavigationController.topViewController as? AddWorkoutViewController else { return }
+        addWorkoutVC.programId = programId
+        present(addWorkoutNavigationController, animated: true, completion: nil)
     }
 
 }
@@ -137,7 +120,7 @@ extension WorkoutViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Training", bundle:nil)
+        let storyBoard = UIStoryboard(name: "Training", bundle:nil)
 //        guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: "Workouts") as? WorkoutsViewController else { return }
 //        workoutsVC.programId = programs[indexPath.row].id
 //        navigationController?.pushViewController(workoutsVC, animated: true)

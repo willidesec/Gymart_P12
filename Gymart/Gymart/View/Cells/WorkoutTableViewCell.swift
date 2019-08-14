@@ -63,13 +63,15 @@ class WorkoutTableViewCell: UITableViewCell {
 
 extension WorkoutTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return workout?.exercices.count ?? 0
+        return workout?.exercicesData.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExercicesTableViewCell.identifier) as? ExercicesTableViewCell else { return UITableViewCell() }
         
-        cell.exercice = workout?.exercices[indexPath.row]
+        guard let exercices = workout?.exercicesData.compactMap({Exercice(dictionary: $0)}) else { return UITableViewCell() }
+        
+        cell.exercice = exercices[indexPath.row]
         
         return cell
     }

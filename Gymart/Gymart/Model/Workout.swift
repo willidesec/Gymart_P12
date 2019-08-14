@@ -14,7 +14,7 @@ struct Workout {
     let name: String
     let creationDate: Date
     var lastWorkoutDate: Date?
-    var exercices = [Exercice]()
+    var exercicesData = [[String: Any]]()
     
     var dictionary: [String: Any] {
         if let lastWorkoutDate = lastWorkoutDate {
@@ -22,22 +22,28 @@ struct Workout {
                 "id": id,
                 "name": name,
                 "lastWorkoutDate": lastWorkoutDate,
-                "creationDate": creationDate
+                "creationDate": creationDate,
+                "exercices": exercicesData
             ]
         } else {
             return [
                 "id": id,
                 "name": name,
-                "creationDate": creationDate
+                "creationDate": creationDate,
+                "exercices": exercicesData
             ]
         }
     }
     
-    init(id: String, name: String, creationDate: Date, lastWorkoutDate: Date?) {
+    init(id: String, name: String, creationDate: Date, exercices: [Exercice], lastWorkoutDate: Date? = nil) {
         self.id = id
         self.name = name
         self.creationDate = creationDate
         self.lastWorkoutDate = lastWorkoutDate
+        
+        exercices.forEach { (exercice) in
+            exercicesData.append(exercice.dictionary)
+        }
     }
 }
 
@@ -54,10 +60,10 @@ extension Workout: DocumentSerializableProtocol {
             dateOfWorkout = lastWorkoutDate.dateValue()
         }
         
-        self.init(id: id, name: name, creationDate: date, lastWorkoutDate: dateOfWorkout)
-        
         guard let exercicesData = dictionary["exercices"] as? [[String: Any]] else { return nil }
         
-        exercices = exercicesData.compactMap({Exercice(dictionary: $0)})
+        let exercices = exercicesData.compactMap({Exercice(dictionary: $0)})
+        
+        self.init(id: id, name: name, creationDate: date, exercices: exercices, lastWorkoutDate: dateOfWorkout)
     }
 }

@@ -15,7 +15,6 @@ class ProgramViewController: UIViewController {
     
     var programs = [Program]()
     var db: Firestore!
-    var programListener: ListenerRegistration?
 
     // MARK: - IBOutlet
     
@@ -29,15 +28,12 @@ class ProgramViewController: UIViewController {
 
         configureFirestoreDataBase()
         configureTableView()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         fetchPrograms()
-//        checkForUpdates()
     }
     
     // MARK: - Methods
@@ -53,27 +49,6 @@ class ProgramViewController: UIViewController {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
-    }
-    
-    private func checkForUpdates() {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        
-        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
-        
-        programsCollection.whereField("creationDate", isGreaterThan: Date()).addSnapshotListener { (querySnapshot, error) in
-            guard let snapshot = querySnapshot else { return }
-            
-            snapshot.documentChanges.forEach({ (diff) in
-                if diff.type == .added {
-                    if let program = Program(dictionary: diff.document.data()) {
-                        self.programs.append(program)
-                        DispatchQueue.main.async {
-                            self.programTableView.reloadData()
-                        }
-                    }
-                }
-            })
-        }
     }
     
     private func fetchPrograms() {
@@ -133,7 +108,7 @@ extension ProgramViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Training", bundle:nil)
+        let storyBoard = UIStoryboard(name: "Training", bundle:nil)
         guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: "Workouts") as? WorkoutViewController else { return }
         workoutsVC.programId = programs[indexPath.row].id
         navigationController?.pushViewController(workoutsVC, animated: true)

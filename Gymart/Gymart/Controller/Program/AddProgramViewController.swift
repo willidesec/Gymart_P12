@@ -33,7 +33,6 @@ class AddProgramViewController: UIViewController {
     
     @IBAction func saveItemDidTapped(_ sender: UIBarButtonItem) {
         saveNewProgram()
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelItemDidTapped(_ sender: UIBarButtonItem) {
@@ -69,6 +68,7 @@ class AddProgramViewController: UIViewController {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with success")
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
