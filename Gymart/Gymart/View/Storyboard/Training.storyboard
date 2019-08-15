@@ -527,6 +527,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="emptyPreviousView" destination="2OZ-ZZ-piG" id="f94-yd-4zw"/>
+                                            <outlet property="setLabel" destination="2px-t5-ai8" id="BR6-2V-XTg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

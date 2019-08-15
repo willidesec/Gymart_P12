@@ -13,6 +13,7 @@ class TrainingTableViewCell: UITableViewCell {
     // MARK: - IBOutlet
     
     @IBOutlet weak var emptyPreviousView: UIView!
+    @IBOutlet weak var setLabel: UILabel!
     
     
     // MARK: - View Life Cycle

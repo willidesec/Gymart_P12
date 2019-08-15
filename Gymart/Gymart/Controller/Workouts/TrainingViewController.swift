@@ -163,7 +163,7 @@ extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else { return UITableViewCell() }
         
-        
+        cell.setLabel.text = String(indexPath.row + 1)
         
         return cell
     }
