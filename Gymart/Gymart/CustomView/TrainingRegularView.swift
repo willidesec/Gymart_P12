@@ -1,14 +1,14 @@
 //
-//  TrainingRegularButton.swift
+//  TrainingRegularView.swift
 //  Gymart
 //
-//  Created by William on 14/08/2019.
+//  Created by William on 15/08/2019.
 //  Copyright © 2019 William Désécot. All rights reserved.
 //
 
 import UIKit
 
-class TrainingRegularButton: UIButton {
+class TrainingRegularView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +17,6 @@ class TrainingRegularButton: UIButton {
     }
     
     private func setupUI() {
-//        titleLabel?.font = UIFont.mainCondensedBoldFont(size: 16)
-//        setTitleColor(.white, for: .normal)
         backgroundColor = UIColor.grey
         layer.roundedCorner(8)
     }

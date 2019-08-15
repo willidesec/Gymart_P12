@@ -15,6 +15,7 @@
 		3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */; };
 		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
 		3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */; };
+		3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6822305770D00DB769F /* TrainingRegularView.swift */; };
 		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
 		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
 		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
@@ -40,7 +41,6 @@
 		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
 		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
 		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
-		3F3029E02304584200EF8972 /* TrainingRegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
@@ -70,6 +70,7 @@
 		3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
 		3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3F25A6822305770D00DB769F /* TrainingRegularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularView.swift; sourceTree = "<group>"; };
 		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
 		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
 		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
-		3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularButton.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 			children = (
 				3F2FADC022AC2F300004C720 /* LoginButton.swift */,
 				3FDC844523041E4600F65DEF /* TrainingActionButton.swift */,
-				3F3029DF2304584200EF8972 /* TrainingRegularButton.swift */,
+				3F25A6822305770D00DB769F /* TrainingRegularView.swift */,
 				3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */,
 				3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */,
 			);
@@ -518,13 +518,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3029E02304584200EF8972 /* TrainingRegularButton.swift in Sources */,
 				3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */,
 				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
 				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
 				3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */,
 				3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */,
 				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
+				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */,
