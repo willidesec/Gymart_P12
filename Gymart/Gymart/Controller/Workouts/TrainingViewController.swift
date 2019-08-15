@@ -16,6 +16,7 @@ class TrainingViewController: UIViewController {
     var exercices = [Exercice]()
     
     var sectionHeaderHeight: CGFloat = 0.0
+    var rowHeight: CGFloat = 0.0
     
     var isTimerRunning = false
     var timer = Timer()
@@ -98,6 +99,8 @@ class TrainingViewController: UIViewController {
     
     private func configureTableView() {
         sectionHeaderHeight = trainingTableView.dequeueReusableCell(withIdentifier: TrainingHeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
+        
+        rowHeight = trainingTableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier)?.contentView.bounds.height ?? 0
     }
     
     private func setupUI() {
@@ -158,7 +161,11 @@ extension TrainingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else { return UITableViewCell() }
+        
+        
+        
+        return cell
     }
     
 }
@@ -173,5 +180,9 @@ extension TrainingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return sectionHeaderHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
     }
 }

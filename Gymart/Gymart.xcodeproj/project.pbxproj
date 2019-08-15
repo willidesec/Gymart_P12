@@ -16,6 +16,7 @@
 		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
 		3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */; };
 		3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6822305770D00DB769F /* TrainingRegularView.swift */; };
+		3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */; };
 		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
 		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
 		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
@@ -71,6 +72,7 @@
 		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
 		3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3F25A6822305770D00DB769F /* TrainingRegularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularView.swift; sourceTree = "<group>"; };
+		3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
 		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */,
 				3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */,
 				3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */,
+				3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */,
 				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
 				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
+				3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
 				3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */,
 				3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */,
