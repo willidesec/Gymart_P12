@@ -154,7 +154,7 @@ extension TrainingViewController: UITableViewDataSource {
 
     // Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return exercices[section].sets
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
