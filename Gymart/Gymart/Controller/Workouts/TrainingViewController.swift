@@ -13,11 +13,17 @@ class TrainingViewController: UIViewController {
     
     // MARK: - Properties
 
+    var exercices = [Exercice]()
+    
+    var sectionHeaderHeight: CGFloat = 0.0
+    
     var isTimerRunning = false
     var timer = Timer()
     var counter: Int = 0
+    
     var programId: String?
     var workoutId: String?
+    
     var db: Firestore!
     
     // MARK: - IBOutlet
@@ -26,6 +32,7 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var cancelButton: TrainingActionButton!
     @IBOutlet weak var workoutNameLabel: UILabel!
+    @IBOutlet weak var trainingTableView: UITableView!
     
     // MARK: - View Life Cycle
     
@@ -33,6 +40,7 @@ class TrainingViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
+        configureTableView()
         setupUI()
         launchTimer()
         fetchWorkout()
@@ -69,9 +77,14 @@ class TrainingViewController: UIViewController {
                     return Workout(dictionary: data)
                 })
             }) {
-                print("Workout: \(workout)")
-                
                 self.workoutNameLabel.text = workout.name
+                
+                let exercicesData = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
+                self.exercices = exercicesData
+                
+                DispatchQueue.main.async {
+                    self.trainingTableView.reloadData()
+                }
                 
             } else {
                 print("Document does not exist")
@@ -81,6 +94,10 @@ class TrainingViewController: UIViewController {
     
     private func configureNavigationBar() {
         navigationItem.title = Constants.Navigation.trainingTitle
+    }
+    
+    private func configureTableView() {
+        sectionHeaderHeight = trainingTableView.dequeueReusableCell(withIdentifier: TrainingHeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
     }
     
     private func setupUI() {
@@ -124,4 +141,37 @@ class TrainingViewController: UIViewController {
         }
     }
 
+}
+
+// MARK: - Extensions
+
+extension TrainingViewController: UITableViewDataSource {
+    
+    // Sections
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return exercices.count
+    }
+
+    // Rows
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+}
+
+extension TrainingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHeaderTableViewCell.identifier) as? TrainingHeaderTableViewCell else { return UIView() }
+        cell.exercice = exercices[section]
+        
+        return cell.contentView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeaderHeight
+    }
 }

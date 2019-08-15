@@ -63,7 +63,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Program_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-iW-PxR">
-                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="158.66666666666666" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="175.66666666666666" height="20"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.74117647058823533" green="0.76470588235294112" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -312,7 +312,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcb-0f-b9o">
-                                <rect key="frame" x="16" y="111" width="329" height="25.666666666666657"/>
+                                <rect key="frame" x="16" y="111" width="343" height="25.666666666666657"/>
                                 <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -320,6 +320,85 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q0M-C9-fqt">
                                 <rect key="frame" x="16" y="146.66666666666669" width="343" height="575.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrainingHeaderTableViewCell" rowHeight="60" id="o8d-ZQ-s6P" customClass="TrainingHeaderTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8d-ZQ-s6P" id="eUf-5U-owi">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCICE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Ug-QCi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="17"/>
+                                                    <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="YRY-iL-xAP">
+                                                    <rect key="frame" x="0.0" y="39.666666666666664" width="343" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-vr-vFg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="wPB-tf-N6c"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybn-gg-39j">
+                                                            <rect key="frame" x="68" y="0.0" width="86" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-oL-ioV">
+                                                            <rect key="frame" x="177" y="0.0" width="45" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="xw5-lt-Nqj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-cV-ALw">
+                                                            <rect key="frame" x="245" y="0.0" width="45" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="7I8-8f-qYu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpj-MJ-Sdo">
+                                                            <rect key="frame" x="313" y="0.0" width="30" height="20"/>
+                                                            <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="TUh-uy-NRS"/>
+                                                                <constraint firstAttribute="width" constant="30" id="ndP-uz-t5H"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YRY-iL-xAP" secondAttribute="bottom" id="4og-Bc-Z0t"/>
+                                                <constraint firstItem="zaQ-Ug-QCi" firstAttribute="top" secondItem="eUf-5U-owi" secondAttribute="top" id="5bS-DR-59R"/>
+                                                <constraint firstAttribute="trailing" secondItem="YRY-iL-xAP" secondAttribute="trailing" id="Vdn-Tg-lfh"/>
+                                                <constraint firstAttribute="trailing" secondItem="zaQ-Ug-QCi" secondAttribute="trailing" id="XWw-5h-uyO"/>
+                                                <constraint firstItem="zaQ-Ug-QCi" firstAttribute="leading" secondItem="eUf-5U-owi" secondAttribute="leading" id="a8e-gr-fHd"/>
+                                                <constraint firstItem="YRY-iL-xAP" firstAttribute="leading" secondItem="eUf-5U-owi" secondAttribute="leading" id="cnq-gq-AOX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exerciceNameLabel" destination="zaQ-Ug-QCi" id="8jU-xw-Ykx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="N4Q-hZ-CCi" id="EJk-NF-VtL"/>
+                                    <outlet property="delegate" destination="N4Q-hZ-CCi" id="tSb-Lv-1Sm"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6y-Jq-suP" customClass="TrainingActionButton" customModule="Gymart" customModuleProvider="target">
                                 <rect key="frame" x="16" y="732" width="343" height="30"/>
@@ -351,7 +430,7 @@
                             <constraint firstItem="hzS-w1-WAP" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="jXW-s4-45i"/>
                             <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="q0M-C9-fqt" secondAttribute="trailing" constant="16" id="jsL-g3-jLu"/>
                             <constraint firstItem="srg-NQ-zCE" firstAttribute="top" secondItem="FWR-uk-bRl" secondAttribute="top" constant="16" id="sBW-Wz-EKm"/>
-                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="Qcb-0f-b9o" secondAttribute="trailing" constant="30" id="xzy-Xr-MxA"/>
+                            <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="Qcb-0f-b9o" secondAttribute="trailing" constant="16" id="xzy-Xr-MxA"/>
                             <constraint firstItem="W6y-Jq-suP" firstAttribute="leading" secondItem="FWR-uk-bRl" secondAttribute="leading" constant="16" id="yWe-hY-7XY"/>
                             <constraint firstItem="FWR-uk-bRl" firstAttribute="trailing" secondItem="hzS-w1-WAP" secondAttribute="trailing" constant="16" id="ypn-Mz-F8B"/>
                         </constraints>
@@ -361,12 +440,13 @@
                         <outlet property="cancelButton" destination="W6y-Jq-suP" id="5k8-cI-Sk7"/>
                         <outlet property="doneButton" destination="hzS-w1-WAP" id="XFC-gd-qOz"/>
                         <outlet property="timerLabel" destination="b1I-hx-kgm" id="AZG-8C-e0Q"/>
+                        <outlet property="trainingTableView" destination="q0M-C9-fqt" id="4JJ-s0-dV9"/>
                         <outlet property="workoutNameLabel" destination="Qcb-0f-b9o" id="jUd-ee-hGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wym-Rd-MTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="23"/>
+            <point key="canvasLocation" x="2757.5999999999999" y="22.906403940886701"/>
         </scene>
         <!--Add Program-->
         <scene sceneID="4Mh-NK-5t5">
