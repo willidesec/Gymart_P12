@@ -330,73 +330,75 @@
                                 <rect key="frame" x="0.0" y="146.66666666666669" width="375" height="575.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrainingHeaderTableViewCell" rowHeight="60" id="o8d-ZQ-s6P" customClass="TrainingHeaderTableViewCell" customModule="Gymart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrainingHeaderTableViewCell" rowHeight="70" id="o8d-ZQ-s6P" customClass="TrainingHeaderTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8d-ZQ-s6P" id="eUf-5U-owi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCICE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Ug-QCi">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="20"/>
-                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="17"/>
-                                                    <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="YRY-iL-xAP">
-                                                    <rect key="frame" x="16" y="40" width="343" height="20"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-TZ-pK3">
+                                                    <rect key="frame" x="16" y="20" width="343" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-vr-vFg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="45" id="wPB-tf-N6c"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCICE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Ug-QCi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybn-gg-39j">
-                                                            <rect key="frame" x="68" y="0.0" width="86" height="20"/>
-                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-oL-ioV">
-                                                            <rect key="frame" x="177" y="0.0" width="45" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="45" id="xw5-lt-Nqj"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-cV-ALw">
-                                                            <rect key="frame" x="245" y="0.0" width="45" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="45" id="7I8-8f-qYu"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="TSf-Ba-H7s">
-                                                            <rect key="frame" x="313" y="0.0" width="30" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="hQv-WZ-5Wn"/>
-                                                                <constraint firstAttribute="width" constant="30" id="zbg-Q6-IbL"/>
-                                                            </constraints>
-                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="YRY-iL-xAP">
+                                                            <rect key="frame" x="0.0" y="30" width="343" height="20"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-vr-vFg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="45" id="wPB-tf-N6c"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybn-gg-39j">
+                                                                    <rect key="frame" x="68" y="0.0" width="86" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hz-oL-ioV">
+                                                                    <rect key="frame" x="177" y="0.0" width="45" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="45" id="xw5-lt-Nqj"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-cV-ALw">
+                                                                    <rect key="frame" x="245" y="0.0" width="45" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="45" id="7I8-8f-qYu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Bold" family="DejaVu Sans" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="TSf-Ba-H7s">
+                                                                    <rect key="frame" x="313" y="0.0" width="30" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="hQv-WZ-5Wn"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="zbg-Q6-IbL"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="zaQ-Ug-QCi" firstAttribute="leading" secondItem="eUf-5U-owi" secondAttribute="leading" constant="16" id="4Ya-Oh-JNY"/>
-                                                <constraint firstAttribute="bottom" secondItem="YRY-iL-xAP" secondAttribute="bottom" id="4og-Bc-Z0t"/>
-                                                <constraint firstItem="zaQ-Ug-QCi" firstAttribute="top" secondItem="eUf-5U-owi" secondAttribute="top" id="5bS-DR-59R"/>
-                                                <constraint firstItem="YRY-iL-xAP" firstAttribute="leading" secondItem="eUf-5U-owi" secondAttribute="leading" constant="16" id="87E-UL-c8L"/>
-                                                <constraint firstAttribute="trailing" secondItem="zaQ-Ug-QCi" secondAttribute="trailing" constant="16" id="aRM-DM-Gdz"/>
-                                                <constraint firstAttribute="trailing" secondItem="YRY-iL-xAP" secondAttribute="trailing" constant="16" id="amN-4c-9k1"/>
+                                                <constraint firstAttribute="trailing" secondItem="aY8-TZ-pK3" secondAttribute="trailing" constant="16" id="AS4-M6-54L"/>
+                                                <constraint firstItem="aY8-TZ-pK3" firstAttribute="leading" secondItem="eUf-5U-owi" secondAttribute="leading" constant="16" id="MWc-L6-O1u"/>
+                                                <constraint firstAttribute="bottom" secondItem="aY8-TZ-pK3" secondAttribute="bottom" id="ddH-2P-va3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -404,7 +406,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainingTableViewCell" id="8bA-Ia-Sqr" customClass="TrainingTableViewCell" customModule="Gymart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="98" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bA-Ia-Sqr" id="bce-G8-C86">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -503,16 +505,58 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-Lg-Wia">
                                                             <rect key="frame" x="245" y="0.0" width="45" height="44"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-2p-cPd" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="12" width="45" height="20"/>
+                                                                    <subviews>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5b-rS-mjO">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
+                                                                            <textInputTraits key="textInputTraits"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="E5b-rS-mjO" secondAttribute="bottom" id="4Dy-e3-yqs"/>
+                                                                        <constraint firstAttribute="width" constant="45" id="9M8-dY-ieh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="E5b-rS-mjO" secondAttribute="trailing" id="PSe-yG-DTv"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="d0W-3w-PtF"/>
+                                                                        <constraint firstItem="E5b-rS-mjO" firstAttribute="leading" secondItem="6Xd-2p-cPd" secondAttribute="leading" id="gp4-Hs-JgW"/>
+                                                                        <constraint firstItem="E5b-rS-mjO" firstAttribute="top" secondItem="6Xd-2p-cPd" secondAttribute="top" id="pMO-0c-sfE"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
+                                                                <constraint firstItem="6Xd-2p-cPd" firstAttribute="centerX" secondItem="BPt-Lg-Wia" secondAttribute="centerX" id="0cc-iJ-R6k"/>
+                                                                <constraint firstItem="6Xd-2p-cPd" firstAttribute="centerY" secondItem="BPt-Lg-Wia" secondAttribute="centerY" id="7PL-Jx-Mbk"/>
                                                                 <constraint firstAttribute="width" constant="45" id="d9I-6f-aZb"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-e8-iro">
                                                             <rect key="frame" x="313" y="0.0" width="30" height="44"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-3q-xHP" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="12" width="30" height="20"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-Li-VRb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="IxA-Hy-HHy"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="u8Q-gm-7Wm"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="Nw0-0T-ohH"/>
+                                                                <constraint firstItem="Yoa-3q-xHP" firstAttribute="centerX" secondItem="pzL-e8-iro" secondAttribute="centerX" id="rBq-xs-D76"/>
+                                                                <constraint firstItem="Yoa-3q-xHP" firstAttribute="centerY" secondItem="pzL-e8-iro" secondAttribute="centerY" id="tMh-fM-Ez3"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -526,8 +570,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkedImageView" destination="7h8-Li-VRb" id="oUj-Ex-bj1"/>
                                             <outlet property="emptyPreviousView" destination="2OZ-ZZ-piG" id="f94-yd-4zw"/>
+                                            <outlet property="previousSetLabel" destination="DAP-UW-99a" id="SoN-CF-MLj"/>
+                                            <outlet property="repsTextField" destination="E5b-rS-mjO" id="RUF-ik-Bkc"/>
                                             <outlet property="setLabel" destination="2px-t5-ai8" id="BR6-2V-XTg"/>
+                                            <outlet property="weightTextField" destination="ZJl-SZ-JNL" id="rKQ-Qc-3EL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

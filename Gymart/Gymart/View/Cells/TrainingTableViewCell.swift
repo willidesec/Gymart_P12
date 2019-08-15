@@ -12,9 +12,12 @@ class TrainingTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var emptyPreviousView: UIView!
     @IBOutlet weak var setLabel: UILabel!
-    
+    @IBOutlet weak var emptyPreviousView: UIView!
+    @IBOutlet weak var previousSetLabel: UILabel!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var repsTextField: UITextField!
+    @IBOutlet weak var checkedImageView: UIImageView!
     
     // MARK: - View Life Cycle
     
@@ -28,5 +31,7 @@ class TrainingTableViewCell: UITableViewCell {
     
     private func setupUI() {
         emptyPreviousView.layer.roundedCorner()
+        
+        checkedImageView.setImageColor(color: UIColor.silver)
     }
 }
