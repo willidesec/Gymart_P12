@@ -50,7 +50,8 @@ class TrainingViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func doneButtonDidTapped() {
-        
+        updateWorkoutDate()
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func stopwatchButtonDidTapped() {
@@ -89,6 +90,26 @@ class TrainingViewController: UIViewController {
                 
             } else {
                 print("Document does not exist")
+            }
+        }
+    }
+    
+    private func updateWorkoutDate() {
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        guard let programId = programId else { return }
+        guard let workoutId = workoutId else { return }
+        
+        let workoutDocument = db.document("users/\(currentUser.uid)/programs/\(programId)/workouts/\(workoutId)")
+        
+        workoutDocument.updateData([
+            "lastWorkoutDate": Date()
+        ]) { (error) in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated")
             }
         }
     }
