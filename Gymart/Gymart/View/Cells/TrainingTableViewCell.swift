@@ -18,6 +18,14 @@ class TrainingTableViewCell: UITableViewCell {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var checkedImageView: UIImageView!
+    @IBOutlet weak var checkedContainerView: TrainingRegularView!
+    @IBOutlet weak var repsContainerView: TrainingRegularView!
+    @IBOutlet weak var weightContainerView: TrainingRegularView!
+    @IBOutlet weak var setContainerView: TrainingRegularView!
+    
+    // MARK: - Properties
+    
+    var isExerciceSetValide = false
     
     // MARK: - View Life Cycle
     
@@ -25,6 +33,17 @@ class TrainingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         setupUI()
+        addTapGestureRecognizer()
+    }
+    
+    // MARK: - Action
+    
+    @objc func checkedImageDidTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        if let weight = weightTextField.text, !weight.isEmpty, let reps = repsTextField.text, !reps.isEmpty {
+            isExerciceSetValide ? changeUIForInvalideSet() : changeUIForValideSet()
+        } else {
+            changeUIForInvalideSet()
+        }
     }
     
     // MARK: - Methods
@@ -34,4 +53,31 @@ class TrainingTableViewCell: UITableViewCell {
         
         checkedImageView.setImageColor(color: UIColor.silver)
     }
+    
+    private func addTapGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(checkedImageDidTapped(tapGestureRecognizer:)))
+        checkedImageView.isUserInteractionEnabled = true
+        checkedImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    private func changeUIForValideSet() {
+        isExerciceSetValide = true
+        checkedContainerView.backgroundColor = UIColor.green
+        checkedImageView.setImageColor(color: UIColor.white)
+        repsContainerView.backgroundColor = .clear
+        weightContainerView.backgroundColor = .clear
+        setContainerView.backgroundColor = .clear
+        contentView.backgroundColor = UIColor.lightGreen
+    }
+    
+    private func changeUIForInvalideSet() {
+        isExerciceSetValide = false
+        checkedContainerView.backgroundColor = UIColor.grey
+        checkedImageView.setImageColor(color: UIColor.silver)
+        repsContainerView.backgroundColor = .grey
+        weightContainerView.backgroundColor = .grey
+        setContainerView.backgroundColor = .grey
+        contentView.backgroundColor = UIColor.clear
+    }
+    
 }

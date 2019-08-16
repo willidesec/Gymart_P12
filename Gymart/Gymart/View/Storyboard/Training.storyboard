@@ -437,7 +437,6 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="NeW-NS-q6p" firstAttribute="centerX" secondItem="2d4-WP-j0S" secondAttribute="centerX" id="7Kk-Bv-PhE"/>
                                                                 <constraint firstItem="NeW-NS-q6p" firstAttribute="centerY" secondItem="2d4-WP-j0S" secondAttribute="centerY" id="DhQ-mD-qfv"/>
@@ -462,7 +461,6 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="DAP-UW-99a" secondAttribute="trailing" id="D5b-L8-IGQ"/>
                                                                 <constraint firstItem="2OZ-ZZ-piG" firstAttribute="centerX" secondItem="BME-Yg-oEq" secondAttribute="centerX" id="Jfe-VE-dzm"/>
@@ -480,9 +478,10 @@
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-SZ-JNL">
                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                             <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
-                                                                            <textInputTraits key="textInputTraits"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -496,7 +495,6 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="qXM-NC-05q" firstAttribute="centerX" secondItem="djS-SW-n4i" secondAttribute="centerX" id="9KB-t6-Gbm"/>
                                                                 <constraint firstItem="qXM-NC-05q" firstAttribute="centerY" secondItem="djS-SW-n4i" secondAttribute="centerY" id="NfO-SR-h5S"/>
@@ -511,9 +509,10 @@
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5b-rS-mjO">
                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                             <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
-                                                                            <textInputTraits key="textInputTraits"/>
+                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -527,7 +526,6 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="6Xd-2p-cPd" firstAttribute="centerX" secondItem="BPt-Lg-Wia" secondAttribute="centerX" id="0cc-iJ-R6k"/>
                                                                 <constraint firstItem="6Xd-2p-cPd" firstAttribute="centerY" secondItem="BPt-Lg-Wia" secondAttribute="centerY" id="7PL-Jx-Mbk"/>
@@ -552,7 +550,6 @@
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="Nw0-0T-ohH"/>
                                                                 <constraint firstItem="Yoa-3q-xHP" firstAttribute="centerX" secondItem="pzL-e8-iro" secondAttribute="centerX" id="rBq-xs-D76"/>
@@ -570,11 +567,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkedContainerView" destination="Yoa-3q-xHP" id="VM1-2E-dVK"/>
                                             <outlet property="checkedImageView" destination="7h8-Li-VRb" id="oUj-Ex-bj1"/>
                                             <outlet property="emptyPreviousView" destination="2OZ-ZZ-piG" id="f94-yd-4zw"/>
                                             <outlet property="previousSetLabel" destination="DAP-UW-99a" id="SoN-CF-MLj"/>
+                                            <outlet property="repsContainerView" destination="6Xd-2p-cPd" id="ONE-Mg-Sci"/>
                                             <outlet property="repsTextField" destination="E5b-rS-mjO" id="RUF-ik-Bkc"/>
+                                            <outlet property="setContainerView" destination="NeW-NS-q6p" id="Z6X-3Y-xQS"/>
                                             <outlet property="setLabel" destination="2px-t5-ai8" id="BR6-2V-XTg"/>
+                                            <outlet property="weightContainerView" destination="qXM-NC-05q" id="zGd-Dg-XUK"/>
                                             <outlet property="weightTextField" destination="ZJl-SZ-JNL" id="rKQ-Qc-3EL"/>
                                         </connections>
                                     </tableViewCell>
