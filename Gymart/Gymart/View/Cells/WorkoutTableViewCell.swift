@@ -26,8 +26,7 @@ class WorkoutTableViewCell: UITableViewCell {
             workoutNameLabel.text = workout?.name
             
             if let lastWorkoutDate = workout?.lastWorkoutDate {
-                let days = lastWorkoutDate.numberOfDaysFromNow
-                lastWorkoutDateLabel.text = "\(days) days ago"
+                displayCorrectTimeInterval(lastWorkoutDate)
             } else {
                 lastWorkoutDateLabel.text = Constants.Label.noTraining
             }
@@ -55,6 +54,49 @@ class WorkoutTableViewCell: UITableViewCell {
         containerView.layer.borderColor = UIColor.silver.cgColor
         containerView.layer.borderWidth = 1.0
         containerView.clipsToBounds = true
+    }
+    
+    private func displayCorrectTimeInterval(_ date: Date) {
+        let daysSinceNow = date.numberOfDaysFromNow
+        if daysSinceNow == 0 {
+            let timeInterval = -(date.timeIntervalSinceNow)
+            let secondsInAnHour: Double = 3600.0
+            let hoursSinceNow = timeInterval / secondsInAnHour
+            if hoursSinceNow < 1 {
+                let minutesInOneHour: Double = 60.0
+                let minutesSinceNow = hoursSinceNow * minutesInOneHour
+                if minutesSinceNow < 1 {
+                    let secondsInOneMinute: Double = 60
+                    let secondsSinceNow = minutesSinceNow * secondsInOneMinute
+                    let secondsRounded = Int(secondsSinceNow.rounded())
+                    if secondsRounded <= 1 {
+                        lastWorkoutDateLabel.text = "\(secondsRounded) second ago"
+                    } else {
+                        lastWorkoutDateLabel.text = "\(secondsRounded) seconds ago"
+                    }
+                } else {
+                    let minutesRounded = Int(minutesSinceNow.rounded())
+                    if minutesRounded == 1 {
+                        lastWorkoutDateLabel.text = "\(minutesRounded) minute ago"
+                    } else {
+                        lastWorkoutDateLabel.text = "\(minutesRounded) minutes ago"
+                    }
+                }
+            } else {
+                let hoursRounded = Int(hoursSinceNow.rounded())
+                if hoursRounded == 1 {
+                    lastWorkoutDateLabel.text = "\(hoursRounded) hour ago"
+                } else {
+                    lastWorkoutDateLabel.text = "\(hoursRounded) hours ago"
+                }
+            }
+        } else {
+            if daysSinceNow == 1 {
+                lastWorkoutDateLabel.text = "\(daysSinceNow) day ago"
+            } else {
+                lastWorkoutDateLabel.text = "\(daysSinceNow) days ago"
+            }
+        }
     }
 
 }
