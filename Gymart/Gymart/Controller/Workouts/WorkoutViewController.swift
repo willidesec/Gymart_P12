@@ -57,7 +57,7 @@ class WorkoutViewController: UIViewController {
         
         let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
         
-        workoutsCollection.getDocuments { (querySnapshot, err) in
+        workoutsCollection.order(by: "creationDate", descending: true).getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err.localizedDescription)")
             } else {
@@ -107,6 +107,7 @@ extension WorkoutViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkoutTableViewCell.identifier, for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
         
         cell.workout = workouts[indexPath.row]
+        cell.exercicesTableView.reloadData()
         
         return cell
     }

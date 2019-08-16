@@ -56,7 +56,7 @@ class ProgramViewController: UIViewController {
         
         let programsCollection = db.collection("users/\(currentUser.uid)/programs")
         
-        programsCollection.getDocuments { (querySnapshot, err) in
+        programsCollection.order(by: "creationDate", descending: true).getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err.localizedDescription)")
             } else {
