@@ -41,8 +41,10 @@ class TrainingTableViewCell: UITableViewCell {
     @objc func checkedImageDidTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         if let weight = weightTextField.text, !weight.isEmpty, let reps = repsTextField.text, !reps.isEmpty {
             isExerciceSetValide ? changeUIForInvalideSet() : changeUIForValideSet()
+            pulseAnimation()
         } else {
             changeUIForInvalideSet()
+            shakeAnimation()
         }
     }
     
@@ -78,6 +80,29 @@ class TrainingTableViewCell: UITableViewCell {
         weightContainerView.backgroundColor = .grey
         setContainerView.backgroundColor = .grey
         contentView.backgroundColor = UIColor.clear
+    }
+    
+    private func shakeAnimation() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.06
+        animation.repeatCount = 2
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: checkedContainerView.center.x - 5, y: checkedContainerView.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: checkedContainerView.center.x + 5, y: checkedContainerView.center.y))
+        
+        checkedContainerView.layer.add(animation, forKey: "position")
+        Vibration.error.vibrate()
+    }
+    
+    private func pulseAnimation() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.checkedContainerView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (_) in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.checkedContainerView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }
+        Vibration.success.vibrate()
     }
     
 }
