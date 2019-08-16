@@ -419,11 +419,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeW-NS-q6p" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="7.6666666666666679" y="12" width="30.000000000000004" height="20"/>
+                                                                    <rect key="frame" x="7.6666666666666679" y="9.6666666666666643" width="30.000000000000004" height="25"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2px-t5-ai8">
-                                                                            <rect key="frame" x="2.6666666666666643" y="2.333333333333333" width="24.666666666666668" height="15.333333333333336"/>
-                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
+                                                                            <rect key="frame" x="0.6666666666666643" y="3.6666666666666679" width="28.333333333333332" height="17.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -433,7 +433,7 @@
                                                                         <constraint firstItem="2px-t5-ai8" firstAttribute="centerX" secondItem="NeW-NS-q6p" secondAttribute="centerX" id="FnM-D6-9DC"/>
                                                                         <constraint firstItem="2px-t5-ai8" firstAttribute="centerY" secondItem="NeW-NS-q6p" secondAttribute="centerY" id="Mo7-Bo-WUa"/>
                                                                         <constraint firstAttribute="width" constant="30" id="R7c-3G-GD7"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="eiY-P6-7ns"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="eiY-P6-7ns"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -448,7 +448,7 @@
                                                             <subviews>
                                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREVIOUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAP-UW-99a">
                                                                     <rect key="frame" x="0.0" y="0.0" width="86" height="44"/>
-                                                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -474,20 +474,20 @@
                                                             <rect key="frame" x="177" y="0.0" width="45" height="44"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-NC-05q" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="12" width="45" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="45" height="25"/>
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-SZ-JNL">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
                                                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                             <nil key="textColor"/>
-                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
+                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="ZJl-SZ-JNL" secondAttribute="bottom" id="9Up-NY-ymP"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="CPu-su-Fsw"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="CPu-su-Fsw"/>
                                                                         <constraint firstItem="ZJl-SZ-JNL" firstAttribute="top" secondItem="qXM-NC-05q" secondAttribute="top" id="Roo-FK-1sE"/>
                                                                         <constraint firstItem="ZJl-SZ-JNL" firstAttribute="leading" secondItem="qXM-NC-05q" secondAttribute="leading" id="tBd-uh-ibQ"/>
                                                                         <constraint firstAttribute="width" constant="45" id="ukX-FM-zol"/>
@@ -505,13 +505,13 @@
                                                             <rect key="frame" x="245" y="0.0" width="45" height="44"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-2p-cPd" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="12" width="45" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="45" height="25"/>
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5b-rS-mjO">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
                                                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                             <nil key="textColor"/>
-                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="13"/>
+                                                                            <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
                                                                     </subviews>
@@ -520,7 +520,7 @@
                                                                         <constraint firstAttribute="bottom" secondItem="E5b-rS-mjO" secondAttribute="bottom" id="4Dy-e3-yqs"/>
                                                                         <constraint firstAttribute="width" constant="45" id="9M8-dY-ieh"/>
                                                                         <constraint firstAttribute="trailing" secondItem="E5b-rS-mjO" secondAttribute="trailing" id="PSe-yG-DTv"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="d0W-3w-PtF"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="d0W-3w-PtF"/>
                                                                         <constraint firstItem="E5b-rS-mjO" firstAttribute="leading" secondItem="6Xd-2p-cPd" secondAttribute="leading" id="gp4-Hs-JgW"/>
                                                                         <constraint firstItem="E5b-rS-mjO" firstAttribute="top" secondItem="6Xd-2p-cPd" secondAttribute="top" id="pMO-0c-sfE"/>
                                                                     </constraints>
@@ -536,17 +536,20 @@
                                                             <rect key="frame" x="313" y="0.0" width="30" height="44"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-3q-xHP" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="12" width="30" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="30" height="25"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-Li-VRb">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-Li-VRb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
+                                                                        <constraint firstItem="7h8-Li-VRb" firstAttribute="top" secondItem="Yoa-3q-xHP" secondAttribute="top" id="DM5-ML-3CG"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="7h8-Li-VRb" secondAttribute="trailing" id="EyL-df-omb"/>
                                                                         <constraint firstAttribute="width" constant="30" id="IxA-Hy-HHy"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="u8Q-gm-7Wm"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="7h8-Li-VRb" secondAttribute="bottom" id="YUB-C8-ctZ"/>
+                                                                        <constraint firstItem="7h8-Li-VRb" firstAttribute="leading" secondItem="Yoa-3q-xHP" secondAttribute="leading" id="jZn-Dc-fZ2"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="u8Q-gm-7Wm"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
