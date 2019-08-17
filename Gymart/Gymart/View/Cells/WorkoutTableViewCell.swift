@@ -118,7 +118,6 @@ extension WorkoutTableViewCell: UITableViewDataSource {
         return cell
     }
     
-    
 }
 
 extension WorkoutTableViewCell: UITableViewDelegate {

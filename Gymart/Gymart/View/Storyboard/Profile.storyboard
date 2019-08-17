@@ -37,7 +37,7 @@
         <scene sceneID="dfI-s0-I59">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pfp-7H-efM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="MUl-yI-9FX"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profil" id="MUl-yI-9FX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ObP-hd-LQl" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
@@ -55,4 +55,7 @@
             <point key="canvasLocation" x="50.724637681159422" y="182.8125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profil" width="21.5" height="21.5"/>
+    </resources>
 </document>

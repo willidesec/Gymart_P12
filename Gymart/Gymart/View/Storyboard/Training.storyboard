@@ -312,7 +312,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1I-hx-kgm">
-                                <rect key="frame" x="168.33333333333334" y="60" width="38.333333333333343" height="35"/>
+                                <rect key="frame" x="171" y="60" width="33.333333333333343" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="IuQ-Vd-B54"/>
                                 </constraints>
@@ -422,7 +422,7 @@
                                                                     <rect key="frame" x="7.6666666666666679" y="9.6666666666666643" width="30.000000000000004" height="25"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2px-t5-ai8">
-                                                                            <rect key="frame" x="0.6666666666666643" y="3.6666666666666679" width="28.333333333333332" height="17.666666666666668"/>
+                                                                            <rect key="frame" x="1" y="3.6666666666666679" width="27.666666666666668" height="17.666666666666668"/>
                                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -810,22 +810,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-Oq-lB9">
-                                                    <rect key="frame" x="22.000000000000007" y="12" width="126.66666666666669" height="20"/>
+                                                    <rect key="frame" x="22" y="12" width="139.66666666666666" height="20"/>
                                                     <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nba-3y-evr">
-                                                    <rect key="frame" x="302" y="12" width="51" height="20"/>
+                                                    <rect key="frame" x="297.66666666666669" y="12" width="55.333333333333314" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPA-CJ-Vu5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="9" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20"/>
                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-lr-XYI">
-                                                            <rect key="frame" x="17" y="0.0" width="34" height="20"/>
+                                                            <rect key="frame" x="18.333333333333314" y="0.0" width="37" height="20"/>
                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -854,14 +854,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercice's Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-oO-YLT">
-                                                <rect key="frame" x="0.0" y="0.0" width="246" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-qC-U0l">
-                                                <rect key="frame" x="254" y="0.0" width="9" height="30"/>
+                                                <rect key="frame" x="252.66666666666671" y="0.0" width="10.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -934,7 +934,7 @@
         <scene sceneID="8qz-m9-m9a">
             <objects>
                 <navigationController storyboardIdentifier="Program" automaticallyAdjustsScrollViewInsets="NO" id="9mo-Ak-4VT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Training" id="8xZ-7F-rdg"/>
+                    <tabBarItem key="tabBarItem" title="Training" image="dumbell" id="8xZ-7F-rdg"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJ0-gf-U8B" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
@@ -983,6 +983,7 @@
     <resources>
         <image name="Clock" width="15" height="15"/>
         <image name="checked" width="18" height="13"/>
+        <image name="dumbell" width="42.666667938232422" height="42.666667938232422"/>
         <image name="stopwatch" width="16" height="20"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

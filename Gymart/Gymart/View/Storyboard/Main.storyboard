@@ -12,18 +12,20 @@
         <!--Main View Controller-->
         <scene sceneID="5Fy-15-Oty">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U2h-m7-1Gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="hGi-Bg-4S1" customClass="MainViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YUc-Do-uro">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="RWy-L1-cbz" kind="relationship" relationship="viewControllers" id="lB8-rA-1Bh"/>
                         <segue destination="kul-th-CtR" kind="relationship" relationship="viewControllers" id="4dJ-ql-fkj"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2h-m7-1Gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-581" y="-448"/>
         </scene>
