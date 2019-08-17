@@ -39,9 +39,15 @@ class TrainingTableViewCell: UITableViewCell {
     // MARK: - Action
     
     @objc func checkedImageDidTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        if let weight = weightTextField.text, !weight.isEmpty, let reps = repsTextField.text, !reps.isEmpty {
+        if let weightString = weightTextField.text, !weightString.isEmpty, let repsString = repsTextField.text, !repsString.isEmpty {
             isExerciceSetValide ? changeUIForInvalideSet() : changeUIForValideSet()
             pulseAnimation()
+            
+            guard let reps = Int(repsString) else { return }
+            guard let weight = Int(weightString) else { return }
+            let set = ExerciceSet(reps: reps, weight: weight)
+            
+            
         } else {
             changeUIForInvalideSet()
             shakeAnimation()

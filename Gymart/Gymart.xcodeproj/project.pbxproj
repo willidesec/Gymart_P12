@@ -56,6 +56,9 @@
 		3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */; };
 		3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FACE7ED23084F1D0066EC3A /* Historical.storyboard */; };
 		3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */; };
+		3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */; };
+		3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F323085E540066EC3A /* HistoricalExercice.swift */; };
+		3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F523085EB50066EC3A /* ExerciceSet.swift */; };
 		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
 		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
 		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
@@ -118,6 +121,9 @@
 		3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FACE7ED23084F1D0066EC3A /* Historical.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historical.storyboard; sourceTree = "<group>"; };
 		3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
+		3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalWorkout.swift; sourceTree = "<group>"; };
+		3FACE7F323085E540066EC3A /* HistoricalExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalExercice.swift; sourceTree = "<group>"; };
+		3FACE7F523085EB50066EC3A /* ExerciceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceSet.swift; sourceTree = "<group>"; };
 		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -309,6 +315,9 @@
 				30E0618A22C0E905007A1964 /* Program.swift */,
 				3FB7163722E37D8800A44FA1 /* Workout.swift */,
 				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
+				3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */,
+				3FACE7F323085E540066EC3A /* HistoricalExercice.swift */,
+				3FACE7F523085EB50066EC3A /* ExerciceSet.swift */,
 				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 			);
 			path = Model;
@@ -549,6 +558,7 @@
 				3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */,
 				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
 				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
+				3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */,
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
 				3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */,
@@ -565,6 +575,7 @@
 				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
+				3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */,
 				3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */,
 				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
 				3F26455C23075C0B00465DBD /* Vibration.swift in Sources */,
@@ -573,6 +584,7 @@
 				3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */,
 				3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */,
 				3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */,
+				3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */,
 				303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */,
 				3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */,
 				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,

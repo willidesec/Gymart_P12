@@ -114,6 +114,12 @@ class TrainingViewController: UIViewController {
         }
     }
     
+    private func saveTrainingInHistory() {
+        guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
+        
+//        let newHistoricalWorkout = HistoricalWorkout(name: workoutName, workoutDate: Date(), exercices: )
+    }
+    
     private func configureNavigationBar() {
         navigationItem.title = Constants.Navigation.trainingTitle
     }
