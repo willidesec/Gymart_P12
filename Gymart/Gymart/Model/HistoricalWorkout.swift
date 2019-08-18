@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct HistoricalWorkout {
     let name: String
@@ -28,5 +29,20 @@ struct HistoricalWorkout {
         exercices.forEach { (historicalExercice) in
             exercicesData.append(historicalExercice.dictionary)
         }
+    }
+}
+
+extension HistoricalWorkout: DocumentSerializableProtocol {
+    init?(dictionary: [String : Any]) {
+        guard let name = dictionary["name"] as? String,
+        let workoutTimestamp = dictionary["workoutDate"] as? Timestamp else { return nil }
+        
+        let workoutDate = workoutTimestamp.dateValue()
+        
+        guard let exercicesData = dictionary["exercices"] as? [[String: Any]] else { return nil }
+        
+        let exercices = exercicesData.compactMap({HistoricalExercice(dictionary: $0)})
+        
+        self.init(name: name, workoutDate: workoutDate, exercices: exercices)
     }
 }
