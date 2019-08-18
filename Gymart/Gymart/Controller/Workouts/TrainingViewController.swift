@@ -14,6 +14,7 @@ class TrainingViewController: UIViewController {
     // MARK: - Properties
 
     var exercices = [Exercice]()
+    var historicalExercices = [HistoricalExercice]()
     
     var sectionHeaderHeight: CGFloat = 0.0
     var rowHeight: CGFloat = 0.0
@@ -51,7 +52,7 @@ class TrainingViewController: UIViewController {
     
     @IBAction func doneButtonDidTapped() {
         updateWorkoutDate()
-        navigationController?.popViewController(animated: true)
+        saveTrainingInHistory()
     }
     
     @IBAction func stopwatchButtonDidTapped() {
@@ -81,8 +82,12 @@ class TrainingViewController: UIViewController {
             }) {
                 self.workoutNameLabel.text = workout.name
                 
-                let exercicesData = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
-                self.exercices = exercicesData
+                self.exercices = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
+                
+                self.exercices.forEach { (exercice) in
+                    let historicalExercice = HistoricalExercice(name: exercice.name, sets: [ExerciceSet]())
+                    self.historicalExercices.append(historicalExercice)
+                }
                 
                 DispatchQueue.main.async {
                     self.trainingTableView.reloadData()
@@ -117,7 +122,21 @@ class TrainingViewController: UIViewController {
     private func saveTrainingInHistory() {
         guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
         
-//        let newHistoricalWorkout = HistoricalWorkout(name: workoutName, workoutDate: Date(), exercices: )
+        let newHistoricalWorkout = HistoricalWorkout(name: workoutName, workoutDate: Date(), exercices: historicalExercices)
+        
+        db = Firestore.firestore()
+        
+        guard let currentUser = AuthService.getCurrentUser() else { return }
+        
+        let historicalCollection = db.collection("users/\(currentUser.uid)/historical")
+        historicalCollection.addDocument(data: newHistoricalWorkout.dictionary) { (error) in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added with succes")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     private func configureNavigationBar() {
@@ -190,6 +209,8 @@ extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else { return UITableViewCell() }
         
+        cell.addSetToExerciceDelegate = self
+        cell.exerciceName = exercices[indexPath.section].name
         cell.setLabel.text = String(indexPath.row + 1)
         
         return cell
@@ -212,4 +233,17 @@ extension TrainingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return rowHeight
     }
+}
+
+extension TrainingViewController: AddSetToExerciceProtocol {
+    func addSetToExercice(set: ExerciceSet, exerciceName: String) {
+        var currentIndex = 0
+        exercices.forEach { (exercice) in
+            if exercice.name == exerciceName {
+                historicalExercices[currentIndex].setsData.append(set.dictionary)
+            }
+            currentIndex += 1
+        }
+    }
+    
 }

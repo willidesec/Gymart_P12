@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddSetToExerciceProtocol {
+    func addSetToExercice(set: ExerciceSet, exerciceName: String)
+}
+
 class TrainingTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
@@ -25,7 +29,9 @@ class TrainingTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
+    var exerciceName: String?
     var isExerciceSetValide = false
+    var addSetToExerciceDelegate: AddSetToExerciceProtocol?
     
     // MARK: - View Life Cycle
     
@@ -45,8 +51,9 @@ class TrainingTableViewCell: UITableViewCell {
             
             guard let reps = Int(repsString) else { return }
             guard let weight = Int(weightString) else { return }
+            guard let exerciceName = exerciceName else { return }
             let set = ExerciceSet(reps: reps, weight: weight)
-            
+            addSetToExerciceDelegate?.addSetToExercice(set: set, exerciceName: exerciceName)
             
         } else {
             changeUIForInvalideSet()
