@@ -8,8 +8,9 @@
 
 import UIKit
 
-protocol AddSetToExerciceProtocol {
+protocol ToggleSetProtocol {
     func addSetToExercice(set: ExerciceSet, exerciceName: String)
+    func deleteSetToExercice(set: ExerciceSet, exerciceName: String)
 }
 
 class TrainingTableViewCell: UITableViewCell {
@@ -29,9 +30,10 @@ class TrainingTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
+    var numeroOfSet: Int?
     var exerciceName: String?
     var isExerciceSetValide = false
-    var addSetToExerciceDelegate: AddSetToExerciceProtocol?
+    var toggleSetDelegate: ToggleSetProtocol?
     
     // MARK: - View Life Cycle
     
@@ -49,11 +51,12 @@ class TrainingTableViewCell: UITableViewCell {
             isExerciceSetValide ? changeUIForInvalideSet() : changeUIForValideSet()
             pulseAnimation()
             
+            guard let numeroOfSet = numeroOfSet else { return }
             guard let reps = Int(repsString) else { return }
             guard let weight = Int(weightString) else { return }
             guard let exerciceName = exerciceName else { return }
-            let set = ExerciceSet(reps: reps, weight: weight)
-            addSetToExerciceDelegate?.addSetToExercice(set: set, exerciceName: exerciceName)
+            let set = ExerciceSet(numeroOfSet: numeroOfSet, reps: reps, weight: weight)
+            isExerciceSetValide ? toggleSetDelegate?.addSetToExercice(set: set, exerciceName: exerciceName): toggleSetDelegate?.deleteSetToExercice(set: set, exerciceName: exerciceName)
             
         } else {
             changeUIForInvalideSet()

@@ -209,8 +209,9 @@ extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else { return UITableViewCell() }
         
-        cell.addSetToExerciceDelegate = self
+        cell.toggleSetDelegate = self
         cell.exerciceName = exercices[indexPath.section].name
+        cell.numeroOfSet = indexPath.row + 1
         cell.setLabel.text = String(indexPath.row + 1)
         
         return cell
@@ -235,15 +236,31 @@ extension TrainingViewController: UITableViewDelegate {
     }
 }
 
-extension TrainingViewController: AddSetToExerciceProtocol {
+extension TrainingViewController: ToggleSetProtocol {
     func addSetToExercice(set: ExerciceSet, exerciceName: String) {
         var currentIndex = 0
-        exercices.forEach { (exercice) in
+        historicalExercices.forEach { (exercice) in
             if exercice.name == exerciceName {
-                historicalExercices[currentIndex].setsData.append(set.dictionary)
+                historicalExercices[currentIndex].setsData.insert(set.dictionary, at: set.numeroOfSet - 1)
             }
             currentIndex += 1
         }
     }
     
+    func deleteSetToExercice(set: ExerciceSet, exerciceName: String) {
+        var exerciceIndex = 0
+        historicalExercices.forEach { (exercice) in
+            if exercice.name == exerciceName {
+                var setIndex = 0
+                historicalExercices[exerciceIndex].setsData.forEach { (historicalSet) in
+                    guard let currentSet = historicalSet["numeroOfSet"] as? Int else { return }
+                    if currentSet == set.numeroOfSet {
+                        historicalExercices[exerciceIndex].setsData.remove(at: setIndex)
+                    }
+                    setIndex += 1
+                }
+            }
+            exerciceIndex += 1
+        }
+    }
 }
