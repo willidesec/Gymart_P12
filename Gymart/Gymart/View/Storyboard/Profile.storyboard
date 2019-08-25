@@ -10,17 +10,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="pn8-xE-D2C">
             <objects>
                 <viewController id="gNx-Pa-Ube" customClass="ProfileViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mzm-GL-5Zd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM6-k5-Ulr">
+                                <rect key="frame" x="25" y="188" width="364" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4pN-a3-wRW"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gymnast" translatesAutoresizingMaskIntoConstraints="NO" id="SvI-Jb-xGB">
+                                <rect key="frame" x="157" y="128" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TTZ-Cv-VcH"/>
+                                    <constraint firstAttribute="height" constant="100" id="k51-T5-dv5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lM6-k5-Ulr" firstAttribute="top" secondItem="SvI-Jb-xGB" secondAttribute="bottom" constant="-40" id="1E0-ba-nCt"/>
+                            <constraint firstItem="SvI-Jb-xGB" firstAttribute="centerX" secondItem="Mzm-GL-5Zd" secondAttribute="centerX" id="3CS-N6-ACQ"/>
+                            <constraint firstItem="lM6-k5-Ulr" firstAttribute="leading" secondItem="aXF-MX-JOF" secondAttribute="leading" constant="25" id="TQe-bk-iX0"/>
+                            <constraint firstItem="aXF-MX-JOF" firstAttribute="trailing" secondItem="lM6-k5-Ulr" secondAttribute="trailing" constant="25" id="qjJ-Hm-3hM"/>
+                            <constraint firstItem="lM6-k5-Ulr" firstAttribute="top" secondItem="aXF-MX-JOF" secondAttribute="top" constant="100" id="wkq-ZP-fgG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aXF-MX-JOF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0fu-Mt-qvC">
+                    <navigationItem key="navigationItem" title="Profile" id="0fu-Mt-qvC">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ydS-p9-j1w">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -28,6 +51,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="profileContainer" destination="lM6-k5-Ulr" id="pfu-Sq-zyJ"/>
+                        <outlet property="userImageView" destination="SvI-Jb-xGB" id="c4b-QU-q0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEi-hT-FhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gymnast" width="80" height="80"/>
         <image name="profil" width="21.5" height="21.5"/>
     </resources>
 </document>

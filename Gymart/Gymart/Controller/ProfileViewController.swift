@@ -13,12 +13,15 @@ class ProfileViewController: UIViewController {
     
     // MARK: - IBOutlet
     
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var profileContainer: UIView!
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
     }
     
     // MARK: - IBAction
@@ -39,5 +42,15 @@ class ProfileViewController: UIViewController {
         displayActionSheet(action: signOutAction)
     }
     
+    // MARK: - Methods
+    
+    private func setupUI() {
+        profileContainer.layer.roundedCorner(10)
+        profileContainer.layer.addShadow(color: .black, opacity: 0.2, width: 0.0, height: 1.0, radius: 4.0, spread: 0)
+        
+        userImageView.layer.borderWidth = 3
+        userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        userImageView.layer.borderColor = UIColor.grey.cgColor
+    }
     
 }

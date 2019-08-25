@@ -20,16 +20,16 @@ extension CALayer {
     
     func addShadow(
         color: UIColor = .black,
-        alpha: Float = 0.5,
-        x: CGFloat = 0,
-        y: CGFloat = 2,
-        blur: CGFloat = 4,
+        opacity: Float = 0.5,
+        width: CGFloat = 0,
+        height: CGFloat = 2,
+        radius: CGFloat = 2,
         spread: CGFloat = 0)
     {
         shadowColor = color.cgColor
-        shadowOpacity = alpha
-        shadowOffset = CGSize(width: x, height: y)
-        shadowRadius = blur / 2.0
+        shadowOpacity = opacity
+        shadowOffset = CGSize(width: width, height: height)
+        shadowRadius = radius
         if spread == 0 {
             shadowPath = nil
         } else {
