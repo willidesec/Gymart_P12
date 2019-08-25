@@ -23,6 +23,14 @@ class ExercicesTableViewCell: UITableViewCell {
             exerciceNameLabel.text = "\(exerciceSets) x \(exerciceName)"
         }
     }
+
+    var historicalExercice: HistoricalExercice? {
+        didSet {
+            guard let exerciceName = historicalExercice?.name else { return }
+            guard let exerciceSets = historicalExercice?.setsData.count else { return }
+            exerciceNameLabel.text = "\(exerciceSets) x \(exerciceName)"
+        }
+    }
     
     // MARK: - View Life Cycle
     

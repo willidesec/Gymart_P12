@@ -19,8 +19,6 @@ class WorkoutTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    let completeView = UIView()
-    
     var workout: Workout? {
         didSet {
             workoutNameLabel.text = workout?.name
@@ -32,6 +30,17 @@ class WorkoutTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    var historicalWorkout: HistoricalWorkout? {
+        didSet {
+            workoutNameLabel.text = historicalWorkout?.name
+            if let workoutDate = historicalWorkout?.workoutDate {
+                displayCorrectTimeInterval(workoutDate)
+            }
+        }
+    }
+    
+    // MARK: - View Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -105,15 +114,25 @@ class WorkoutTableViewCell: UITableViewCell {
 
 extension WorkoutTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return workout?.exercicesData.count ?? 0
+        if let workout = workout {
+            return workout.exercicesData.count
+        } else if let historicalWorkout = historicalWorkout {
+            return historicalWorkout.exercicesData.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExercicesTableViewCell.identifier) as? ExercicesTableViewCell else { return UITableViewCell() }
         
-        guard let exercices = workout?.exercicesData.compactMap({Exercice(dictionary: $0)}) else { return UITableViewCell() }
-        
-        cell.exercice = exercices[indexPath.row]
+        if let workout = workout {
+            let exercices = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
+            cell.exercice = exercices[indexPath.row]
+        } else if let historicalWorkout = historicalWorkout {
+            let exercices = historicalWorkout.exercicesData.compactMap({HistoricalExercice(dictionary: $0)})
+            cell.historicalExercice = exercices[indexPath.row]
+        }
         
         return cell
     }
