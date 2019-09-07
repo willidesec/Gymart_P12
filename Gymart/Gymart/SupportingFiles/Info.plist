@@ -20,6 +20,18 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DejaVuSans-Bold.ttf</string>
+		<string>DejaVuSans-BoldOblique.ttf</string>
+		<string>DejaVuSans-ExtraLight.ttf</string>
+		<string>DejaVuSans-Oblique.ttf</string>
+		<string>DejaVuSans.ttf</string>
+		<string>DejaVuSansCondensed-Bold.ttf</string>
+		<string>DejaVuSansCondensed-BoldOblique.ttf</string>
+		<string>DejaVuSansCondensed-Oblique.ttf</string>
+		<string>DejaVuSansCondensed.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

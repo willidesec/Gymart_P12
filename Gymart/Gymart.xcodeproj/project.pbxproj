@@ -7,25 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
+		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
+		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
+		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
+		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
+		3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */; };
+		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
+		3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */; };
+		3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6822305770D00DB769F /* TrainingRegularView.swift */; };
+		3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */; };
+		3F25A68B2305CDC200DB769F /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */; };
+		3F26455C23075C0B00465DBD /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26455B23075C0B00465DBD /* Vibration.swift */; };
+		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
+		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
+		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
+		3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D92892323A8E20004AE7F /* Profil.swift */; };
+		3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */; };
+		3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */; };
+		3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */; };
+		3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */; };
+		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
+		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
+		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
+		3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */; };
+		3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */; };
+		3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */; };
+		3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */; };
+		3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */; };
+		3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */; };
+		3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */; };
+		3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */; };
+		3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */; };
+		3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC022AC2F300004C720 /* LoginButton.swift */; };
+		3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC222AC30CE0004C720 /* UIView+extension.swift */; };
+		3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC422AC33C50004C720 /* UIFont+extension.swift */; };
+		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
+		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
+		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
-		3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24922A0675C00D22D36 /* ViewController.swift */; };
-		3F3FB24D22A0675C00D22D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24B22A0675C00D22D36 /* Main.storyboard */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
 		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
 		3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */; };
+		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
+		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
+		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
+		3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */; };
+		3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */; };
+		3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FACE7ED23084F1D0066EC3A /* Historical.storyboard */; };
+		3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */; };
+		3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */; };
+		3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F323085E540066EC3A /* HistoricalExercice.swift */; };
+		3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F523085EB50066EC3A /* ExerciceSet.swift */; };
+		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
+		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
+		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
+		3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC8441230413D900F65DEF /* TrainingViewController.swift */; };
+		3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC844523041E4600F65DEF /* TrainingActionButton.swift */; };
+		3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */; };
+		3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */; };
+		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
+		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
+		3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3F25A6822305770D00DB769F /* TrainingRegularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularView.swift; sourceTree = "<group>"; };
+		3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
+		3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
+		3F26455B23075C0B00465DBD /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
+		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
+		3F2D92892323A8E20004AE7F /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
+		3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesTableViewCell.swift; sourceTree = "<group>"; };
+		3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSerializableProtocol.swift; sourceTree = "<group>"; };
+		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
+		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansCondensed.ttf; sourceTree = "<group>"; };
+		3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSans.ttf; sourceTree = "<group>"; };
+		3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC022AC2F300004C720 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		3F2FADC222AC30CE0004C720 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC422AC33C50004C720 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F3FB24922A0675C00D22D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F3FB24C22A0675C00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3FB25122A0675D00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Gymart.xcconfig; sourceTree = "<group>"; };
 		3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Gymart-PreProd.xcconfig"; sourceTree = "<group>"; };
+		3F5A60F622C7C03300D84692 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F5A60F822C7C4C000D84692 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewController.swift; path = Gymart/Controller/ProfilViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3FACE7ED23084F1D0066EC3A /* Historical.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historical.storyboard; sourceTree = "<group>"; };
+		3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
+		3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalWorkout.swift; sourceTree = "<group>"; };
+		3FACE7F323085E540066EC3A /* HistoricalExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalExercice.swift; sourceTree = "<group>"; };
+		3FACE7F523085EB50066EC3A /* ExerciceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceSet.swift; sourceTree = "<group>"; };
+		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3FDC8441230413D900F65DEF /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		3FDC844523041E4600F65DEF /* TrainingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingActionButton.swift; sourceTree = "<group>"; };
+		3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceTableViewCell.swift; sourceTree = "<group>"; };
+		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
+		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
+		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +143,124 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303AFF1922C0E5100077B62A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */,
+				3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */,
+				3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */,
+				3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */,
+				3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */,
+				3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3F23FE2722AD31B80085B20C /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */,
+				3F23FE2A22AD73050085B20C /* RegisterViewController.swift */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		3F26455A23075BFF00465DBD /* Vibration */ = {
+			isa = PBXGroup;
+			children = (
+				3F26455B23075C0B00465DBD /* Vibration.swift */,
+			);
+			path = Vibration;
+			sourceTree = "<group>";
+		};
+		3F2FADA322AC15300004C720 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
+				3F5A60F622C7C03300D84692 /* Main.storyboard */,
+				3F25403422B6BCE200DB33DC /* Training.storyboard */,
+				3F5A60F822C7C4C000D84692 /* Profile.storyboard */,
+				3FACE7ED23084F1D0066EC3A /* Historical.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3F2FADA622AC181E0004C720 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				3F26455A23075BFF00465DBD /* Vibration */,
+				3F2FADC622AC34CC0004C720 /* Constants */,
+				3F2FADA722AC182C0004C720 /* Fonts */,
+				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		3F2FADA722AC182C0004C720 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */,
+				3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */,
+				3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */,
+				3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */,
+				3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */,
+				3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */,
+				3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */,
+				3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */,
+				3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F2FADBC22AC1E0C0004C720 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */,
+				3F2FADC222AC30CE0004C720 /* UIView+extension.swift */,
+				3F2FADC422AC33C50004C720 /* UIFont+extension.swift */,
+				3F2FADC922AC39200004C720 /* CALayer+extension.swift */,
+				3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */,
+				3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */,
+				3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */,
+				3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F2FADBF22AC2F0E0004C720 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC022AC2F300004C720 /* LoginButton.swift */,
+				3FDC844523041E4600F65DEF /* TrainingActionButton.swift */,
+				3F25A6822305770D00DB769F /* TrainingRegularView.swift */,
+				3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */,
+				3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3F2FADC622AC34CC0004C720 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC722AC35760004C720 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3F3FB23B22A0675C00D22D36 = {
 			isa = PBXGroup;
 			children = (
 				3F3FB24622A0675C00D22D36 /* Gymart */,
 				3F3FB24522A0675C00D22D36 /* Products */,
+				4C9506C1FC48B794E3ED1E5A /* Pods */,
+				A8562B67907D98D17FDFC6B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +275,14 @@
 		3F3FB24622A0675C00D22D36 /* Gymart */ = {
 			isa = PBXGroup;
 			children = (
+				3F2FADA622AC181E0004C720 /* Ressources */,
 				3F3FB25D22A071E500D22D36 /* Config */,
 				3F3FB25C22A068BA00D22D36 /* SupportingFiles */,
 				3F3FB25B22A068B300D22D36 /* Model */,
 				3F3FB25A22A0689A00D22D36 /* View */,
 				3F3FB25922A0689000D22D36 /* Controller */,
+				3F2FADBC22AC1E0C0004C720 /* Extensions */,
+				3F2FADBF22AC2F0E0004C720 /* CustomView */,
 			);
 			path = Gymart;
 			sourceTree = "<group>";
@@ -70,7 +290,12 @@
 		3F3FB25922A0689000D22D36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F3FB24922A0675C00D22D36 /* ViewController.swift */,
+				3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */,
+				3FB7163322E3358000A44FA1 /* Program */,
+				3FB7163422E335D000A44FA1 /* Workouts */,
+				3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */,
+				3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */,
+				3F23FE2722AD31B80085B20C /* Login&Register */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,9 +303,9 @@
 		3F3FB25A22A0689A00D22D36 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
 				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
-				3F3FB24B22A0675C00D22D36 /* Main.storyboard */,
+				303AFF1922C0E5100077B62A /* Cells */,
+				3F2FADA322AC15300004C720 /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,6 +313,15 @@
 		3F3FB25B22A068B300D22D36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */,
+				3F2D92892323A8E20004AE7F /* Profil.swift */,
+				30E0618A22C0E905007A1964 /* Program.swift */,
+				3FB7163722E37D8800A44FA1 /* Workout.swift */,
+				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
+				3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */,
+				3FACE7F323085E540066EC3A /* HistoricalExercice.swift */,
+				3FACE7F523085EB50066EC3A /* ExerciceSet.swift */,
+				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +331,7 @@
 			children = (
 				3F3FB24722A0675C00D22D36 /* AppDelegate.swift */,
 				3F3FB25322A0675D00D22D36 /* Info.plist */,
+				3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -110,6 +345,42 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		3FB7163322E3358000A44FA1 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */,
+				3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		3FB7163422E335D000A44FA1 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */,
+				3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */,
+				3FDC8441230413D900F65DEF /* TrainingViewController.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		4C9506C1FC48B794E3ED1E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */,
+				63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8562B67907D98D17FDFC6B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +388,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F3FB25622A0675D00D22D36 /* Build configuration list for PBXNativeTarget "Gymart" */;
 			buildPhases = (
+				2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */,
 				3F3FB24022A0675C00D22D36 /* Sources */,
 				3F3FB24122A0675C00D22D36 /* Frameworks */,
 				3F3FB24222A0675C00D22D36 /* Resources */,
+				84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */,
+				024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,37 +442,165 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */,
+				3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */,
+				3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */,
 				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
+				3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */,
+				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
+				3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */,
+				3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */,
 				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
+				3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */,
+				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
+				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
 				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
+				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
+				3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */,
+				3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */,
+				3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */,
+				3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */,
 				3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */,
-				3F3FB24D22A0675C00D22D36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gymart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F3FB24022A0675C00D22D36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3FB24A22A0675C00D22D36 /* ViewController.swift in Sources */,
+				3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */,
+				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
+				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
+				3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */,
+				3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */,
+				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
+				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
+				3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */,
+				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
+				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
+				3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */,
+				3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */,
+				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
+				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
+				3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */,
+				3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */,
+				3F25A68B2305CDC200DB769F /* UIImageView+extensions.swift in Sources */,
+				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
+				3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */,
+				3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */,
+				3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */,
+				3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */,
+				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
+				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
+				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
+				3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */,
+				3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */,
+				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
+				3F26455C23075C0B00465DBD /* Vibration.swift in Sources */,
+				3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */,
 				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
+				3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */,
+				3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */,
+				3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */,
+				3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */,
+				303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */,
+				3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */,
+				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,
+				3F2FADC822AC35760004C720 /* Constants.swift in Sources */,
+				3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */,
+				3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F3FB24B22A0675C00D22D36 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F3FB24C22A0675C00D22D36 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -212,6 +614,7 @@
 /* Begin XCBuildConfiguration section */
 		3F3FB25422A0675D00D22D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -273,6 +676,7 @@
 		};
 		3F3FB25522A0675D00D22D36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -328,7 +732,7 @@
 		};
 		3F3FB25722A0675D00D22D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */;
+			baseConfigurationReference = 9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,7 +751,7 @@
 		};
 		3F3FB25822A0675D00D22D36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */;
+			baseConfigurationReference = 63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

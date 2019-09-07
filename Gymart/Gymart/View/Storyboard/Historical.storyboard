@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ix-92-f4n">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DejaVuSans-Oblique.ttf">
+            <string>DejaVuSans-Oblique</string>
+        </array>
+        <array key="DejaVuSans.ttf">
+            <string>DejaVuSans</string>
+        </array>
+        <array key="DejaVuSansCondensed-Bold.ttf">
+            <string>DejaVuSansCondensed-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Historical-->
+        <scene sceneID="UIe-1Z-3aF">
+            <objects>
+                <viewController id="M92-HO-Iy5" customClass="HistoricalViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fY0-qA-PdX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iW2-vx-GBy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="200" id="WCB-ZH-Q1m" customClass="WorkoutTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WCB-ZH-Q1m" id="FzT-6x-HFK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muJ-51-ftj" userLabel="Container View">
+                                                    <rect key="frame" x="16" y="8" width="382" height="183.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-kW-vRi">
+                                                            <rect key="frame" x="26" y="8" width="340" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="DNb-He-02u"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KG-fz-cDH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="10" height="183.5"/>
+                                                            <color key="backgroundColor" red="0.35686274509999999" green="0.90588235289999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="10" id="e7P-5D-isa"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lUT-4d-a8D">
+                                                            <rect key="frame" x="26" y="33" width="340" height="20"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-0H-TdQ">
+                                                                    <rect key="frame" x="0.0" y="2.5" width="15" height="15"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="15" id="23z-v4-OVt"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="xtG-iO-R4N"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST_WORKOUT_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-VW-M0u">
+                                                                    <rect key="frame" x="23" y="0.0" width="317" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
+                                                                    <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="cpn-6F-SEq"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xoi-Fb-Tci">
+                                                            <rect key="frame" x="26" y="61" width="340" height="122.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExercicesTableViewCell" rowHeight="30" id="7wi-a2-c0t" customClass="ExercicesTableViewCell" customModule="Gymart" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="28" width="340" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7wi-a2-c0t" id="zi8-Pg-p3d">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="340" height="29.5"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTf-eG-gQ5">
+                                                                                <rect key="frame" x="0.0" y="5" width="340" height="19.5"/>
+                                                                                <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="hTf-eG-gQ5" firstAttribute="leading" secondItem="zi8-Pg-p3d" secondAttribute="leading" id="8eK-Gw-NMR"/>
+                                                                            <constraint firstItem="hTf-eG-gQ5" firstAttribute="top" secondItem="zi8-Pg-p3d" secondAttribute="top" constant="5" id="QxF-dj-XaW"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="hTf-eG-gQ5" secondAttribute="bottom" constant="5" id="p4G-L0-ZVH"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="hTf-eG-gQ5" secondAttribute="trailing" id="qVs-9M-4CZ"/>
+                                                                        </constraints>
+                                                                    </tableViewCellContentView>
+                                                                    <connections>
+                                                                        <outlet property="exerciceNameLabel" destination="hTf-eG-gQ5" id="31L-SL-mhN"/>
+                                                                    </connections>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="esZ-kW-vRi" firstAttribute="leading" secondItem="4KG-fz-cDH" secondAttribute="trailing" constant="16" id="Ctr-NY-qvW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lUT-4d-a8D" secondAttribute="trailing" constant="16" id="HCq-Wd-KhR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="esZ-kW-vRi" secondAttribute="trailing" constant="16" id="HYp-tp-sUS"/>
+                                                        <constraint firstItem="4KG-fz-cDH" firstAttribute="top" secondItem="muJ-51-ftj" secondAttribute="top" id="Iij-3r-mTZ"/>
+                                                        <constraint firstItem="Xoi-Fb-Tci" firstAttribute="top" secondItem="lUT-4d-a8D" secondAttribute="bottom" constant="8" id="Je0-3N-w8f"/>
+                                                        <constraint firstItem="lUT-4d-a8D" firstAttribute="leading" secondItem="4KG-fz-cDH" secondAttribute="trailing" constant="16" id="MrZ-X1-NUR"/>
+                                                        <constraint firstItem="Xoi-Fb-Tci" firstAttribute="leading" secondItem="4KG-fz-cDH" secondAttribute="trailing" constant="16" id="URz-Jo-DBx"/>
+                                                        <constraint firstItem="lUT-4d-a8D" firstAttribute="top" secondItem="esZ-kW-vRi" secondAttribute="bottom" constant="5" id="VQi-Xa-zQC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Xoi-Fb-Tci" secondAttribute="trailing" constant="16" id="WLY-gb-oPD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Xoi-Fb-Tci" secondAttribute="bottom" id="bBy-sr-Fam"/>
+                                                        <constraint firstItem="esZ-kW-vRi" firstAttribute="top" secondItem="muJ-51-ftj" secondAttribute="top" constant="8" id="jIT-WW-PVy"/>
+                                                        <constraint firstItem="4KG-fz-cDH" firstAttribute="leading" secondItem="muJ-51-ftj" secondAttribute="leading" id="t56-90-gfk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4KG-fz-cDH" secondAttribute="bottom" id="urc-3n-K0f"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="muJ-51-ftj" firstAttribute="top" secondItem="FzT-6x-HFK" secondAttribute="top" constant="8" id="KH1-ME-aqi"/>
+                                                <constraint firstItem="muJ-51-ftj" firstAttribute="leading" secondItem="FzT-6x-HFK" secondAttribute="leading" constant="16" id="mWn-Kf-Axo"/>
+                                                <constraint firstAttribute="bottom" secondItem="muJ-51-ftj" secondAttribute="bottom" constant="8" id="rLt-Wh-SsY"/>
+                                                <constraint firstAttribute="trailing" secondItem="muJ-51-ftj" secondAttribute="trailing" constant="16" id="xGr-ef-pyO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="containerView" destination="muJ-51-ftj" id="Nj2-oc-YWL"/>
+                                            <outlet property="exercicesTableView" destination="Xoi-Fb-Tci" id="aAh-Kw-Fn9"/>
+                                            <outlet property="lastWorkoutDateLabel" destination="Sje-VW-M0u" id="6m6-Db-QoT"/>
+                                            <outlet property="workoutNameLabel" destination="esZ-kW-vRi" id="sRq-sX-cTA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M92-HO-Iy5" id="qXs-UG-VWb"/>
+                                    <outlet property="delegate" destination="M92-HO-Iy5" id="VcM-0f-1kP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iW2-vx-GBy" firstAttribute="top" secondItem="WiQ-pV-Kem" secondAttribute="top" id="IAG-CK-vcl"/>
+                            <constraint firstItem="iW2-vx-GBy" firstAttribute="leading" secondItem="WiQ-pV-Kem" secondAttribute="leading" id="bVP-Uo-qDg"/>
+                            <constraint firstItem="WiQ-pV-Kem" firstAttribute="bottom" secondItem="iW2-vx-GBy" secondAttribute="bottom" id="om6-OF-01s"/>
+                            <constraint firstItem="WiQ-pV-Kem" firstAttribute="trailing" secondItem="iW2-vx-GBy" secondAttribute="trailing" id="xEr-4c-HgN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WiQ-pV-Kem"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Historical" id="tIx-gn-O2O"/>
+                    <connections>
+                        <outlet property="historicalTableView" destination="iW2-vx-GBy" id="FPI-Rg-1C3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ld-zV-Ryk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+        </scene>
+        <!--Historical-->
+        <scene sceneID="sPR-5E-11f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ix-92-f4n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Historical" image="journal" id="AMq-Vm-2w1"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o2M-b1-xiP" customClass="CustomNavBar" customModule="Gymart" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M92-HO-Iy5" kind="relationship" relationship="rootViewController" id="IFy-Ku-t8M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fus-I3-sbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clock" width="15" height="15"/>
+        <image name="journal" width="21.5" height="21.5"/>
+    </resources>
+</document>
