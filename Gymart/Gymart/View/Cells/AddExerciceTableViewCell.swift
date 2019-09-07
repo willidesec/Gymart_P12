@@ -10,7 +10,6 @@ import UIKit
 
 class AddExerciceTableViewCell: UITableViewCell {
 
-    
     // MARK: - IBOutlet
     
     @IBOutlet weak var exerciceNameLabel: UILabel!

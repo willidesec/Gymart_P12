@@ -40,7 +40,6 @@ class ExercicesTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    
     // MARK: - Methods
     
     private func setupUI() {

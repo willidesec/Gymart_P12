@@ -69,13 +69,13 @@ class WorkoutViewController: UIViewController {
         }
     }
     
-    private func deleteWorkoutInFirestore(id: String) {
+    private func deleteWorkoutInFirestore(identifier: String) {
         guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
         
         let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
         
-        workoutsCollection.document(id).delete { error in
+        workoutsCollection.document(identifier).delete { error in
             if let error = error {
                 print("Error removing document: \(error)")
             } else {
@@ -104,7 +104,9 @@ extension WorkoutViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkoutTableViewCell.identifier, for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkoutTableViewCell.identifier, for: indexPath) as? WorkoutTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.workout = workouts[indexPath.row]
         cell.exercicesTableView.reloadData()
@@ -114,7 +116,7 @@ extension WorkoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteWorkoutInFirestore(id: workouts[indexPath.row].id)
+            deleteWorkoutInFirestore(identifier: workouts[indexPath.row].identifier)
             workouts.remove(at: indexPath.row)
             workoutsTableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -122,12 +124,13 @@ extension WorkoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Training", bundle: nil)
-        guard let trainingVC = storyBoard.instantiateViewController(withIdentifier: TrainingViewController.identifier) as? TrainingViewController else { return }
+        guard let trainingVC = storyBoard.instantiateViewController(withIdentifier: TrainingViewController.identifier) as? TrainingViewController else {
+            return
+        }
         trainingVC.programId = programId
-        trainingVC.workoutId = workouts[indexPath.row].id
+        trainingVC.workoutId = workouts[indexPath.row].identifier
         navigationController?.pushViewController(trainingVC, animated: true)
     }
-    
     
 }
 

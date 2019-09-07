@@ -34,7 +34,9 @@ struct Constants {
         static let title = "Oups"
         static let okMessage = "Ok"
         
-        static let noEmail = "Entrer une adresse email"
+        static let noEmail = "Enter an email"
+        static let noPassword = "Enter a password"
+        static let noUserName = "Enter a User Name"
     }
     
     struct AlertError {

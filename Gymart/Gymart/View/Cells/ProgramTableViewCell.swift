@@ -46,5 +46,4 @@ class ProgramTableViewCell: UITableViewCell {
         tagView.layer.roundedCorner(10)
     }
     
-    
 }

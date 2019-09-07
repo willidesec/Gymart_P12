@@ -31,7 +31,7 @@ extension UIViewController {
     internal func displayActionSheet(action: UIAlertAction) {
         let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheetVC.addAction(action)
-        let cancelAction = UIAlertAction(title:  Constants.ActionSheet.cancelAction, style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: Constants.ActionSheet.cancelAction, style: .cancel, handler: nil)
         actionSheetVC.addAction(cancelAction)
         present(actionSheetVC, animated: true, completion: nil)
     }
@@ -53,9 +53,15 @@ extension UIViewController: UITextFieldDelegate {
 
 extension UIViewController {
     internal func createKeyboardNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
     }
     
     internal func removeKeyboardNotificationObservers() {
@@ -64,28 +70,12 @@ extension UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-    
     @objc func keyboardWillChange(notification: Notification) {
-        let MAX_MOVING_HEIGHT: CGFloat = 150.0
-//        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-//            return
-//        }
-        
-//        let logInButtonOriginY = logInButton.frame.origin.y
-//        let distanceFromBottom = view.frame.height - logInButtonOriginY
-//        var keyboardMovingHeight: CGFloat = 0.0
-        
-//        if distanceFromBottom < keyboardRect.height {
-//            keyboardMovingHeight = keyboardRect.height - distanceFromBottom
-//        }
-        
-//        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
-        if notification.name == UIResponder.keyboardWillShowNotification  {
-            view.frame.origin.y = -MAX_MOVING_HEIGHT
+        let maxMovingHeight: CGFloat = 150.0
+        if notification.name == UIResponder.keyboardWillShowNotification {
+            view.frame.origin.y = -maxMovingHeight
         } else {
             view.frame.origin.y = 0
         }
     }
 }
-
-

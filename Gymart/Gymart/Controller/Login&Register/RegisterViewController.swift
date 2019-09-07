@@ -14,7 +14,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Properties
     
     let db = Firestore.firestore()
-    var ref: DocumentReference? = nil
+    var ref: DocumentReference?
 
     // MARK: - IBOutlet
     
@@ -49,18 +49,15 @@ class RegisterViewController: UIViewController {
     
     private func createUserAccount() {
         guard let username = userNameInput.textField.text, !username.isEmpty else {
-            // TODO: Alert
-            print("Pas de username")
+            displayAlert(message: Constants.Alert.noUserName)
             return
         }
         guard let email = emailUserInput.textField.text, !email.isEmpty else {
-            // TODO: Alert
-            print("Pas de email")
+            displayAlert(message: Constants.Alert.noEmail)
             return
         }
         guard let password = passwordUserInput.textField.text, !password.isEmpty else {
-            // TODO: Alert
-            print("Pas de password")
+            displayAlert(message: Constants.Alert.noPassword)
             return
         }
         
@@ -72,7 +69,7 @@ class RegisterViewController: UIViewController {
                     "userName": username,
                     "email": email
                 ]
-                self.saveUserData(user, id: userId)
+                self.saveUserData(user, identifier: userId)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error creating user: \(error!.localizedDescription)")
@@ -80,8 +77,8 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    private func saveUserData(_ user: [String: Any], id: String) {
-        db.collection("users").document(id).setData(user)
+    private func saveUserData(_ user: [String: Any], identifier: String) {
+        db.collection("users").document(identifier).setData(user)
     }
     
     private func configureTextField() {
@@ -91,7 +88,6 @@ class RegisterViewController: UIViewController {
         userNameInput.textField.keyboardType = .default
         userNameInput.textField.returnKeyType = .done
         userNameInput.textField.delegate = self
-        
         
         guard let emailImage = #imageLiteral(resourceName: "email").cgImage else { return }
         emailUserInput.iconImageView.image = UIImage(cgImage: emailImage)

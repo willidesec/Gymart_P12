@@ -36,16 +36,24 @@ class UserInputView: UIView {
     // MARK: - Methods
     private func setupUI() {
         setupBorder()
-        [iconImageView, textField].forEach() { addSubview($0) }
+        [iconImageView, textField].forEach { addSubview($0) }
         setUpConstraints()
     }
     
     private func setUpConstraints() {
         iconImageView.centerY(to: self)
-        iconImageView.setAnchors(top: nil, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 0), size: CGSize(width: 22.0, height: 22.0))
+        iconImageView.setAnchors(top: nil,
+                                 leading: self.leadingAnchor,
+                                 bottom: nil,
+                                 trailing: nil,
+                                 padding: UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 0), size: CGSize(width: 22.0, height: 22.0))
         
         textField.centerY(to: self)
-        textField.setAnchors(top: nil, leading: iconImageView.trailingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 22))
+        textField.setAnchors(top: nil,
+                             leading: iconImageView.trailingAnchor,
+                             bottom: nil,
+                             trailing: self.trailingAnchor,
+                             padding: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 22))
     }
     
     private func setupBorder() {

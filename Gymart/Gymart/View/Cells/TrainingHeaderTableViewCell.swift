@@ -27,9 +27,5 @@ class TrainingHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    }
-    
-    // MARK: - Methods
-    
-    
+    }  
 }

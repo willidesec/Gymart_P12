@@ -74,7 +74,7 @@ class TrainingViewController: UIViewController {
         
         let workoutDocument = db.document("users/\(currentUser.uid)/programs/\(programId)/workouts/\(workoutId)")
         
-        workoutDocument.getDocument { (document, error) in
+        workoutDocument.getDocument { (document, _) in
             if let workout = document.flatMap({
                 $0.data().flatMap({ (data) in
                     return Workout(dictionary: data)
@@ -207,7 +207,9 @@ extension TrainingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingTableViewCell.identifier, for: indexPath) as? TrainingTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.toggleSetDelegate = self
         cell.exerciceName = exercices[indexPath.section].name
@@ -221,7 +223,9 @@ extension TrainingViewController: UITableViewDataSource {
 
 extension TrainingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHeaderTableViewCell.identifier) as? TrainingHeaderTableViewCell else { return UIView() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHeaderTableViewCell.identifier) as? TrainingHeaderTableViewCell else {
+            return UIView()
+        }
         cell.exercice = exercices[section]
         
         return cell.contentView

@@ -23,13 +23,12 @@ struct ExerciceSet {
 }
 
 extension ExerciceSet: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
+    init?(dictionary: [String: Any]) {
         guard let reps = dictionary["reps"] as? Int,
             let weight = dictionary["weight"] as? Int,
             let numeroOfSet = dictionary["numeroOfSet"] as? Int else { return nil }
         
         self.init(numeroOfSet: numeroOfSet, reps: reps, weight: weight)
     }
-    
     
 }

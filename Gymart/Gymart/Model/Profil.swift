@@ -9,13 +9,13 @@
 import Foundation
 
 struct Profil {
-    let id: String
+    let identifier: String
     let email: String
     let userName: String
 
     var dictionary: [String: Any] {
         return [
-            "id": id,
+            "id": identifier,
             "email": email,
             "userName": userName
         ]
@@ -23,11 +23,11 @@ struct Profil {
 }
 
 extension Profil: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
-        guard let id = dictionary["userId"] as? String,
+    init?(dictionary: [String: Any]) {
+        guard let identifier = dictionary["userId"] as? String,
             let email = dictionary["email"] as? String,
             let userName = dictionary["userName"] as? String else { return nil }
         
-        self.init(id: id, email: email, userName: userName)
+        self.init(identifier: identifier, email: email, userName: userName)
     }
 }

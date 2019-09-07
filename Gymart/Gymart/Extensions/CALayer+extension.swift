@@ -17,15 +17,13 @@ extension CALayer {
         }
     }
     
-    
     func addShadow(
         color: UIColor = .black,
         opacity: Float = 0.5,
         width: CGFloat = 0,
         height: CGFloat = 2,
         radius: CGFloat = 2,
-        spread: CGFloat = 0)
-    {
+        spread: CGFloat = 0) {
         shadowColor = color.cgColor
         shadowOpacity = opacity
         shadowOffset = CGSize(width: width, height: height)
@@ -33,8 +31,8 @@ extension CALayer {
         if spread == 0 {
             shadowPath = nil
         } else {
-            let dx = -spread
-            let rect = bounds.insetBy(dx: dx, dy: dx)
+            let coordonnate = -spread
+            let rect = bounds.insetBy(dx: coordonnate, dy: coordonnate)
             shadowPath = UIBezierPath(rect: rect).cgPath
         }
     }

@@ -43,7 +43,7 @@ class ProfilViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func signOutItemDidTapped(_ sender: UIBarButtonItem) {
-        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { (action) in
+        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { _ in
             do {
                 try Auth.auth().signOut()
                 let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
@@ -103,7 +103,7 @@ class ProfilViewController: UIViewController {
         
         let userDocument = db.collection("users").document(currentUser.uid)
         
-        userDocument.getDocument { (document, err) in
+        userDocument.getDocument { (document, _) in
             if let document = document, document.exists {
                 guard let profil = document.data().map({Profil(dictionary: $0)}) as? Profil else { return }
                 self.updateScreenWithProfil(profil)

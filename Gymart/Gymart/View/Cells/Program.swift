@@ -10,14 +10,14 @@ import Foundation
 import Firebase
 
 struct Program {
-    let id: String
+    let identifier: String
     let name: String
     let description: String
     let creationDate: Date
     
     var dictionary: [String: Any] {
         return [
-            "id": id,
+            "id": identifier,
             "name": name,
             "description": description,
             "creationDate": creationDate
@@ -26,8 +26,8 @@ struct Program {
 }
 
 extension Program: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
-        guard let id = dictionary["id"] as? String,
+    init?(dictionary: [String: Any]) {
+        guard let identifier = dictionary["id"] as? String,
             let name = dictionary["name"] as? String,
             let description = dictionary["description"] as? String else { return nil }
         
@@ -36,7 +36,6 @@ extension Program: DocumentSerializableProtocol {
             date = creationDate.dateValue()
         }
         
-        self.init(id: id, name: name, description: description, creationDate: date)
+        self.init(identifier: identifier, name: name, description: description, creationDate: date)
     }
 }
-
