@@ -65,7 +65,7 @@ enum Endpoint {
 extension Endpoint {
     var userId: String {
         guard let currentUser = AuthService.getCurrentUser() else {
-            return ""
+            return "unknow user"
         }
         return currentUser.uid
     }

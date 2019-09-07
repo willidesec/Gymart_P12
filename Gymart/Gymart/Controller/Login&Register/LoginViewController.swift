@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -34,7 +33,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonDidTapped() {
         logIn()
-        
     }
     
     // MARK: - Methods
@@ -49,11 +47,13 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if error == nil && user != nil {
+        let authService = AuthService()
+        authService.signIn(email: email, password: password) { (authDataResult, error) in
+            if error == nil && authDataResult != nil {
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error loging user: \(error!.localizedDescription)")
+                self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
