@@ -15,6 +15,7 @@ final class FirestoreService {
     
     var dataBase = Firestore.firestore()
     var collection: CollectionReference?
+    var document: DocumentReference?
     
     // MARK: - Init
     
@@ -31,6 +32,11 @@ final class FirestoreService {
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
     }
     
+    func fetchDocumentData(endpoint: Endpoint, completion: @escaping FIRDocumentSnapshotBlock) {
+        document = dataBase.document(endpoint.path)
+        document?.getDocument(completion: completion)
+    }
+    
     func deleteDocumentData(endpoint: Endpoint, identifier: String, completion: @escaping (Error?) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).delete(completion: completion)
@@ -40,11 +46,18 @@ final class FirestoreService {
         collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).setData(data, completion: completion)
     }
+    
+    func updateDocumentDataInFirestore(endpoint: Endpoint, data: [String: Any], completion: @escaping (Error?) -> Void) {
+        document = dataBase.document(endpoint.path)
+        document?.updateData(data, completion: completion)
+    }
 }
 
 enum Endpoint {
     case program
     case workout(programId: String)
+    case training(programId: String, workoutId: String)
+    case historical
 }
 
 extension Endpoint {
@@ -61,6 +74,10 @@ extension Endpoint {
             return "users/\(userId)/programs"
         case let .workout(programId):
             return "users/\(userId)/programs/\(programId)/workouts"
+        case let .training(programId, workoutId):
+            return "users/\(userId)/programs/\(programId)/workouts/\(workoutId)"
+        case .historical:
+            return "users/\(userId)/historical"
         }
     }
 }

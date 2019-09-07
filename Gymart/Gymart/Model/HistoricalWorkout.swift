@@ -10,19 +10,22 @@ import Foundation
 import FirebaseFirestore
 
 struct HistoricalWorkout {
+    let identifier: String
     let name: String
     let workoutDate: Date
     var exercicesData = [[String: Any]]()
     
     var dictionary: [String: Any] {
         return [
+            "identifier": identifier,
             "name": name,
             "workoutDate": workoutDate,
             "exercices": exercicesData
         ]
     }
     
-    init(name: String, workoutDate: Date, exercices: [HistoricalExercice]) {
+    init(identifier: String, name: String, workoutDate: Date, exercices: [HistoricalExercice]) {
+        self.identifier = identifier
         self.name = name
         self.workoutDate = workoutDate
         
@@ -35,7 +38,8 @@ struct HistoricalWorkout {
 extension HistoricalWorkout: DocumentSerializableProtocol {
     init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String,
-        let workoutTimestamp = dictionary["workoutDate"] as? Timestamp else { return nil }
+            let identifier = dictionary["identifier"] as? String,
+            let workoutTimestamp = dictionary["workoutDate"] as? Timestamp else { return nil }
         
         let workoutDate = workoutTimestamp.dateValue()
         
@@ -43,6 +47,6 @@ extension HistoricalWorkout: DocumentSerializableProtocol {
         
         let exercices = exercicesData.compactMap({HistoricalExercice(dictionary: $0)})
         
-        self.init(name: name, workoutDate: workoutDate, exercices: exercices)
+        self.init(identifier: identifier, name: name, workoutDate: workoutDate, exercices: exercices)
     }
 }
