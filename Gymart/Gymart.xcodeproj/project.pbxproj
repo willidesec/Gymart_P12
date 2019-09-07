@@ -22,6 +22,7 @@
 		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
 		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
 		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
+		3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D92892323A8E20004AE7F /* Profil.swift */; };
 		3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */; };
 		3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */; };
 		3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */; };
@@ -52,7 +53,7 @@
 		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
 		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
 		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
-		3F5A60FD22C7C72B00D84692 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */; };
+		3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */; };
 		3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */; };
 		3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FACE7ED23084F1D0066EC3A /* Historical.storyboard */; };
 		3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */; };
@@ -85,6 +86,7 @@
 		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
 		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
+		3F2D92892323A8E20004AE7F /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
 		3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
 		3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesTableViewCell.swift; sourceTree = "<group>"; };
 		3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 		3F5A60F622C7C03300D84692 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F5A60F822C7C4C000D84692 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
-		3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Gymart/Controller/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewController.swift; path = Gymart/Controller/ProfilViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FACE7ED23084F1D0066EC3A /* Historical.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historical.storyboard; sourceTree = "<group>"; };
 		3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
@@ -291,7 +293,7 @@
 				3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */,
 				3FB7163322E3358000A44FA1 /* Program */,
 				3FB7163422E335D000A44FA1 /* Workouts */,
-				3F5A60FC22C7C72B00D84692 /* ProfileViewController.swift */,
+				3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */,
 				3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */,
 				3F23FE2722AD31B80085B20C /* Login&Register */,
 			);
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */,
+				3F2D92892323A8E20004AE7F /* Profil.swift */,
 				30E0618A22C0E905007A1964 /* Program.swift */,
 				3FB7163722E37D8800A44FA1 /* Workout.swift */,
 				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
@@ -569,9 +572,10 @@
 				3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */,
 				3F25A68B2305CDC200DB769F /* UIImageView+extensions.swift in Sources */,
 				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
+				3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */,
 				3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */,
 				3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */,
-				3F5A60FD22C7C72B00D84692 /* ProfileViewController.swift in Sources */,
+				3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */,
 				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
 				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
 				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,

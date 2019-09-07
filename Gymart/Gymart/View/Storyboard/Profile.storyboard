@@ -9,20 +9,108 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DejaVuSans.ttf">
+            <string>DejaVuSans</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile-->
         <scene sceneID="pn8-xE-D2C">
             <objects>
-                <viewController id="gNx-Pa-Ube" customClass="ProfileViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gNx-Pa-Ube" customClass="ProfilViewController" customModule="Gymart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mzm-GL-5Zd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM6-k5-Ulr">
                                 <rect key="frame" x="25" y="188" width="364" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-Cl-ngh" userLabel="Email View">
+                                        <rect key="frame" x="0.0" y="50" width="364" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-pl-OuO">
+                                                <rect key="frame" x="20" y="5" width="324" height="19"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL_LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-V0-a22">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="19"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="Tqq-VZ-lUq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL_PROFIL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPu-Xh-OMG">
+                                                        <rect key="frame" x="80" y="0.0" width="244" height="19"/>
+                                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dw-tO-xpK" userLabel="Separator View">
+                                                <rect key="frame" x="20" y="29" width="324" height="1"/>
+                                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="po7-A6-1tn"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="9dw-tO-xpK" secondAttribute="bottom" id="3aH-8j-Kqj"/>
+                                            <constraint firstAttribute="trailing" secondItem="9dw-tO-xpK" secondAttribute="trailing" constant="20" id="BDS-DT-hYx"/>
+                                            <constraint firstItem="9dw-tO-xpK" firstAttribute="top" secondItem="E9o-pl-OuO" secondAttribute="bottom" constant="5" id="Kmt-UU-Jqw"/>
+                                            <constraint firstItem="9dw-tO-xpK" firstAttribute="leading" secondItem="6gD-Cl-ngh" secondAttribute="leading" constant="20" id="LeE-Jg-O6X"/>
+                                            <constraint firstAttribute="trailing" secondItem="E9o-pl-OuO" secondAttribute="trailing" constant="20" id="LuJ-CH-udr"/>
+                                            <constraint firstItem="E9o-pl-OuO" firstAttribute="top" secondItem="6gD-Cl-ngh" secondAttribute="top" constant="5" id="UnJ-Mt-7c3"/>
+                                            <constraint firstAttribute="height" constant="30" id="fpG-fQ-rSe"/>
+                                            <constraint firstItem="E9o-pl-OuO" firstAttribute="leading" secondItem="6gD-Cl-ngh" secondAttribute="leading" constant="20" id="nz8-6P-vqe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuD-aD-uim" userLabel="Email View">
+                                        <rect key="frame" x="0.0" y="85" width="364" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f81-oP-7fv">
+                                                <rect key="frame" x="20" y="5" width="324" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME_LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5a-eg-GXe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="kci-g2-yBr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                        <color key="textColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME_PROFIL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz6-Bk-oaR">
+                                                        <rect key="frame" x="110" y="0.0" width="214" height="20"/>
+                                                        <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="f81-oP-7fv" firstAttribute="top" secondItem="TuD-aD-uim" secondAttribute="top" constant="5" id="E2N-Z1-FIk"/>
+                                            <constraint firstAttribute="height" constant="30" id="Ffa-yM-NOc"/>
+                                            <constraint firstAttribute="trailing" secondItem="f81-oP-7fv" secondAttribute="trailing" constant="20" id="eCR-ky-uDh"/>
+                                            <constraint firstItem="f81-oP-7fv" firstAttribute="leading" secondItem="TuD-aD-uim" secondAttribute="leading" constant="20" id="zWY-PB-cdK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="TuD-aD-uim" firstAttribute="top" secondItem="6gD-Cl-ngh" secondAttribute="bottom" constant="5" id="3Di-wN-lLV"/>
                                     <constraint firstAttribute="height" constant="120" id="4pN-a3-wRW"/>
+                                    <constraint firstItem="6gD-Cl-ngh" firstAttribute="leading" secondItem="lM6-k5-Ulr" secondAttribute="leading" id="DDt-r8-4RR"/>
+                                    <constraint firstItem="TuD-aD-uim" firstAttribute="leading" secondItem="lM6-k5-Ulr" secondAttribute="leading" id="pks-M4-zH6"/>
+                                    <constraint firstItem="6gD-Cl-ngh" firstAttribute="top" secondItem="lM6-k5-Ulr" secondAttribute="top" constant="50" id="r2q-JW-gYK"/>
+                                    <constraint firstAttribute="trailing" secondItem="6gD-Cl-ngh" secondAttribute="trailing" id="uxb-5C-fnQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TuD-aD-uim" secondAttribute="trailing" id="wb9-K3-7oC"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gymnast" translatesAutoresizingMaskIntoConstraints="NO" id="SvI-Jb-xGB">
@@ -52,8 +140,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailLabel" destination="IGi-V0-a22" id="YXO-CC-e3p"/>
+                        <outlet property="emailProfilLabel" destination="jPu-Xh-OMG" id="AcN-zF-mFN"/>
                         <outlet property="profileContainer" destination="lM6-k5-Ulr" id="pfu-Sq-zyJ"/>
                         <outlet property="userImageView" destination="SvI-Jb-xGB" id="c4b-QU-q0W"/>
+                        <outlet property="userNameLabel" destination="F5a-eg-GXe" id="yEd-rB-MU0"/>
+                        <outlet property="userNameProfilLabel" destination="Mz6-Bk-oaR" id="lSf-U5-jjd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEi-hT-FhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
