@@ -41,6 +41,7 @@ struct Constants {
     
     struct AlertError {
         static let signOutError = "Sign Out Error"
+        static let serverError = "Unavailable Server"
     }
     
     struct ActionSheet {

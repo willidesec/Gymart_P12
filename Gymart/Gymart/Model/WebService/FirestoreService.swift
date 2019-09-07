@@ -13,13 +13,13 @@ final class FirestoreService {
     
     // MARK: - Properties
     
-    var dataBase: Firestore
+    var dataBase = Firestore.firestore()
     let userId: String
+    var collection: CollectionReference?
     
     // MARK: - Init
     
     init() {
-        self.dataBase = Firestore.firestore()
         let settings = dataBase.settings
         settings.areTimestampsInSnapshotsEnabled = true
         dataBase.settings = settings
@@ -33,11 +33,15 @@ final class FirestoreService {
     
     // MARK: - Methods
     
-    func fetchPrograms(completion: @escaping FIRQuerySnapshotBlock ) {
-        let programsCollection = dataBase.collection(Endpoint.program(userId: userId).path)
-        programsCollection.order(by: "creationDate", descending: true).getDocuments(completion: completion)
+    func fetchPrograms(completion: @escaping FIRQuerySnapshotBlock) {
+        collection = dataBase.collection(Endpoint.program(userId: userId).path)
+        collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
     }
     
+    func deleteProgram(identifier: String, completion: @escaping (Error?) -> Void) {
+        collection = dataBase.collection(Endpoint.program(userId: userId).path)
+        collection?.document(identifier).delete(completion: completion)
+    }
 }
 
 enum Endpoint {
