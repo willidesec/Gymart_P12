@@ -26,13 +26,13 @@ final class FirestoreService {
     
     // MARK: - Methods
     
-    func fetchPrograms(completion: @escaping FIRQuerySnapshotBlock) {
-        collection = dataBase.collection(Endpoint.program.path)
+    func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {
+        collection = dataBase.collection(endpoint.path)
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
     }
     
-    func deleteProgram(identifier: String, completion: @escaping (Error?) -> Void) {
-        collection = dataBase.collection(Endpoint.program.path)
+    func deleteDocumentData(endpoint: Endpoint, identifier: String, completion: @escaping (Error?) -> Void) {
+        collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).delete(completion: completion)
     }
     

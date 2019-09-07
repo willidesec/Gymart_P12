@@ -42,7 +42,7 @@ class ProgramViewController: UIViewController {
     
     private func fetchPrograms() {
         let firestoreService = FirestoreService()
-        firestoreService.fetchPrograms { (querySnapshot, error) in
+        firestoreService.fetchCollectionData(endpoint: .program) { (querySnapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error.localizedDescription)")
             } else {
@@ -56,7 +56,7 @@ class ProgramViewController: UIViewController {
     
     private func deleteProgramInFirestore(identifier: String) {
         let firestoreService = FirestoreService()
-        firestoreService.deleteProgram(identifier: identifier) { (error) in
+        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
             if error != nil {
                 self.displayAlert(message: Constants.AlertError.serverError)
             }
