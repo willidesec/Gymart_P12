@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import FirebaseFirestore
+//import FirebaseFirestore
 
 class AddWorkoutViewController: UIViewController {
 
     // MARK: - Properties
     
-    var db: Firestore!
     var exercices = [Exercice]()
     var programId: String?
     
@@ -62,12 +61,12 @@ class AddWorkoutViewController: UIViewController {
     
     private func addExerciceToTableView() {
         guard let exerciceName = exerciceNameTextField.text, !exerciceName.isEmpty else {
-            // Alert
+            displayAlert(message: Constants.Alert.noExerciceName)
             return
         }
         
         guard let stringSets = numberOfSetsTextField.text, !stringSets.isEmpty else {
-            // Alert
+            displayAlert(message: Constants.Alert.noExerciceSet)
             return
         }
         
@@ -81,12 +80,12 @@ class AddWorkoutViewController: UIViewController {
     
     private func saveNewWorkout() {
         guard let workoutName = workoutNameTextField.text, !workoutName.isEmpty else {
-            displayAlert(message: "Enter a name for the Workout")
+            displayAlert(message: Constants.Alert.noWorkoutName)
             return
         }
         
         if exercices.isEmpty {
-            displayAlert(message: "Add at least one exercice")
+            displayAlert(message: Constants.Alert.noWorkoutExercices)
         } else {
             let identifier = UUID().uuidString
             let newWorkout = Workout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: exercices)
@@ -95,15 +94,12 @@ class AddWorkoutViewController: UIViewController {
     }
     
     private func saveWorkoutInFirestore(identifier: String, data: [String: Any]) {
-        db = Firestore.firestore()
-        
-        guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
-        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
-        
-        workoutsCollection.document(identifier).setData(data) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
+        let firestoreService = FirestoreService()
+        firestoreService.saveDataInFirestore(endpoint: .workout(programId: programId), identifier: identifier, data: data) { (error) in
+            if let error = error {
+                print("Error adding document: \(error)")
+                self.displayAlert(message: Constants.AlertError.serverError)
             } else {
                 print("Document added with succes")
                 self.dismiss(animated: true, completion: nil)

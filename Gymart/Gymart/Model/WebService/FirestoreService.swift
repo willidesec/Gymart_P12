@@ -44,7 +44,7 @@ final class FirestoreService {
 
 enum Endpoint {
     case program
-    case workout
+    case workout(programId: String)
 }
 
 extension Endpoint {
@@ -59,8 +59,8 @@ extension Endpoint {
         switch self {
         case .program:
             return "users/\(userId)/programs"
-        case .workout:
-            return "users/currentUser/workout"
+        case let .workout(programId):
+            return "users/\(userId)/programs/\(programId)/workouts"
         }
     }
 }

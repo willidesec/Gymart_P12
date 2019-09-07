@@ -39,6 +39,10 @@ struct Constants {
         static let noUserName = "Enter a User Name"
         static let noProgramName = "Enter a Program name"
         static let noProgramDescription = "Enter a Description"
+        static let noExerciceName = "Enter a Name for the Exercice"
+        static let noExerciceSet = "Enter a number of Set"
+        static let noWorkoutName = "Enter a name for the Workout"
+        static let noWorkoutExercices = "Add at least one exercice"
     }
     
     struct AlertError {
