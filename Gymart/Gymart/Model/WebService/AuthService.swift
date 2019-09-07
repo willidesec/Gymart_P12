@@ -20,4 +20,8 @@ class AuthService {
             return nil
         }
     }
+    
+    func signOut() throws {
+        try Auth.auth().signOut()
+    }
 }

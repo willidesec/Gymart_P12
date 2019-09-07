@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
 
 class ProfilViewController: UIViewController {
     
@@ -21,10 +19,6 @@ class ProfilViewController: UIViewController {
     @IBOutlet weak var emailProfilLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userNameProfilLabel: UILabel!
-    
-    // MARK: - Properties
-    
-    var db: Firestore!
     
     // MARK: - View Life Cycle
     
@@ -43,19 +37,7 @@ class ProfilViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func signOutItemDidTapped(_ sender: UIBarButtonItem) {
-        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { _ in
-            do {
-                try Auth.auth().signOut()
-                let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
-                let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
-                self.present(loginVC, animated: true, completion: nil)
-            } catch let error {
-                print(error.localizedDescription)
-                self.displayAlert(title: Constants.AlertError.signOutError, message: error.localizedDescription)
-            }
-        }
-        
-        displayActionSheet(action: signOutAction)
+        signOut()
     }
     
     // MARK: - Methods UI
@@ -98,19 +80,34 @@ class ProfilViewController: UIViewController {
     // MARK: - Methods WebService
     
     private func fetchProfilInformation() {
-        db = Firestore.firestore()
-        guard let currentUser = AuthService.getCurrentUser() else { return }
         
-        let userDocument = db.collection("users").document(currentUser.uid)
-        
-        userDocument.getDocument { (document, _) in
+        let firestoreService = FirestoreService()
+        firestoreService.fetchDocumentData(endpoint: .user) { (document, _) in
             if let document = document, document.exists {
                 guard let profil = document.data().map({Profil(dictionary: $0)}) as? Profil else { return }
                 self.updateScreenWithProfil(profil)
             } else {
                 print("Document does not exist")
+                self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
+    }
+    
+    private func signOut() {
+        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { _ in
+            do {
+                let authService = AuthService()
+                try authService.signOut()
+                let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
+                let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
+                self.present(loginVC, animated: true, completion: nil)
+            } catch let error {
+                print(error.localizedDescription)
+                self.displayAlert(title: Constants.AlertError.signOutError, message: error.localizedDescription)
+            }
+        }
+        
+        displayActionSheet(action: signOutAction)
     }
     
 }

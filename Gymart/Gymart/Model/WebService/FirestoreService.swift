@@ -54,6 +54,7 @@ final class FirestoreService {
 }
 
 enum Endpoint {
+    case user
     case program
     case workout(programId: String)
     case training(programId: String, workoutId: String)
@@ -70,6 +71,8 @@ extension Endpoint {
     
     var path: String {
         switch self {
+        case .user:
+            return "users/\(userId)"
         case .program:
             return "users/\(userId)/programs"
         case let .workout(programId):
