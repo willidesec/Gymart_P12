@@ -45,6 +45,7 @@
 		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
 		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
 		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
+		3F3387C42323FA5D0090D3EE /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3387C32323FA5D0090D3EE /* FirestoreService.swift */; };
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
@@ -109,6 +110,7 @@
 		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
 		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		3F3387C32323FA5D0090D3EE /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,6 +256,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3F3387C22323F3550090D3EE /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
+				3F3387C32323FA5D0090D3EE /* FirestoreService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 		3F3FB23B22A0675C00D22D36 = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +324,7 @@
 		3F3FB25B22A068B300D22D36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F3387C22323F3550090D3EE /* WebService */,
 				3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */,
 				3F2D92892323A8E20004AE7F /* Profil.swift */,
 				30E0618A22C0E905007A1964 /* Program.swift */,
@@ -321,7 +333,6 @@
 				3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */,
 				3FACE7F323085E540066EC3A /* HistoricalExercice.swift */,
 				3FACE7F523085EB50066EC3A /* ExerciceSet.swift */,
-				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -579,6 +590,7 @@
 				3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */,
 				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
 				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
+				3F3387C42323FA5D0090D3EE /* FirestoreService.swift in Sources */,
 				3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */,
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,

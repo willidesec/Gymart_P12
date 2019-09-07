@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import FirebaseFirestore
+//import FirebaseFirestore
 
 class ProgramViewController: UIViewController {
     
     // MARK: - Properties
     
     var programs = [Program]()
-    var db: Firestore!
-
+//    var db: Firestore!
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var programTableView: UITableView!
@@ -25,7 +25,7 @@ class ProgramViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureFirestoreDataBase()
+//        configureFirestoreDataBase()
         configureTableView()
     }
     
@@ -43,21 +43,18 @@ class ProgramViewController: UIViewController {
         programTableView.separatorStyle = .none
     }
     
-    private func configureFirestoreDataBase() {
-        db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-    }
+//    private func configureFirestoreDataBase() {
+//        db = Firestore.firestore()
+//        let settings = db.settings
+//        settings.areTimestampsInSnapshotsEnabled = true
+//        db.settings = settings
+//    }
     
     private func fetchPrograms() {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        
-        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
-        
-        programsCollection.order(by: "creationDate", descending: true).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err.localizedDescription)")
+        let firestoreService = FirestoreService()
+        firestoreService.fetchPrograms { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error.localizedDescription)")
             } else {
                 self.programs = querySnapshot!.documents.compactMap({Program(dictionary: $0.data())})
                 DispatchQueue.main.async {
@@ -65,21 +62,36 @@ class ProgramViewController: UIViewController {
                 }
             }
         }
+        
+//        guard let currentUser = AuthService.getCurrentUser() else { return }
+//
+//        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
+//
+//        programsCollection.order(by: "creationDate", descending: true).getDocuments { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err.localizedDescription)")
+//            } else {
+//                self.programs = querySnapshot!.documents.compactMap({Program(dictionary: $0.data())})
+//                DispatchQueue.main.async {
+//                    self.programTableView.reloadData()
+//                }
+//            }
+//        }
     }
     
-    private func deleteProgramInFirestore(identifier: String) {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        
-        let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
-        
-        programsCollection.document(identifier).delete { error in
-            if let error = error {
-                print("Error removing document: \(error)")
-            } else {
-                print("Document successfully removed!")
-            }
-        }
-    }
+//    private func deleteProgramInFirestore(identifier: String) {
+//        guard let currentUser = AuthService.getCurrentUser() else { return }
+//
+//        let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
+//
+//        programsCollection.document(identifier).delete { error in
+//            if let error = error {
+//                print("Error removing document: \(error)")
+//            } else {
+//                print("Document successfully removed!")
+//            }
+//        }
+//    }
     
 }
 
@@ -102,9 +114,9 @@ extension ProgramViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteProgramInFirestore(identifier: programs[indexPath.row].identifier)
-            programs.remove(at: indexPath.row)
-            programTableView.deleteRows(at: [indexPath], with: .automatic)
+//            deleteProgramInFirestore(identifier: programs[indexPath.row].identifier)
+//            programs.remove(at: indexPath.row)
+//            programTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
