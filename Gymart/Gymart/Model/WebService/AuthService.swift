@@ -21,6 +21,10 @@ class AuthService {
         }
     }
     
+    func signUp(email: String, password: String, completion: @escaping AuthDataResultCallback) {
+        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+    }
+    
     func signOut() throws {
         try Auth.auth().signOut()
     }

@@ -34,7 +34,7 @@ class WorkoutTableViewCell: UITableViewCell {
     var historicalWorkout: HistoricalWorkout? {
         didSet {
             workoutNameLabel.text = historicalWorkout?.name
-            if let workoutDate = historicalWorkout?.workoutDate {
+            if let workoutDate = historicalWorkout?.creationDate {
                 displayCorrectTimeInterval(workoutDate)
             }
         }

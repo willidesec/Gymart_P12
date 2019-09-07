@@ -14,7 +14,6 @@ class HistoricalViewController: UIViewController {
     // MARK: - Properties
     
     var historicalWorkouts = [HistoricalWorkout]()
-    var db: Firestore!
     
     // MARK: - IBOutlet
 
@@ -22,35 +21,18 @@ class HistoricalViewController: UIViewController {
     
     // MARK: - View Life Cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        configureFirestoreDataBase()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         fetchHistoricalWorkouts()
     }
     
-    // MARK: - Methods
-    
-    private func configureFirestoreDataBase() {
-        db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-    }
-    
     private func fetchHistoricalWorkouts() {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-
-        let historicalCollection = db.collection("users/\(currentUser.uid)/historical")
-
-        historicalCollection.order(by: "workoutDate", descending: true).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err.localizedDescription)")
+        
+        let firestoreService = FirestoreService()
+        firestoreService.fetchCollectionData(endpoint: .historical) { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error.localizedDescription)")
             } else {
                 self.historicalWorkouts = querySnapshot!.documents.compactMap({HistoricalWorkout(dictionary: $0.data())})
                 DispatchQueue.main.async {

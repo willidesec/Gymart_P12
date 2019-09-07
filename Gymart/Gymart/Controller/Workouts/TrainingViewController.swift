@@ -166,7 +166,7 @@ class TrainingViewController: UIViewController {
     private func saveTrainingInHistory() {
         guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
         let identifier = UUID().uuidString
-        let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, workoutDate: Date(), exercices: historicalExercices)
+        let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
         
         firestoreService.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
             if let error = error {
