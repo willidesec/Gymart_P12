@@ -121,7 +121,7 @@ extension WorkoutViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Training", bundle:nil)
+        let storyBoard = UIStoryboard(name: "Training", bundle: nil)
         guard let trainingVC = storyBoard.instantiateViewController(withIdentifier: TrainingViewController.identifier) as? TrainingViewController else { return }
         trainingVC.programId = programId
         trainingVC.workoutId = workouts[indexPath.row].id
