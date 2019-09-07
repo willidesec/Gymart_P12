@@ -24,7 +24,6 @@ class AddWorkoutViewController: UIViewController {
     @IBOutlet weak var numberOfSetsTextField: UITextField!
     @IBOutlet weak var exerciceTableView: UITableView!
     
-    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -90,19 +89,19 @@ class AddWorkoutViewController: UIViewController {
             displayAlert(message: "Add at least one exercice")
         } else {
             let identifier = UUID().uuidString
-            let newWorkout = Workout(id: identifier, name: workoutName, creationDate: Date(), exercices: exercices)
-            saveWorkoutInFirestore(id: identifier, data: newWorkout.dictionary)
+            let newWorkout = Workout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: exercices)
+            saveWorkoutInFirestore(identifier: identifier, data: newWorkout.dictionary)
         }
     }
     
-    private func saveWorkoutInFirestore(id: String, data: [String: Any]) {
+    private func saveWorkoutInFirestore(identifier: String, data: [String: Any]) {
         db = Firestore.firestore()
         
         guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
         let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
         
-        workoutsCollection.document(id).setData(data) { err in
+        workoutsCollection.document(identifier).setData(data) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
@@ -128,7 +127,9 @@ extension AddWorkoutViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AddExerciceTableViewCell.identifier, for: indexPath) as? AddExerciceTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AddExerciceTableViewCell.identifier, for: indexPath) as? AddExerciceTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.exercice = exercices[indexPath.row]
         

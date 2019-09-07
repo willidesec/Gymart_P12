@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ToggleSetProtocol {
+protocol ToggleSetProtocol: class {
     func addSetToExercice(set: ExerciceSet, exerciceName: String)
     func deleteSetToExercice(set: ExerciceSet, exerciceName: String)
 }
@@ -33,7 +33,7 @@ class TrainingTableViewCell: UITableViewCell {
     var numeroOfSet: Int?
     var exerciceName: String?
     var isExerciceSetValide = false
-    var toggleSetDelegate: ToggleSetProtocol?
+    weak var toggleSetDelegate: ToggleSetProtocol?
     
     // MARK: - View Life Cycle
     
@@ -56,7 +56,10 @@ class TrainingTableViewCell: UITableViewCell {
             guard let weight = Int(weightString) else { return }
             guard let exerciceName = exerciceName else { return }
             let set = ExerciceSet(numeroOfSet: numeroOfSet, reps: reps, weight: weight)
-            isExerciceSetValide ? toggleSetDelegate?.addSetToExercice(set: set, exerciceName: exerciceName): toggleSetDelegate?.deleteSetToExercice(set: set, exerciceName: exerciceName)
+            
+            isExerciceSetValide ?
+                toggleSetDelegate?.addSetToExercice(set: set, exerciceName: exerciceName) :
+                toggleSetDelegate?.deleteSetToExercice(set: set, exerciceName: exerciceName)
             
         } else {
             changeUIForInvalideSet()
@@ -113,7 +116,7 @@ class TrainingTableViewCell: UITableViewCell {
     private func pulseAnimation() {
         UIView.animate(withDuration: 0.1, animations: {
             self.checkedContainerView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        }) { (_) in
+        }) { _ in
             UIView.animate(withDuration: 0.1, animations: {
                 self.checkedContainerView.transform = CGAffineTransform(scaleX: 1, y: 1)
             })

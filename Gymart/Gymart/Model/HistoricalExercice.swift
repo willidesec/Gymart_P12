@@ -29,7 +29,7 @@ struct HistoricalExercice {
 }
 
 extension HistoricalExercice: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
+    init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String else { return nil }
         
         guard let setsData = dictionary["sets"] as? [[String: Any]] else { return nil }
@@ -38,6 +38,5 @@ extension HistoricalExercice: DocumentSerializableProtocol {
         
         self.init(name: name, sets: sets)
     }
-    
     
 }

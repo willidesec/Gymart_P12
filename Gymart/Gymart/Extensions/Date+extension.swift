@@ -10,11 +10,9 @@ import Foundation
 
 extension Date {
     var numberOfDaysFromNow: Int {
-        get {
             let calendar = Calendar.current
             let components = calendar.dateComponents([.day], from: self, to: Date())
             guard let days = components.day else { return 0 }
             return days
-        }
     }
 }

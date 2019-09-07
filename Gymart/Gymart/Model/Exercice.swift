@@ -21,7 +21,7 @@ struct Exercice {
 }
 
 extension Exercice: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
+    init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String,
             let sets = dictionary["sets"] as? Int else { return nil }
         

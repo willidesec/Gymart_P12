@@ -20,7 +20,6 @@ class ProgramViewController: UIViewController {
     
     @IBOutlet weak var programTableView: UITableView!
     
-    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -68,12 +67,12 @@ class ProgramViewController: UIViewController {
         }
     }
     
-    private func deleteProgramInFirestore(id: String) {
+    private func deleteProgramInFirestore(identifier: String) {
         guard let currentUser = AuthService.getCurrentUser() else { return }
         
         let programsCollection = db.collection("users").document(currentUser.uid).collection("programs")
         
-        programsCollection.document(id).delete { error in
+        programsCollection.document(identifier).delete { error in
             if let error = error {
                 print("Error removing document: \(error)")
             } else {
@@ -92,7 +91,9 @@ extension ProgramViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramTableViewCell.identifier, for: indexPath) as? ProgramTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgramTableViewCell.identifier, for: indexPath) as? ProgramTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.program = programs[indexPath.row]
         
@@ -101,19 +102,18 @@ extension ProgramViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteProgramInFirestore(id: programs[indexPath.row].id)
+            deleteProgramInFirestore(identifier: programs[indexPath.row].identifier)
             programs.remove(at: indexPath.row)
             programTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Training", bundle:nil)
+        let storyBoard = UIStoryboard(name: "Training", bundle: nil)
         guard let workoutsVC = storyBoard.instantiateViewController(withIdentifier: WorkoutViewController.identifier) as? WorkoutViewController else { return }
-        workoutsVC.programId = programs[indexPath.row].id
+        workoutsVC.programId = programs[indexPath.row].identifier
         navigationController?.pushViewController(workoutsVC, animated: true)
     }
-    
     
 }
 

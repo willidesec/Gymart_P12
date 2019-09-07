@@ -52,18 +52,18 @@ class AddProgramViewController: UIViewController {
             return
         }
         let identifier = UUID().uuidString
-        let newProgram = Program(id: identifier, name: programName, description: programDescription, creationDate: Date())
+        let newProgram = Program(identifier: identifier, name: programName, description: programDescription, creationDate: Date())
         
-        saveProgramInFirestore(id: identifier, data: newProgram.dictionary)
+        saveProgramInFirestore(identifier: identifier, data: newProgram.dictionary)
         
     }
     
-    private func saveProgramInFirestore(id: String, data: [String: Any]) {
+    private func saveProgramInFirestore(identifier: String, data: [String: Any]) {
         db = Firestore.firestore()
         
         guard let currentUser = AuthService.getCurrentUser() else { return }
         let programsCollection = db.collection("users/\(currentUser.uid)/programs")
-        programsCollection.document(id).setData(data) { err in
+        programsCollection.document(identifier).setData(data) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
@@ -79,6 +79,5 @@ class AddProgramViewController: UIViewController {
             separator.layer.borderWidth = 1
         }
     }
-    
     
 }

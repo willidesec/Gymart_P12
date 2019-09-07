@@ -33,7 +33,7 @@ struct HistoricalWorkout {
 }
 
 extension HistoricalWorkout: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
+    init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String,
         let workoutTimestamp = dictionary["workoutDate"] as? Timestamp else { return nil }
         

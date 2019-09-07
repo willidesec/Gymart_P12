@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 struct Workout {
-    let id: String
+    let identifier: String
     let name: String
     let creationDate: Date
     var lastWorkoutDate: Date?
@@ -19,7 +19,7 @@ struct Workout {
     var dictionary: [String: Any] {
         if let lastWorkoutDate = lastWorkoutDate {
             return [
-                "id": id,
+                "id": identifier,
                 "name": name,
                 "lastWorkoutDate": lastWorkoutDate,
                 "creationDate": creationDate,
@@ -27,7 +27,7 @@ struct Workout {
             ]
         } else {
             return [
-                "id": id,
+                "id": identifier,
                 "name": name,
                 "creationDate": creationDate,
                 "exercices": exercicesData
@@ -35,8 +35,8 @@ struct Workout {
         }
     }
     
-    init(id: String, name: String, creationDate: Date, exercices: [Exercice], lastWorkoutDate: Date? = nil) {
-        self.id = id
+    init(identifier: String, name: String, creationDate: Date, exercices: [Exercice], lastWorkoutDate: Date? = nil) {
+        self.identifier = identifier
         self.name = name
         self.creationDate = creationDate
         self.lastWorkoutDate = lastWorkoutDate
@@ -48,8 +48,8 @@ struct Workout {
 }
 
 extension Workout: DocumentSerializableProtocol {
-    init?(dictionary: [String : Any]) {
-        guard let id = dictionary["id"] as? String,
+    init?(dictionary: [String: Any]) {
+        guard let identifier = dictionary["id"] as? String,
             let name = dictionary["name"] as? String else { return nil }
         var date = Date()
         if let creationDate = dictionary["creationDate"] as? Timestamp {
@@ -64,6 +64,6 @@ extension Workout: DocumentSerializableProtocol {
         
         let exercices = exercicesData.compactMap({Exercice(dictionary: $0)})
         
-        self.init(id: id, name: name, creationDate: date, exercices: exercices, lastWorkoutDate: dateOfWorkout)
+        self.init(identifier: identifier, name: name, creationDate: date, exercices: exercices, lastWorkoutDate: dateOfWorkout)
     }
 }

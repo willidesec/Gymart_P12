@@ -9,7 +9,12 @@
 import UIKit
 
 extension UIView {
-    func setAnchors(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
+    func setAnchors(top: NSLayoutYAxisAnchor?,
+                    leading: NSLayoutXAxisAnchor?,
+                    bottom: NSLayoutYAxisAnchor?,
+                    trailing: NSLayoutXAxisAnchor?,
+                    padding: UIEdgeInsets = .zero,
+                    size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         if let top = top { topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true }
         if let leading = leading { leadingAnchor.constraint(equalTo: leading, constant: padding.left).isActive = true }

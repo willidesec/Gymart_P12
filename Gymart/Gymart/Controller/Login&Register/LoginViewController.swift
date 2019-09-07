@@ -37,7 +37,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    
     // MARK: - Methods
     
     private func logIn() {
@@ -46,8 +45,7 @@ class LoginViewController: UIViewController {
             return
         }
         guard let password = passwordUserInput.textField.text, !password.isEmpty else {
-            // TODO: Alert
-            print("Pas de password")
+            displayAlert(message: Constants.Alert.noPassword)
             return
         }
         
