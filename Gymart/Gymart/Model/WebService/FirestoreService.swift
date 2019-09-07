@@ -14,7 +14,6 @@ final class FirestoreService {
     // MARK: - Properties
     
     var dataBase = Firestore.firestore()
-    let userId: String
     var collection: CollectionReference?
     
     // MARK: - Init
@@ -23,39 +22,45 @@ final class FirestoreService {
         let settings = dataBase.settings
         settings.areTimestampsInSnapshotsEnabled = true
         dataBase.settings = settings
-        
-        guard let currentUser = AuthService.getCurrentUser() else {
-            self.userId = ""
-            return
-        }
-        self.userId = currentUser.uid
     }
     
     // MARK: - Methods
     
     func fetchPrograms(completion: @escaping FIRQuerySnapshotBlock) {
-        collection = dataBase.collection(Endpoint.program(userId: userId).path)
+        collection = dataBase.collection(Endpoint.program.path)
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
     }
     
     func deleteProgram(identifier: String, completion: @escaping (Error?) -> Void) {
-        collection = dataBase.collection(Endpoint.program(userId: userId).path)
+        collection = dataBase.collection(Endpoint.program.path)
         collection?.document(identifier).delete(completion: completion)
+    }
+    
+    func saveDataInFirestore(endpoint: Endpoint, identifier: String, data: [String: Any], completion: @escaping (Error?) -> Void) {
+        collection = dataBase.collection(endpoint.path)
+        collection?.document(identifier).setData(data, completion: completion)
     }
 }
 
 enum Endpoint {
-    case program(userId: String)
+    case program
     case workout
 }
 
 extension Endpoint {
+    var userId: String {
+        guard let currentUser = AuthService.getCurrentUser() else {
+            return ""
+        }
+        return currentUser.uid
+    }
+    
     var path: String {
         switch self {
-        case let .program(userId):
+        case .program:
             return "users/\(userId)/programs"
         case .workout:
-            return "user/currentUser/workout"
+            return "users/currentUser/workout"
         }
     }
 }

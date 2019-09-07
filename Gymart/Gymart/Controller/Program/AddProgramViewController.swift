@@ -7,13 +7,8 @@
 //
 
 import UIKit
-import Firebase
 
 class AddProgramViewController: UIViewController {
-
-    // MARK: - Properties
-    
-    var db: Firestore!
     
     // MARK: - IBOutlet
     
@@ -43,12 +38,12 @@ class AddProgramViewController: UIViewController {
     
     private func saveNewProgram() {
         guard let programName = programNameTextField.text, !programName.isEmpty else {
-            print("No Program Name")
+            displayAlert(message: Constants.Alert.noProgramName)
             return
         }
         
         guard let programDescription = descriptionTextField.text, !description.isEmpty else {
-            print("No description")
+            displayAlert(message: Constants.Alert.noProgramDescription)
             return
         }
         let identifier = UUID().uuidString
@@ -59,13 +54,12 @@ class AddProgramViewController: UIViewController {
     }
     
     private func saveProgramInFirestore(identifier: String, data: [String: Any]) {
-        db = Firestore.firestore()
         
-        guard let currentUser = AuthService.getCurrentUser() else { return }
-        let programsCollection = db.collection("users/\(currentUser.uid)/programs")
-        programsCollection.document(identifier).setData(data) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
+        let firestoreService = FirestoreService()
+        firestoreService.saveDataInFirestore(endpoint: .program, identifier: identifier, data: data) { (error) in
+            if let error = error {
+                print("Error adding document: \(error)")
+                self.displayAlert(message: Constants.AlertError.serverError)
             } else {
                 print("Document added with success")
                 self.dismiss(animated: true, completion: nil)
