@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
 		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
+		3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F235CA4232546C4006C3638 /* Endpoint.swift */; };
 		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
 		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
 		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
+		3F235CA4232546C4006C3638 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		3F3387C22323F3550090D3EE /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				3F235CA4232546C4006C3638 /* Endpoint.swift */,
 				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
 				3F3387C32323FA5D0090D3EE /* FirestoreService.swift */,
 			);
@@ -591,6 +594,7 @@
 				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
 				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
 				3F3387C42323FA5D0090D3EE /* FirestoreService.swift in Sources */,
+				3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */,
 				3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */,
 				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
 				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
