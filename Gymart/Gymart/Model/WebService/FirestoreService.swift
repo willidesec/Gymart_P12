@@ -13,9 +13,9 @@ final class FirestoreService {
     
     // MARK: - Properties
     
-    var dataBase = Firestore.firestore()
-    var collection: CollectionReference?
-    var document: DocumentReference?
+    private var dataBase = Firestore.firestore()
+    private var collection: CollectionReference?
+    private var document: DocumentReference?
     
     // MARK: - Init
     

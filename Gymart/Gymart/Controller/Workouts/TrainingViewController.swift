@@ -29,7 +29,7 @@ class TrainingViewController: UIViewController {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var doneButton: TrainingActionButton!
+    @IBOutlet private weak var doneButton: TrainingActionButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var cancelButton: TrainingActionButton!
     @IBOutlet weak var workoutNameLabel: UILabel!

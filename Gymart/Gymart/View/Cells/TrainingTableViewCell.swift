@@ -116,11 +116,11 @@ class TrainingTableViewCell: UITableViewCell {
     private func pulseAnimation() {
         UIView.animate(withDuration: 0.1, animations: {
             self.checkedContainerView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        }) { _ in
+        }, completion: { _ in
             UIView.animate(withDuration: 0.1, animations: {
                 self.checkedContainerView.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
-        }
+        })
         Vibration.success.vibrate()
     }
     
