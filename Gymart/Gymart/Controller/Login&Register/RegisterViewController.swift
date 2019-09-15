@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import Firebase
 
 class RegisterViewController: UIViewController {
     
     // MARK: - Properties
     
-    let db = Firestore.firestore()
-    var ref: DocumentReference?
+    let authService = AuthService()
+    let firestoreService = FirestoreService()
 
     // MARK: - IBOutlet
     
@@ -48,7 +47,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Methods
     
     private func createUserAccount() {
-        guard let username = userNameInput.textField.text, !username.isEmpty else {
+        guard let userName = userNameInput.textField.text, !userName.isEmpty else {
             displayAlert(message: Constants.Alert.noUserName)
             return
         }
@@ -61,24 +60,25 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+        authService.signUp(email: email, password: password) { (authResult, error) in
             if error == nil && authResult != nil {
-                guard let userId = Auth.auth().currentUser?.uid else { return }
-                let user: [String: Any] = [
-                    "userId": userId,
-                    "userName": username,
-                    "email": email
-                ]
-                self.saveUserData(user, identifier: userId)
+                guard let currentUser = AuthService.getCurrentUser() else { return }
+                let profil = Profil(identifier: currentUser.uid, email: email, userName: userName)
+                self.saveUserData(profil)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error creating user: \(error!.localizedDescription)")
+                self.displayAlert(message: error!.localizedDescription)
             }
         }
     }
     
-    private func saveUserData(_ user: [String: Any], identifier: String) {
-        db.collection("users").document(identifier).setData(user)
+    private func saveUserData(_ profil: Profil) {
+        firestoreService.saveDataInFirestore(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { (error) in
+            if error != nil {
+                self.displayAlert(message: Constants.AlertError.serverError)
+            }
+        }
     }
     
     private func configureTextField() {

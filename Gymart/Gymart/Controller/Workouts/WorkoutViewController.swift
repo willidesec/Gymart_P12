@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
 
 class WorkoutViewController: UIViewController {
     
@@ -15,7 +14,7 @@ class WorkoutViewController: UIViewController {
     
     var programId: String?
     var workouts = [Workout]()
-    var db: Firestore!
+    let firestoreService = FirestoreService()
 
     // MARK: - IBOutlet
     
@@ -50,16 +49,10 @@ class WorkoutViewController: UIViewController {
     }
     
     private func fetchWorkouts() {
-        db = Firestore.firestore()
-        
-        guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
-        
-        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
-        
-        workoutsCollection.order(by: "creationDate", descending: true).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err.localizedDescription)")
+        firestoreService.fetchCollectionData(endpoint: .workout(programId: programId)) { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error.localizedDescription)")
             } else {
                 self.workouts = querySnapshot!.documents.compactMap({Workout(dictionary: $0.data())})
                 DispatchQueue.main.async {
@@ -70,14 +63,11 @@ class WorkoutViewController: UIViewController {
     }
     
     private func deleteWorkoutInFirestore(identifier: String) {
-        guard let currentUser = AuthService.getCurrentUser() else { return }
         guard let programId = programId else { return }
-        
-        let workoutsCollection = db.collection("users/\(currentUser.uid)/programs/\(programId)/workouts")
-        
-        workoutsCollection.document(identifier).delete { error in
+        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
             if let error = error {
                 print("Error removing document: \(error)")
+                self.displayAlert(message: Constants.AlertError.serverError)
             } else {
                 print("Document successfully removed!")
             }

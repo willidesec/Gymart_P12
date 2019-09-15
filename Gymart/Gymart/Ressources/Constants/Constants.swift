@@ -34,13 +34,20 @@ struct Constants {
         static let title = "Oups"
         static let okMessage = "Ok"
         
-        static let noEmail = "Enter an email"
-        static let noPassword = "Enter a password"
+        static let noEmail = "Enter an Email"
+        static let noPassword = "Enter a Password"
         static let noUserName = "Enter a User Name"
+        static let noProgramName = "Enter a Program name"
+        static let noProgramDescription = "Enter a Description"
+        static let noExerciceName = "Enter a Name for the Exercice"
+        static let noExerciceSet = "Enter a number of Set"
+        static let noWorkoutName = "Enter a name for the Workout"
+        static let noWorkoutExercices = "Add at least one exercice"
     }
     
     struct AlertError {
         static let signOutError = "Sign Out Error"
+        static let serverError = "Unavailable Server"
     }
     
     struct ActionSheet {

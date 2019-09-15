@@ -15,7 +15,7 @@ struct Profil {
 
     var dictionary: [String: Any] {
         return [
-            "id": identifier,
+            "userId": identifier,
             "email": email,
             "userName": userName
         ]

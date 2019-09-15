@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class MainViewController: UITabBarController {
 
@@ -23,7 +22,7 @@ class MainViewController: UITabBarController {
     
     private func checkIfUserLoggedIn() {
         DispatchQueue.main.async {
-            if Auth.auth().currentUser == nil {
+            if AuthService.getCurrentUser() == nil {
                 let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
                 let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
                 self.present(loginVC, animated: false, completion: nil)
