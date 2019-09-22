@@ -29,7 +29,7 @@ class ProgramViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchPrograms()
+        fetchCollection()
     }
     
     // MARK: - Methods
@@ -50,6 +50,22 @@ class ProgramViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.programTableView.reloadData()
                 }
+            }
+        }
+    }
+    
+    private func fetchCollection() {
+        let firestoreService = FirestoreService()
+        firestoreService.fetchCollection(endpoint: .program) { result in
+            switch result {
+            case .success(let objectData):
+                self.programs = objectData.documents.compactMap({Program(dictionary: $0.data())})
+                DispatchQueue.main.async {
+                    self.programTableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                
             }
         }
     }

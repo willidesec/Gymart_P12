@@ -495,6 +495,7 @@
 					};
 					3FBD1979232E9CB6007AB627 = {
 						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 3F3FB24322A0675C00D22D36;
 					};
 				};
 			};
@@ -974,6 +975,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
 				INFOPLIST_FILE = GymartTests/Info.plist;
@@ -987,6 +989,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
 			};
 			name = Debug;
 		};
@@ -994,6 +997,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
 				INFOPLIST_FILE = GymartTests/Info.plist;
@@ -1007,6 +1011,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
 			};
 			name = Release;
 		};

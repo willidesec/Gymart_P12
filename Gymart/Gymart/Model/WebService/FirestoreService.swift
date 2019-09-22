@@ -9,7 +9,16 @@
 import Foundation
 import FirebaseFirestore
 
-final class FirestoreService {
+enum FirestoreError: Error {
+    case offline
+}
+
+protocol FirestoreRequest {
+    typealias Result = Swift.Result<QuerySnapshot, FirestoreError>
+    func fetchCollection(endpoint: Endpoint, result: @escaping (Result) -> Void)
+}
+
+final class FirestoreService: FirestoreRequest {
     
     // MARK: - Properties
     
@@ -26,6 +35,17 @@ final class FirestoreService {
     }
     
     // MARK: - Methods
+    
+    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreRequest.Result) -> Void) {
+        collection = dataBase.collection(endpoint.path)
+        collection?.order(by: "creationDate", descending: true).getDocuments(completion: { (querySnapshot, error) in
+            guard let objectData = querySnapshot else {
+                result(.failure(.offline))
+                return
+            }
+            result(.success(objectData))
+        })
+    }
     
     func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {
         collection = dataBase.collection(endpoint.path)
