@@ -23,7 +23,7 @@ class GymartTests: XCTestCase {
     }
 
     func testFetchCollectionDataInFirestore() {
-        firestoreService.fetchCollectionData(endpoint: .program) { (querySnapShot, error) in
+        firestoreService.fetchCollection(endpoint: .program) { result in
             
         }
     }

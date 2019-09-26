@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145A612339244400E64058 /* FirestoreServiceSpy.swift */; };
 		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
 		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
 		3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F235CA4232546C4006C3638 /* Endpoint.swift */; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30145A612339244400E64058 /* FirestoreServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceSpy.swift; sourceTree = "<group>"; };
 		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
 		3F235CA4232546C4006C3638 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				3FBD197C232E9CB6007AB627 /* GymartTests.swift */,
 				3FBD197E232E9CB6007AB627 /* Info.plist */,
+				30145A612339244400E64058 /* FirestoreServiceSpy.swift */,
 			);
 			path = GymartTests;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */,
 				3FBD197D232E9CB6007AB627 /* GymartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

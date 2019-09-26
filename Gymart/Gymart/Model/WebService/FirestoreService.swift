@@ -9,16 +9,17 @@
 import Foundation
 import FirebaseFirestore
 
-enum FirestoreError: Error {
+public enum FirestoreError: Error {
     case offline
 }
 
-protocol FirestoreRequest {
-    typealias Result = Swift.Result<QuerySnapshot, FirestoreError>
-    func fetchCollection(endpoint: Endpoint, result: @escaping (Result) -> Void)
+public protocol FirestoreRequest {
+    associatedtype FirestoreObject: DocumentSerializableProtocol
+    typealias FirestoreResult<FirestoreObject: DocumentSerializableProtocol> = Result<[FirestoreObject], FirestoreError>
+    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreResult<FirestoreObject>) -> Void)
 }
 
-final class FirestoreService: FirestoreRequest {
+final public class FirestoreServiceGeneric<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
     
     // MARK: - Properties
     
@@ -36,15 +37,33 @@ final class FirestoreService: FirestoreRequest {
     
     // MARK: - Methods
     
-    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreRequest.Result) -> Void) {
+    public func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreResult<FirestoreObject>) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: { (querySnapshot, error) in
+            if error != nil {
+                result(.failure(.offline))
+            }
+            
             guard let objectData = querySnapshot else {
                 result(.failure(.offline))
                 return
             }
-            result(.success(objectData))
+            let object = objectData.documents.compactMap({FirestoreObject(dictionary: $0.data())})
+            result(.success(object))
         })
+    }
+}
+
+final public class FirestoreService {
+    
+    private var dataBase = Firestore.firestore()
+    private var collection: CollectionReference?
+    private var document: DocumentReference?
+    
+    init() {
+        let settings = dataBase.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        dataBase.settings = settings
     }
     
     func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {

@@ -55,17 +55,17 @@ class ProgramViewController: UIViewController {
     }
     
     private func fetchCollection() {
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceGeneric<Program>()
         firestoreService.fetchCollection(endpoint: .program) { result in
             switch result {
-            case .success(let objectData):
-                self.programs = objectData.documents.compactMap({Program(dictionary: $0.data())})
+            case .success(let firestorePrograms):
+                self.programs = firestorePrograms
                 DispatchQueue.main.async {
                     self.programTableView.reloadData()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                
+
             }
         }
     }
