@@ -85,15 +85,15 @@ final public class FirestoreServiceOld {
         dataBase.settings = settings
     }
     
-    func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {
-        collection = dataBase.collection(endpoint.path)
-        collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
-    }
-    
-    func fetchDocumentData(endpoint: Endpoint, completion: @escaping FIRDocumentSnapshotBlock) {
-        document = dataBase.document(endpoint.path)
-        document?.getDocument(completion: completion)
-    }
+//    func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {
+//        collection = dataBase.collection(endpoint.path)
+//        collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
+//    }
+//    
+//    func fetchDocumentData(endpoint: Endpoint, completion: @escaping FIRDocumentSnapshotBlock) {
+//        document = dataBase.document(endpoint.path)
+//        document?.getDocument(completion: completion)
+//    }
     
     func deleteDocumentData(endpoint: Endpoint, identifier: String, completion: @escaping (Error?) -> Void) {
         collection = dataBase.collection(endpoint.path)

@@ -13,7 +13,7 @@ import Firebase
 class GymartTests: XCTestCase {
     
     var authService = AuthService()
-    var firestoreService = FirestoreService()
+    
 
     override func setUp() {
     }
@@ -23,9 +23,7 @@ class GymartTests: XCTestCase {
     }
 
     func testFetchCollectionDataInFirestore() {
-        firestoreService.fetchCollection(endpoint: .program) { result in
-            
-        }
+        
     }
 
 }
