@@ -81,7 +81,7 @@ class ProfilViewController: UIViewController {
     
     private func fetchProfilInformation() {
         
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceOld()
         firestoreService.fetchDocumentData(endpoint: .currentUser) { (document, _) in
             if let document = document, document.exists {
                 guard let profil = document.data().map({Profil(dictionary: $0)}) as? Profil else { return }

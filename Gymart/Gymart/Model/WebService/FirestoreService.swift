@@ -19,7 +19,7 @@ public protocol FirestoreRequest {
     func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreResult<FirestoreObject>) -> Void)
 }
 
-final public class FirestoreServiceGeneric<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
+final public class FirestoreService<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
     
     // MARK: - Properties
     
@@ -54,7 +54,7 @@ final public class FirestoreServiceGeneric<FirestoreObject: DocumentSerializable
     }
 }
 
-final public class FirestoreService {
+final public class FirestoreServiceOld {
     
     private var dataBase = Firestore.firestore()
     private var collection: CollectionReference?

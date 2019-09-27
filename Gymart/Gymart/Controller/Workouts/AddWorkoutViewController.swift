@@ -94,7 +94,7 @@ class AddWorkoutViewController: UIViewController {
     
     private func saveWorkoutInFirestore(identifier: String, data: [String: Any]) {
         guard let programId = programId else { return }
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceOld()
         firestoreService.saveDataInFirestore(endpoint: .workout(programId: programId), identifier: identifier, data: data) { (error) in
             if let error = error {
                 print("Error adding document: \(error)")

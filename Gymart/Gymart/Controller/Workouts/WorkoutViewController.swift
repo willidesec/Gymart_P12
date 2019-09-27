@@ -14,7 +14,8 @@ class WorkoutViewController: UIViewController {
     
     var programId: String?
     var workouts = [Workout]()
-    let firestoreService = FirestoreService()
+    let firestoreService = FirestoreService<Workout>()
+    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     
@@ -50,21 +51,23 @@ class WorkoutViewController: UIViewController {
     
     private func fetchWorkouts() {
         guard let programId = programId else { return }
-        firestoreService.fetchCollectionData(endpoint: .workout(programId: programId)) { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                self.workouts = querySnapshot!.documents.compactMap({Workout(dictionary: $0.data())})
+        firestoreService.fetchCollection(endpoint: .workout(programId: programId)) { (result) in
+            switch result {
+            case .success(let firestoreWorkouts):
+                self.workouts = firestoreWorkouts
                 DispatchQueue.main.async {
                     self.workoutsTableView.reloadData()
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
     private func deleteWorkoutInFirestore(identifier: String) {
         guard let programId = programId else { return }
-        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
+        firestoreServiceOld.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
             if let error = error {
                 print("Error removing document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)

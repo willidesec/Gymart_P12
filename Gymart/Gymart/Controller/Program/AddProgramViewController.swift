@@ -55,7 +55,7 @@ class AddProgramViewController: UIViewController {
     
     private func saveProgramInFirestore(identifier: String, data: [String: Any]) {
         
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceOld()
         firestoreService.saveDataInFirestore(endpoint: .program, identifier: identifier, data: data) { (error) in
             if let error = error {
                 print("Error adding document: \(error)")

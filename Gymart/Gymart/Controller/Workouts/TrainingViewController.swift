@@ -12,7 +12,7 @@ class TrainingViewController: UIViewController {
     
     // MARK: - Properties
 
-    let firestoreService = FirestoreService()
+    let firestoreService = FirestoreServiceOld()
     
     var exercices = [Exercice]()
     var historicalExercices = [HistoricalExercice]()

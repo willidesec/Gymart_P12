@@ -28,7 +28,7 @@ class HistoricalViewController: UIViewController {
     
     private func fetchHistoricalWorkouts() {
         
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceOld()
         firestoreService.fetchCollectionData(endpoint: .historical) { (querySnapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error.localizedDescription)")

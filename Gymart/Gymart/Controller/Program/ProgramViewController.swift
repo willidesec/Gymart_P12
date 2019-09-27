@@ -29,7 +29,7 @@ class ProgramViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchCollection()
+        fetchPrograms()
     }
     
     // MARK: - Methods
@@ -41,21 +41,7 @@ class ProgramViewController: UIViewController {
     }
     
     private func fetchPrograms() {
-        let firestoreService = FirestoreService()
-        firestoreService.fetchCollectionData(endpoint: .program) { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                self.programs = querySnapshot!.documents.compactMap({Program(dictionary: $0.data())})
-                DispatchQueue.main.async {
-                    self.programTableView.reloadData()
-                }
-            }
-        }
-    }
-    
-    private func fetchCollection() {
-        let firestoreService = FirestoreServiceGeneric<Program>()
+        let firestoreService = FirestoreService<Program>()
         firestoreService.fetchCollection(endpoint: .program) { result in
             switch result {
             case .success(let firestorePrograms):
@@ -65,13 +51,13 @@ class ProgramViewController: UIViewController {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-
+                self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
     private func deleteProgramInFirestore(identifier: String) {
-        let firestoreService = FirestoreService()
+        let firestoreService = FirestoreServiceOld()
         firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
             if error != nil {
                 self.displayAlert(message: Constants.AlertError.serverError)
