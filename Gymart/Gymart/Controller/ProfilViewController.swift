@@ -81,7 +81,7 @@ class ProfilViewController: UIViewController {
     
     private func fetchProfilInformation() {
         let firestoreService = FirestoreService<Profil>()
-        firestoreService.fetchDocument(endpoint: .currentUser) { (result) in
+        firestoreService.fetchDocument(endpoint: .currentUser) { result in
             switch result {
             case .success(let firestoreProfil):
                 self.updateScreenWithProfil(firestoreProfil)

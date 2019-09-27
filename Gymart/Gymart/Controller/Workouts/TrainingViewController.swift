@@ -12,7 +12,8 @@ class TrainingViewController: UIViewController {
     
     // MARK: - Properties
 
-    let firestoreService = FirestoreServiceOld()
+    let firestoreService = FirestoreService<Workout>()
+    let firestoreServiceOld = FirestoreServiceOld()
     
     var exercices = [Exercice]()
     var historicalExercices = [HistoricalExercice]()
@@ -82,6 +83,15 @@ class TrainingViewController: UIViewController {
         cancelButton.setTitle("Cancel workout", for: .normal)
     }
     
+    private func setupWorkoutInformation(workout: Workout) {
+        self.workoutNameLabel.text = workout.name
+        self.exercices = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
+        self.exercices.forEach { (exercice) in
+            let historicalExercice = HistoricalExercice(name: exercice.name, sets: [ExerciceSet]())
+            self.historicalExercices.append(historicalExercice)
+        }
+    }
+    
     // MARK: - Methods Timer
     
     private func launchTimer() {
@@ -123,27 +133,15 @@ class TrainingViewController: UIViewController {
         guard let programId = programId else { return }
         guard let workoutId = workoutId else { return }
         
-        firestoreService.fetchDocumentData(endpoint: .training(programId: programId, workoutId: workoutId)) { document, _ in
-            if let workout = document.flatMap({
-                $0.data().flatMap({ (data) in
-                    return Workout(dictionary: data)
-                })
-            }) {
-                self.workoutNameLabel.text = workout.name
-                
-                self.exercices = workout.exercicesData.compactMap({Exercice(dictionary: $0)})
-                
-                self.exercices.forEach { (exercice) in
-                    let historicalExercice = HistoricalExercice(name: exercice.name, sets: [ExerciceSet]())
-                    self.historicalExercices.append(historicalExercice)
-                }
-                
+        firestoreService.fetchDocument(endpoint: .training(programId: programId, workoutId: workoutId)) { result in
+            switch result {
+            case .success(let firestoreWorkout):
+                self.setupWorkoutInformation(workout: firestoreWorkout)
                 DispatchQueue.main.async {
                     self.trainingTableView.reloadData()
                 }
-                
-            } else {
-                print("Document does not exist")
+            case .failure(let error):
+                print(error.localizedDescription)
                 self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
@@ -153,7 +151,7 @@ class TrainingViewController: UIViewController {
         guard let programId = programId else { return }
         guard let workoutId = workoutId else { return }
         let data = ["lastWorkoutDate": Date()]
-        firestoreService.updateDocumentDataInFirestore(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { (error) in
+        firestoreServiceOld.updateDocumentDataInFirestore(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { (error) in
             if let error = error {
                 print("Error updating document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
@@ -168,7 +166,7 @@ class TrainingViewController: UIViewController {
         let identifier = UUID().uuidString
         let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
         
-        firestoreService.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
+        firestoreServiceOld.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
             if let error = error {
                 print("Error adding document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
