@@ -15,8 +15,11 @@ public enum FirestoreError: Error {
 
 public protocol FirestoreRequest {
     associatedtype FirestoreObject: DocumentSerializableProtocol
-    typealias FirestoreResult<FirestoreObject: DocumentSerializableProtocol> = Result<[FirestoreObject], FirestoreError>
-    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreResult<FirestoreObject>) -> Void)
+    typealias FirestoreCollectionResult<FirestoreObject: DocumentSerializableProtocol> = Result<[FirestoreObject], FirestoreError>
+    typealias FirestoreDocumentResult<FirestoreObject: DocumentSerializableProtocol> = Result<FirestoreObject, FirestoreError>
+    
+    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreCollectionResult<FirestoreObject>) -> Void)
+    func fetchDocument(endpoint: Endpoint, result: @escaping (FirestoreDocumentResult<FirestoreObject>) -> Void)
 }
 
 final public class FirestoreService<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
@@ -37,7 +40,7 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
     
     // MARK: - Methods
     
-    public func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreResult<FirestoreObject>) -> Void) {
+    public func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreCollectionResult<FirestoreObject>) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: { (querySnapshot, error) in
             if error != nil {
@@ -49,6 +52,22 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
                 return
             }
             let object = objectData.documents.compactMap({FirestoreObject(dictionary: $0.data())})
+            result(.success(object))
+        })
+    }
+    
+    public func fetchDocument(endpoint: Endpoint, result: @escaping (FirestoreDocumentResult<FirestoreObject>) -> Void) {
+        document = dataBase.document(endpoint.path)
+        document?.getDocument(completion: { (documentSnapshot, error) in
+            if error != nil {
+                result(.failure(.offline))
+            }
+            
+            guard let objectData = documentSnapshot, objectData.exists else {
+                result(.failure(.offline))
+                return
+            }
+            guard let object = objectData.data().map({FirestoreObject(dictionary: $0)}) as? FirestoreObject else { return }
             result(.success(object))
         })
     }

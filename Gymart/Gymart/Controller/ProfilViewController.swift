@@ -80,14 +80,13 @@ class ProfilViewController: UIViewController {
     // MARK: - Methods WebService
     
     private func fetchProfilInformation() {
-        
-        let firestoreService = FirestoreServiceOld()
-        firestoreService.fetchDocumentData(endpoint: .currentUser) { (document, _) in
-            if let document = document, document.exists {
-                guard let profil = document.data().map({Profil(dictionary: $0)}) as? Profil else { return }
-                self.updateScreenWithProfil(profil)
-            } else {
-                print("Document does not exist")
+        let firestoreService = FirestoreService<Profil>()
+        firestoreService.fetchDocument(endpoint: .currentUser) { (result) in
+            switch result {
+            case .success(let firestoreProfil):
+                self.updateScreenWithProfil(firestoreProfil)
+            case .failure(let error):
+                print(error.localizedDescription)
                 self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
