@@ -51,8 +51,6 @@
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
-		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
-		3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */; };
 		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
 		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
 		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
@@ -490,7 +488,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "William Désécot";
 				TargetAttributes = {
 					3F3FB24322A0675C00D22D36 = {
@@ -538,13 +536,11 @@
 				3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */,
 				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
 				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
-				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
 				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
 				3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */,
 				3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */,
 				3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */,
 				3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */,
-				3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
