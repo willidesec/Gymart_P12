@@ -10,16 +10,36 @@ import Foundation
 import Firebase
 @testable import Gymart_PP
 
-private class FirestoreServiceSpy: FirestoreRequest {
+class FirestoreServiceSpy<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
     
-    var message: ((FirestoreRequest.Result) -> Void)?
+    var collectionMessage: ((FirestoreCollectionResult<FirestoreObject>) -> Void)?
+    var documentMessage: ((FirestoreDocumentResult<FirestoreObject>) -> Void)?
     
-    func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreRequest.Result) -> Void) {
-        message = result
+    // MARK: - Protocol Methods
+    
+    func fetchCollection(endpoint: Endpoint, result: @escaping (Result<[FirestoreObject], FirestoreError>) -> Void) {
+        collectionMessage = result
     }
     
-    func completeRequestSuccessfullyWith() {
-        message?(.success)
+    func fetchDocument(endpoint: Endpoint, result: @escaping (Result<FirestoreObject, FirestoreError>) -> Void) {
+        documentMessage = result
     }
     
+    // MARK: - Helpers Methods
+    
+    func fetchCollectionSuccessfullyWith(_ firestoreObject: [FirestoreObject]) {
+        collectionMessage?(.success(firestoreObject))
+    }
+    
+    func fetchCollectionWithOfflineError() {
+        collectionMessage?(.failure(.offline))
+    }
+    
+    func fetchDocumentSuccessfullyWith(_ firestoreObject: FirestoreObject) {
+        documentMessage?(.success(firestoreObject))
+    }
+    
+    func fetchDocumentWithOfflineError() {
+        documentMessage?(.failure(.offline))
+    }
 }
