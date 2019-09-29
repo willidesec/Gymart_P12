@@ -17,9 +17,11 @@ public protocol FirestoreRequest {
     associatedtype FirestoreObject: DocumentSerializableProtocol
     typealias FirestoreCollectionResult<FirestoreObject: DocumentSerializableProtocol> = Result<[FirestoreObject], FirestoreError>
     typealias FirestoreDocumentResult<FirestoreObject: DocumentSerializableProtocol> = Result<FirestoreObject, FirestoreError>
+    typealias FirestoreSaveResult = Result<String, FirestoreError>
     
     func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreCollectionResult<FirestoreObject>) -> Void)
     func fetchDocument(endpoint: Endpoint, result: @escaping (FirestoreDocumentResult<FirestoreObject>) -> Void)
+    func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreSaveResult) -> Void)
 }
 
 final public class FirestoreService<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
@@ -69,6 +71,18 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
             }
             guard let object = objectData.data().map({FirestoreObject(dictionary: $0)}) as? FirestoreObject else { return }
             result(.success(object))
+        })
+    }
+    
+    public func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreSaveResult) -> Void) {
+        collection = dataBase.collection(endpoint.path)
+        collection?.document(identifier).setData(data, completion: { (error) in
+            if let error = error {
+                print("Error adding document: \(error)")
+                result(.failure(.offline))
+            } else {
+                result(.success("Document added with success"))
+            }
         })
     }
 }
