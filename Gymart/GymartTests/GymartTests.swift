@@ -30,21 +30,47 @@ class GymartTests: XCTestCase {
         }
     }
 
-//    func testFetchCollectionSuccessfully() {
-//        let firestoreServiceSpy = FirestoreServiceSpy<Program>()
-//        let programs = [Program]()
-//
-//        let exp = expectation(description: "Wait for load completion")
-//
-//        firestoreServiceSpy.fetchCollection(endpoint: .program) { result in
-//            switch result {
-//            case .success(let receivedPrograms):
-//                XCTAssertEqual(receivedPrograms, programs)
-//            case .failure:
-//                XCTFail("Should be success, got \(result) instead")
-//            }
-//        }
-//    }
+    func testFetchCollectionSuccessfully() {
+        let firestoreServiceSpy = FirestoreServiceSpy<Program>()
+        let program = Program(identifier: "EB9CF9CA-73E6-460C-9641-A620FC311FD2", name: "Test", description: "Test", creationDate: Date())
+        let programs = [program]
+
+        let exp = expectation(description: "Wait for load completion")
+
+        firestoreServiceSpy.fetchCollection(endpoint: .program) { result in
+            switch result {
+            case .success(let receivedPrograms):
+                XCTAssertEqual(receivedPrograms, programs)
+            case .failure:
+                XCTFail("Should be success, got \(result) instead")
+            }
+            exp.fulfill()
+        }
+        
+        firestoreServiceSpy.fetchCollectionSuccessfullyWith(programs)
+        
+        wait(for: [exp], timeout: 1.0)
+    }
+    
+    func testFetchCollectionWithOfflineError() {
+        let firestoreServiceSpy = FirestoreServiceSpy<Program>()
+        
+        let exp = expectation(description: "Wait for load completion")
+        
+        firestoreServiceSpy.fetchCollection(endpoint: .currentUser) { result in
+            switch result {
+            case .success:
+                XCTFail("Should fail, got \(result) instead")
+            case .failure(let receivedError):
+                XCTAssertEqual(receivedError, .offline)
+            }
+            exp.fulfill()
+        }
+        
+        firestoreServiceSpy.fetchCollectionWithOfflineError()
+        
+        wait(for: [exp], timeout: 1.0)
+    }
     
     func testFetchDocumentSuccessfully() {
         let firestoreServiceSpy = FirestoreServiceSpy<Profil>()
