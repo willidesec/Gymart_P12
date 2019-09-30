@@ -11,21 +11,10 @@ import Firebase
 @testable import Gymart_PP
 
 class FirestoreServiceSpy<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
-    func saveData(endpoint: Endpoint, identifier: String, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
-        
-    }
-    
-    func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void) {
-        
-    }
-    
-    func updateData(endpoint: Endpoint, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
-        
-    }
-    
     
     var collectionMessage: ((FirestoreCollectionResult<FirestoreObject>) -> Void)?
     var documentMessage: ((FirestoreDocumentResult<FirestoreObject>) -> Void)?
+    var updateMessage: ((FirestoreUpdateResult) -> Void)?
     
     // MARK: - Protocol Methods
     
@@ -35,6 +24,18 @@ class FirestoreServiceSpy<FirestoreObject: DocumentSerializableProtocol>: Firest
     
     func fetchDocument(endpoint: Endpoint, result: @escaping (Result<FirestoreObject, FirestoreError>) -> Void) {
         documentMessage = result
+    }
+    
+    func saveData(endpoint: Endpoint, identifier: String, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
+        updateMessage = result
+    }
+    
+    func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void) {
+        updateMessage = result
+    }
+    
+    func updateData(endpoint: Endpoint, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
+        updateMessage = result
     }
     
     // MARK: - Helpers Methods

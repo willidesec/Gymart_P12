@@ -111,24 +111,5 @@ class GymartTests: XCTestCase {
         
         wait(for: [exp], timeout: 1.0)
     }
-    
-//    func testFirestore() {
-//        let firestoreService = FirestoreService<Profil>()
-//        let profil = Profil(identifier: "yblp54LyxzLYhFYqjP3e06AJxAv1", email: "unitTests@test.fr", userName: "Unit Tests")
-//
-//        let exp = expectation(description: "Wait for load completion")
-//
-//        firestoreService.fetchDocument(endpoint: .currentUser) { (result) in
-//            switch result {
-//            case .success(let receivedProfil):
-//                XCTAssertEqual(receivedProfil, profil)
-//            case .failure:
-//                XCTFail("Should be success, got \(result) instead")
-//            }
-//            exp.fulfill()
-//        }
-//
-//        wait(for: [exp], timeout: 10.0)
-//    }
 
 }
