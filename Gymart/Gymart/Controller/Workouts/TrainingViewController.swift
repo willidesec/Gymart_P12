@@ -229,7 +229,7 @@ extension TrainingViewController: ToggleSetProtocol {
         var currentIndex = 0
         historicalExercices.forEach { (exercice) in
             if exercice.name == exerciceName {
-                historicalExercices[currentIndex].setsData.append(set.dictionary)
+                historicalExercices[currentIndex].setsData.insert(set.dictionary, at: set.numeroOfSet - 1)
                 currentIndex += 1
             }
         }
