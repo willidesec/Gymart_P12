@@ -161,18 +161,35 @@ class TrainingViewController: UIViewController {
         }
     }
     
+//    private func saveTrainingInHistory1() {
+//        guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
+//        let identifier = UUID().uuidString
+//        let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
+//
+//        firestoreServiceOld.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
+//            if let error = error {
+//                print("Error adding document: \(error)")
+//                self.displayAlert(message: Constants.AlertError.serverError)
+//            } else {
+//                print("Document added with succes")
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        }
+//    }
+    
     private func saveTrainingInHistory() {
         guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
         let identifier = UUID().uuidString
         let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
         
-        firestoreServiceOld.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
-            if let error = error {
+        firestoreService.saveData(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+                self.navigationController?.popViewController(animated: true)
+            case .failure(let error):
                 print("Error adding document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
-            } else {
-                print("Document added with succes")
-                self.navigationController?.popViewController(animated: true)
             }
         }
     }

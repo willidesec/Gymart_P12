@@ -13,7 +13,8 @@ class RegisterViewController: UIViewController {
     // MARK: - Properties
     
     let authService = AuthService()
-    let firestoreService = FirestoreServiceOld()
+    let firestoreService = FirestoreService<Profil>()
+    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     
@@ -73,9 +74,21 @@ class RegisterViewController: UIViewController {
         }
     }
     
+//    private func saveUserData1(_ profil: Profil) {
+//        firestoreServiceOld.saveDataInFirestore(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { (error) in
+//            if error != nil {
+//                self.displayAlert(message: Constants.AlertError.serverError)
+//            }
+//        }
+//    }
+    
     private func saveUserData(_ profil: Profil) {
-        firestoreService.saveDataInFirestore(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { (error) in
-            if error != nil {
+        firestoreService.saveData(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
+                print("Error adding document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
             }
         }
