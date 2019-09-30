@@ -17,11 +17,13 @@ public protocol FirestoreRequest {
     associatedtype FirestoreObject: DocumentSerializableProtocol
     typealias FirestoreCollectionResult<FirestoreObject: DocumentSerializableProtocol> = Result<[FirestoreObject], FirestoreError>
     typealias FirestoreDocumentResult<FirestoreObject: DocumentSerializableProtocol> = Result<FirestoreObject, FirestoreError>
-    typealias FirestoreSaveResult = Result<String, FirestoreError>
+    typealias FirestoreUpdateResult = Result<String, FirestoreError>
     
     func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreCollectionResult<FirestoreObject>) -> Void)
     func fetchDocument(endpoint: Endpoint, result: @escaping (FirestoreDocumentResult<FirestoreObject>) -> Void)
-    func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreSaveResult) -> Void)
+    func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void)
+    func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void)
+    func updateData(endpoint: Endpoint, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void)
 }
 
 final public class FirestoreService<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
@@ -74,7 +76,7 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
         })
     }
     
-    public func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreSaveResult) -> Void) {
+    public func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).setData(data, completion: { (error) in
             if let error = error {
@@ -85,20 +87,44 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
             }
         })
     }
-}
-
-final public class FirestoreServiceOld {
     
-    private var dataBase = Firestore.firestore()
-    private var collection: CollectionReference?
-    private var document: DocumentReference?
-    
-    init() {
-        let settings = dataBase.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        dataBase.settings = settings
+    public func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void) {
+        collection = dataBase.collection(endpoint.path)
+        collection?.document(identifier).delete(completion: { error in
+            if let error = error {
+                print("Error deleting document: \(error)")
+                result(.failure(.offline))
+            } else {
+                result(.success("Document deleted with success"))
+            }
+        })
     }
     
+    public func updateData(endpoint: Endpoint, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void) {
+        document = dataBase.document(endpoint.path)
+        document?.updateData(data, completion: { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+                result(.failure(.offline))
+            } else {
+                result(.success("Document updated with success"))
+            }
+        })
+    }
+}
+
+//final public class FirestoreServiceOld {
+//
+//    private var dataBase = Firestore.firestore()
+//    private var collection: CollectionReference?
+//    private var document: DocumentReference?
+//
+//    init() {
+//        let settings = dataBase.settings
+//        settings.areTimestampsInSnapshotsEnabled = true
+//        dataBase.settings = settings
+//    }
+
 //    func fetchCollectionData(endpoint: Endpoint, completion: @escaping FIRQuerySnapshotBlock) {
 //        collection = dataBase.collection(endpoint.path)
 //        collection?.order(by: "creationDate", descending: true).getDocuments(completion: completion)
@@ -109,18 +135,18 @@ final public class FirestoreServiceOld {
 //        document?.getDocument(completion: completion)
 //    }
     
-    func deleteDocumentData(endpoint: Endpoint, identifier: String, completion: @escaping (Error?) -> Void) {
-        collection = dataBase.collection(endpoint.path)
-        collection?.document(identifier).delete(completion: completion)
-    }
+//    func deleteDocumentData(endpoint: Endpoint, identifier: String, completion: @escaping (Error?) -> Void) {
+//        collection = dataBase.collection(endpoint.path)
+//        collection?.document(identifier).delete(completion: completion)
+//    }
     
-    func saveDataInFirestore(endpoint: Endpoint, identifier: String, data: [String: Any], completion: @escaping (Error?) -> Void) {
-        collection = dataBase.collection(endpoint.path)
-        collection?.document(identifier).setData(data, completion: completion)
-    }
+//    func saveDataInFirestore(endpoint: Endpoint, identifier: String, data: [String: Any], completion: @escaping (Error?) -> Void) {
+//        collection = dataBase.collection(endpoint.path)
+//        collection?.document(identifier).setData(data, completion: completion)
+//    }
     
-    func updateDocumentDataInFirestore(endpoint: Endpoint, data: [String: Any], completion: @escaping (Error?) -> Void) {
-        document = dataBase.document(endpoint.path)
-        document?.updateData(data, completion: completion)
-    }
-}
+//    func updateDocumentDataInFirestore(endpoint: Endpoint, data: [String: Any], completion: @escaping (Error?) -> Void) {
+//        document = dataBase.document(endpoint.path)
+//        document?.updateData(data, completion: completion)
+//    }
+//}

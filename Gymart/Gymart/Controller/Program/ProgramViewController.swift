@@ -42,24 +42,37 @@ class ProgramViewController: UIViewController {
     
     private func fetchPrograms() {
         let firestoreService = FirestoreService<Program>()
-        firestoreService.fetchCollection(endpoint: .program) { result in
+        firestoreService.fetchCollection(endpoint: .program) { [weak self] result in
             switch result {
             case .success(let firestorePrograms):
-                self.programs = firestorePrograms
+                self?.programs = firestorePrograms
                 DispatchQueue.main.async {
-                    self.programTableView.reloadData()
+                    self?.programTableView.reloadData()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
+//    private func deleteProgramInFirestore1(identifier: String) {
+//        let firestoreService = FirestoreServiceOld()
+//        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
+//            if error != nil {
+//                self.displayAlert(message: Constants.AlertError.serverError)
+//            }
+//        }
+//    }
+    
     private func deleteProgramInFirestore(identifier: String) {
-        let firestoreService = FirestoreServiceOld()
-        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
-            if error != nil {
+        let firestoreService = FirestoreService<Program>()
+        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
+                print("Error deleting document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
             }
         }

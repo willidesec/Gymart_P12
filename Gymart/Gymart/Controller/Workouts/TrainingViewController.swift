@@ -13,7 +13,7 @@ class TrainingViewController: UIViewController {
     // MARK: - Properties
 
     let firestoreService = FirestoreService<Workout>()
-    let firestoreServiceOld = FirestoreServiceOld()
+//    let firestoreServiceOld = FirestoreServiceOld()
     
     var exercices = [Exercice]()
     var historicalExercices = [HistoricalExercice]()
@@ -147,16 +147,31 @@ class TrainingViewController: UIViewController {
         }
     }
     
+//    private func updateWorkoutDate1() {
+//        guard let programId = programId else { return }
+//        guard let workoutId = workoutId else { return }
+//        let data = ["lastWorkoutDate": Date()]
+//        firestoreServiceOld.updateDocumentDataInFirestore(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { (error) in
+//            if let error = error {
+//                print("Error updating document: \(error)")
+//                self.displayAlert(message: Constants.AlertError.serverError)
+//            } else {
+//                print("Document successfully updated")
+//            }
+//        }
+//    }
+    
     private func updateWorkoutDate() {
         guard let programId = programId else { return }
         guard let workoutId = workoutId else { return }
         let data = ["lastWorkoutDate": Date()]
-        firestoreServiceOld.updateDocumentDataInFirestore(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { (error) in
-            if let error = error {
+        firestoreService.updateData(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
                 print("Error updating document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
-            } else {
-                print("Document successfully updated")
             }
         }
     }

@@ -14,7 +14,7 @@ class RegisterViewController: UIViewController {
     
     let authService = AuthService()
     let firestoreService = FirestoreService<Profil>()
-    let firestoreServiceOld = FirestoreServiceOld()
+//    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     

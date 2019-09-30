@@ -15,7 +15,7 @@ class WorkoutViewController: UIViewController {
     var programId: String?
     var workouts = [Workout]()
     let firestoreService = FirestoreService<Workout>()
-    let firestoreServiceOld = FirestoreServiceOld()
+//    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     
@@ -65,14 +65,27 @@ class WorkoutViewController: UIViewController {
         }
     }
     
+//    private func deleteWorkoutInFirestore1(identifier: String) {
+//        guard let programId = programId else { return }
+//        firestoreServiceOld.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
+//            if let error = error {
+//                print("Error removing document: \(error)")
+//                self.displayAlert(message: Constants.AlertError.serverError)
+//            } else {
+//                print("Document successfully removed!")
+//            }
+//        }
+//    }
+    
     private func deleteWorkoutInFirestore(identifier: String) {
         guard let programId = programId else { return }
-        firestoreServiceOld.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
-            if let error = error {
+        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
                 print("Error removing document: \(error)")
                 self.displayAlert(message: Constants.AlertError.serverError)
-            } else {
-                print("Document successfully removed!")
             }
         }
     }

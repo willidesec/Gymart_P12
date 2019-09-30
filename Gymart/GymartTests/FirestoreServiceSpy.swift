@@ -11,6 +11,18 @@ import Firebase
 @testable import Gymart_PP
 
 class FirestoreServiceSpy<FirestoreObject: DocumentSerializableProtocol>: FirestoreRequest {
+    func saveData(endpoint: Endpoint, identifier: String, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
+        
+    }
+    
+    func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void) {
+        
+    }
+    
+    func updateData(endpoint: Endpoint, data: [String : Any], result: @escaping (FirestoreUpdateResult) -> Void) {
+        
+    }
+    
     
     var collectionMessage: ((FirestoreCollectionResult<FirestoreObject>) -> Void)?
     var documentMessage: ((FirestoreDocumentResult<FirestoreObject>) -> Void)?
