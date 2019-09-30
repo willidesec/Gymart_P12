@@ -51,41 +51,29 @@ class WorkoutViewController: UIViewController {
     
     private func fetchWorkouts() {
         guard let programId = programId else { return }
-        firestoreService.fetchCollection(endpoint: .workout(programId: programId)) { (result) in
+        firestoreService.fetchCollection(endpoint: .workout(programId: programId)) { [weak self] result in
             switch result {
             case .success(let firestoreWorkouts):
-                self.workouts = firestoreWorkouts
+                self?.workouts = firestoreWorkouts
                 DispatchQueue.main.async {
-                    self.workoutsTableView.reloadData()
+                    self?.workoutsTableView.reloadData()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
-//    private func deleteWorkoutInFirestore1(identifier: String) {
-//        guard let programId = programId else { return }
-//        firestoreServiceOld.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
-//            if let error = error {
-//                print("Error removing document: \(error)")
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            } else {
-//                print("Document successfully removed!")
-//            }
-//        }
-//    }
-    
     private func deleteWorkoutInFirestore(identifier: String) {
         guard let programId = programId else { return }
-        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { result in
+        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
             case .failure(let error):
                 print("Error removing document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

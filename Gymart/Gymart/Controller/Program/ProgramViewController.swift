@@ -56,24 +56,15 @@ class ProgramViewController: UIViewController {
         }
     }
     
-//    private func deleteProgramInFirestore1(identifier: String) {
-//        let firestoreService = FirestoreServiceOld()
-//        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
-//            if error != nil {
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            }
-//        }
-//    }
-    
     private func deleteProgramInFirestore(identifier: String) {
         let firestoreService = FirestoreService<Program>()
-        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { result in
+        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
             case .failure(let error):
                 print("Error deleting document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

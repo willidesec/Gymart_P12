@@ -54,14 +54,14 @@ class AddProgramViewController: UIViewController {
     
     private func saveProgramInFirestore(identifier: String, program: Program) {
         let firestoreService = FirestoreService<Program>()
-        firestoreService.saveData(endpoint: .program, identifier: identifier, data: program.dictionary) { result in
+        firestoreService.saveData(endpoint: .program, identifier: identifier, data: program.dictionary) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print("Error adding document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

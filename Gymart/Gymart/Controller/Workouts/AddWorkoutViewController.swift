@@ -92,31 +92,17 @@ class AddWorkoutViewController: UIViewController {
         }
     }
     
-//    private func saveWorkoutInFirestore1(identifier: String, data: [String: Any]) {
-//        guard let programId = programId else { return }
-//        let firestoreService = FirestoreServiceOld()
-//        firestoreService.saveDataInFirestore(endpoint: .workout(programId: programId), identifier: identifier, data: data) { (error) in
-//            if let error = error {
-//                print("Error adding document: \(error)")
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            } else {
-//                print("Document added with succes")
-//                self.dismiss(animated: true, completion: nil)
-//            }
-//        }
-//    }
-    
     private func saveWorkoutInFirestore(identifier: String, workout: Workout) {
         guard let programId = programId else { return }
         let firestoreService = FirestoreService<Workout>()
-        firestoreService.saveData(endpoint: .workout(programId: programId), identifier: identifier, data: workout.dictionary) { result in
+        firestoreService.saveData(endpoint: .workout(programId: programId), identifier: identifier, data: workout.dictionary) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print("Error adding document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

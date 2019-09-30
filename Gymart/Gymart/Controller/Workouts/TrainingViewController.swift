@@ -13,7 +13,6 @@ class TrainingViewController: UIViewController {
     // MARK: - Properties
 
     let firestoreService = FirestoreService<Workout>()
-//    let firestoreServiceOld = FirestoreServiceOld()
     
     var exercices = [Exercice]()
     var historicalExercices = [HistoricalExercice]()
@@ -55,12 +54,8 @@ class TrainingViewController: UIViewController {
         saveTrainingInHistory()
     }
     
-    @IBAction func stopwatchButtonDidTapped() {
-        
-    }
-    
     @IBAction func cancelButtonDidTapped() {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Methods UI
@@ -133,78 +128,48 @@ class TrainingViewController: UIViewController {
         guard let programId = programId else { return }
         guard let workoutId = workoutId else { return }
         
-        firestoreService.fetchDocument(endpoint: .training(programId: programId, workoutId: workoutId)) { result in
+        firestoreService.fetchDocument(endpoint: .training(programId: programId, workoutId: workoutId)) { [weak self] result in
             switch result {
             case .success(let firestoreWorkout):
-                self.setupWorkoutInformation(workout: firestoreWorkout)
+                self?.setupWorkoutInformation(workout: firestoreWorkout)
                 DispatchQueue.main.async {
-                    self.trainingTableView.reloadData()
+                    self?.trainingTableView.reloadData()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
-    
-//    private func updateWorkoutDate1() {
-//        guard let programId = programId else { return }
-//        guard let workoutId = workoutId else { return }
-//        let data = ["lastWorkoutDate": Date()]
-//        firestoreServiceOld.updateDocumentDataInFirestore(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { (error) in
-//            if let error = error {
-//                print("Error updating document: \(error)")
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            } else {
-//                print("Document successfully updated")
-//            }
-//        }
-//    }
     
     private func updateWorkoutDate() {
         guard let programId = programId else { return }
         guard let workoutId = workoutId else { return }
         let data = ["lastWorkoutDate": Date()]
-        firestoreService.updateData(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { result in
+        firestoreService.updateData(endpoint: .training(programId: programId, workoutId: workoutId), data: data) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
             case .failure(let error):
                 print("Error updating document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
-    
-//    private func saveTrainingInHistory1() {
-//        guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
-//        let identifier = UUID().uuidString
-//        let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
-//
-//        firestoreServiceOld.saveDataInFirestore(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { (error) in
-//            if let error = error {
-//                print("Error adding document: \(error)")
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            } else {
-//                print("Document added with succes")
-//                self.navigationController?.popViewController(animated: true)
-//            }
-//        }
-//    }
     
     private func saveTrainingInHistory() {
         guard let workoutName = workoutNameLabel.text, !workoutName.isEmpty else { return }
         let identifier = UUID().uuidString
         let newHistoricalWorkout = HistoricalWorkout(identifier: identifier, name: workoutName, creationDate: Date(), exercices: historicalExercices)
         
-        firestoreService.saveData(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { result in
+        firestoreService.saveData(endpoint: .historical, identifier: identifier, data: newHistoricalWorkout.dictionary) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
-                self.navigationController?.popViewController(animated: true)
+                self?.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 print("Error adding document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

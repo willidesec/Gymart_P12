@@ -14,7 +14,6 @@ class RegisterViewController: UIViewController {
     
     let authService = AuthService()
     let firestoreService = FirestoreService<Profil>()
-//    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     
@@ -74,22 +73,14 @@ class RegisterViewController: UIViewController {
         }
     }
     
-//    private func saveUserData1(_ profil: Profil) {
-//        firestoreServiceOld.saveDataInFirestore(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { (error) in
-//            if error != nil {
-//                self.displayAlert(message: Constants.AlertError.serverError)
-//            }
-//        }
-//    }
-    
     private func saveUserData(_ profil: Profil) {
-        firestoreService.saveData(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { result in
+        firestoreService.saveData(endpoint: .user, identifier: profil.identifier, data: profil.dictionary) { [weak self] result in
             switch result {
             case .success(let successMessage):
                 print(successMessage)
             case .failure(let error):
                 print("Error adding document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
@@ -112,7 +103,6 @@ class RegisterViewController: UIViewController {
         guard let podlockImage = #imageLiteral(resourceName: "padlock").cgImage else { return }
         passwordUserInput.iconImageView.image = UIImage(cgImage: podlockImage)
         passwordUserInput.textField.placeholder = Constants.Placeholder.password
-//        passwordUserInput.textField.isSecureTextEntry = true
         passwordUserInput.textField.returnKeyType = .done
         passwordUserInput.textField.delegate = self
     }

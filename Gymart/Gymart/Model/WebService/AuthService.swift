@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseAuth
 
-final class AuthService {
+final public class AuthService {
     
     static func getCurrentUser() -> User? {
         let currentUser = Auth.auth().currentUser
