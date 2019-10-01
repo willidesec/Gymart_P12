@@ -80,30 +80,29 @@ class ProfilViewController: UIViewController {
     // MARK: - Methods WebService
     
     private func fetchProfilInformation() {
-        
-        let firestoreService = FirestoreService()
-        firestoreService.fetchDocumentData(endpoint: .currentUser) { (document, _) in
-            if let document = document, document.exists {
-                guard let profil = document.data().map({Profil(dictionary: $0)}) as? Profil else { return }
-                self.updateScreenWithProfil(profil)
-            } else {
-                print("Document does not exist")
-                self.displayAlert(message: Constants.AlertError.serverError)
+        let firestoreService = FirestoreService<Profil>()
+        firestoreService.fetchDocument(endpoint: .currentUser) { [weak self] result in
+            switch result {
+            case .success(let firestoreProfil):
+                self?.updateScreenWithProfil(firestoreProfil)
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
     private func signOut() {
-        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { _ in
+        let signOutAction = UIAlertAction(title: Constants.ActionSheet.signOutAction, style: .destructive) { [weak self] _ in
             do {
                 let authService = AuthService()
                 try authService.signOut()
                 let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
                 let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
-                self.present(loginVC, animated: true, completion: nil)
+                self?.present(loginVC, animated: true, completion: nil)
             } catch let error {
                 print(error.localizedDescription)
-                self.displayAlert(title: Constants.AlertError.signOutError, message: error.localizedDescription)
+                self?.displayAlert(title: Constants.AlertError.signOutError, message: error.localizedDescription)
             }
         }
         

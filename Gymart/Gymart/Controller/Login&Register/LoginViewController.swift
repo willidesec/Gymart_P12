@@ -48,12 +48,12 @@ class LoginViewController: UIViewController {
         }
         
         let authService = AuthService()
-        authService.signIn(email: email, password: password) { (authDataResult, error) in
+        authService.signIn(email: email, password: password) { [weak self] authDataResult, error in
             if error == nil && authDataResult != nil {
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             } else {
                 print("Error loging user: \(error!.localizedDescription)")
-                self.displayAlert(message: Constants.AlertError.serverError)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

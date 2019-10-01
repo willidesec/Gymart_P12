@@ -49,20 +49,19 @@ class AddProgramViewController: UIViewController {
         let identifier = UUID().uuidString
         let newProgram = Program(identifier: identifier, name: programName, description: programDescription, creationDate: Date())
         
-        saveProgramInFirestore(identifier: identifier, data: newProgram.dictionary)
-        
+        saveProgramInFirestore(identifier: identifier, program: newProgram)
     }
     
-    private func saveProgramInFirestore(identifier: String, data: [String: Any]) {
-        
-        let firestoreService = FirestoreService()
-        firestoreService.saveDataInFirestore(endpoint: .program, identifier: identifier, data: data) { (error) in
-            if let error = error {
+    private func saveProgramInFirestore(identifier: String, program: Program) {
+        let firestoreService = FirestoreService<Program>()
+        firestoreService.saveData(endpoint: .program, identifier: identifier, data: program.dictionary) { [weak self] result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+                self?.dismiss(animated: true, completion: nil)
+            case .failure(let error):
                 print("Error adding document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
-            } else {
-                print("Document added with success")
-                self.dismiss(animated: true, completion: nil)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

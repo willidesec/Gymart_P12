@@ -25,6 +25,7 @@ class MainViewController: UITabBarController {
             if AuthService.getCurrentUser() == nil {
                 let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
                 let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
+                loginVC.modalPresentationStyle = .fullScreen
                 self.present(loginVC, animated: false, completion: nil)
             } else {
                 print("user already log in")

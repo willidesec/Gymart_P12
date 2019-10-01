@@ -27,16 +27,17 @@ class HistoricalViewController: UIViewController {
     }
     
     private func fetchHistoricalWorkouts() {
-        
-        let firestoreService = FirestoreService()
-        firestoreService.fetchCollectionData(endpoint: .historical) { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                self.historicalWorkouts = querySnapshot!.documents.compactMap({HistoricalWorkout(dictionary: $0.data())})
+        let firestoreService = FirestoreService<HistoricalWorkout>()
+        firestoreService.fetchCollection(endpoint: .historical) { [weak self] result in
+            switch result {
+            case .success(let firestoreHistorical):
+                self?.historicalWorkouts = firestoreHistorical
                 DispatchQueue.main.async {
-                    self.historicalTableView.reloadData()
+                    self?.historicalTableView.reloadData()
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

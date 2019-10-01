@@ -41,24 +41,30 @@ class ProgramViewController: UIViewController {
     }
     
     private func fetchPrograms() {
-        let firestoreService = FirestoreService()
-        firestoreService.fetchCollectionData(endpoint: .program) { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                self.programs = querySnapshot!.documents.compactMap({Program(dictionary: $0.data())})
+        let firestoreService = FirestoreService<Program>()
+        firestoreService.fetchCollection(endpoint: .program) { [weak self] result in
+            switch result {
+            case .success(let firestorePrograms):
+                self?.programs = firestorePrograms
                 DispatchQueue.main.async {
-                    self.programTableView.reloadData()
+                    self?.programTableView.reloadData()
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
     private func deleteProgramInFirestore(identifier: String) {
-        let firestoreService = FirestoreService()
-        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { (error) in
-            if error != nil {
-                self.displayAlert(message: Constants.AlertError.serverError)
+        let firestoreService = FirestoreService<Program>()
+        firestoreService.deleteDocumentData(endpoint: .program, identifier: identifier) { [weak self] result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
+                print("Error deleting document: \(error)")
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145A612339244400E64058 /* FirestoreServiceSpy.swift */; };
 		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
 		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
 		3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F235CA4232546C4006C3638 /* Endpoint.swift */; };
@@ -50,8 +51,6 @@
 		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
 		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
 		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
-		3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */; };
-		3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */; };
 		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
 		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
 		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
@@ -65,14 +64,28 @@
 		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
 		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
 		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
+		3FBD197D232E9CB6007AB627 /* GymartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD197C232E9CB6007AB627 /* GymartTests.swift */; };
 		3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC8441230413D900F65DEF /* TrainingViewController.swift */; };
 		3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC844523041E4600F65DEF /* TrainingActionButton.swift */; };
 		3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */; };
 		3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */; };
+		BC8897979BD85E1D99D5BBC2 /* Pods_GymartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */; };
 		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3FBD197F232E9CB6007AB627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F3FB23C22A0675C00D22D36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F3FB24322A0675C00D22D36;
+			remoteInfo = Gymart;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30145A612339244400E64058 /* FirestoreServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceSpy.swift; sourceTree = "<group>"; };
 		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
 		3F235CA4232546C4006C3638 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -133,13 +146,18 @@
 		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3FBD197A232E9CB6007AB627 /* GymartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBD197C232E9CB6007AB627 /* GymartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymartTests.swift; sourceTree = "<group>"; };
+		3FBD197E232E9CB6007AB627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDC8441230413D900F65DEF /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		3FDC844523041E4600F65DEF /* TrainingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingActionButton.swift; sourceTree = "<group>"; };
 		3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceTableViewCell.swift; sourceTree = "<group>"; };
 		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
+		6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
 		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +166,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FBD1977232E9CB6007AB627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8897979BD85E1D99D5BBC2 /* Pods_GymartTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3FB24622A0675C00D22D36 /* Gymart */,
+				3FBD197B232E9CB6007AB627 /* GymartTests */,
 				3F3FB24522A0675C00D22D36 /* Products */,
 				4C9506C1FC48B794E3ED1E5A /* Pods */,
 				A8562B67907D98D17FDFC6B2 /* Frameworks */,
@@ -282,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				3F3FB24422A0675C00D22D36 /* Gymart-PP.app */,
+				3FBD197A232E9CB6007AB627 /* GymartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,11 +406,23 @@
 			path = Workouts;
 			sourceTree = "<group>";
 		};
+		3FBD197B232E9CB6007AB627 /* GymartTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FBD197C232E9CB6007AB627 /* GymartTests.swift */,
+				3FBD197E232E9CB6007AB627 /* Info.plist */,
+				30145A612339244400E64058 /* FirestoreServiceSpy.swift */,
+			);
+			path = GymartTests;
+			sourceTree = "<group>";
+		};
 		4C9506C1FC48B794E3ED1E5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */,
 				63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */,
+				042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */,
+				6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -391,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */,
+				F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -419,18 +460,43 @@
 			productReference = 3F3FB24422A0675C00D22D36 /* Gymart-PP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3FBD1979232E9CB6007AB627 /* GymartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FBD1983232E9CB6007AB627 /* Build configuration list for PBXNativeTarget "GymartTests" */;
+			buildPhases = (
+				74E814EC39C09939D8773B93 /* [CP] Check Pods Manifest.lock */,
+				3FBD1976232E9CB6007AB627 /* Sources */,
+				3FBD1977232E9CB6007AB627 /* Frameworks */,
+				3FBD1978232E9CB6007AB627 /* Resources */,
+				8C4041B02A9089987F05416D /* [CP] Embed Pods Frameworks */,
+				F886367AB70A05B1DCA201F0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FBD1980232E9CB6007AB627 /* PBXTargetDependency */,
+			);
+			name = GymartTests;
+			productName = GymartTests;
+			productReference = 3FBD197A232E9CB6007AB627 /* GymartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3F3FB23C22A0675C00D22D36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "William Désécot";
 				TargetAttributes = {
 					3F3FB24322A0675C00D22D36 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					3FBD1979232E9CB6007AB627 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 3F3FB24322A0675C00D22D36;
 					};
 				};
 			};
@@ -448,6 +514,7 @@
 			projectRoot = "";
 			targets = (
 				3F3FB24322A0675C00D22D36 /* Gymart */,
+				3FBD1979232E9CB6007AB627 /* GymartTests */,
 			);
 		};
 /* End PBXProject section */
@@ -469,13 +536,18 @@
 				3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */,
 				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
 				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
-				3F3FB26122A0724B00D22D36 /* Gymart-PreProd.xcconfig in Resources */,
 				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
 				3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */,
 				3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */,
 				3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */,
 				3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */,
-				3F3FB25F22A0723300D22D36 /* Gymart.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FBD1978232E9CB6007AB627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,8 +562,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore-iOS12.2/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -501,7 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */ = {
@@ -543,6 +615,28 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		74E814EC39C09939D8773B93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,15 +645,15 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-iOS12.2/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS12.2/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-iOS12.2/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf-iOS12.2/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++-iOS12.2/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core-iOS12.2/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library-iOS12.2/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-iOS12.2/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -576,7 +670,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4041B02A9089987F05416D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-iOS12.4/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS12.4/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-iOS12.4/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf-iOS12.4/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++-iOS12.4/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core-iOS12.4/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library-iOS12.4/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-iOS12.4/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F886367AB70A05B1DCA201F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore-iOS12.4/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -632,7 +784,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FBD1976232E9CB6007AB627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */,
+				3FBD197D232E9CB6007AB627 /* GymartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FBD1980232E9CB6007AB627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F3FB24322A0675C00D22D36 /* Gymart */;
+			targetProxy = 3FBD197F232E9CB6007AB627 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */ = {
@@ -802,6 +971,50 @@
 			};
 			name = Release;
 		};
+		3FBD1981232E9CB6007AB627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = GymartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.william.GymartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
+			};
+			name = Debug;
+		};
+		3FBD1982232E9CB6007AB627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = GymartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.william.GymartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -819,6 +1032,15 @@
 			buildConfigurations = (
 				3F3FB25722A0675D00D22D36 /* Debug */,
 				3F3FB25822A0675D00D22D36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FBD1983232E9CB6007AB627 /* Build configuration list for PBXNativeTarget "GymartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBD1981232E9CB6007AB627 /* Debug */,
+				3FBD1982232E9CB6007AB627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

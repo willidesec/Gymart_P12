@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-struct Program {
+struct Program: Equatable {
     let identifier: String
     let name: String
     let description: String

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol DocumentSerializableProtocol {
+public protocol DocumentSerializableProtocol {
     init?(dictionary: [String: Any])
 }

@@ -14,7 +14,8 @@ class WorkoutViewController: UIViewController {
     
     var programId: String?
     var workouts = [Workout]()
-    let firestoreService = FirestoreService()
+    let firestoreService = FirestoreService<Workout>()
+//    let firestoreServiceOld = FirestoreServiceOld()
 
     // MARK: - IBOutlet
     
@@ -50,26 +51,29 @@ class WorkoutViewController: UIViewController {
     
     private func fetchWorkouts() {
         guard let programId = programId else { return }
-        firestoreService.fetchCollectionData(endpoint: .workout(programId: programId)) { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                self.workouts = querySnapshot!.documents.compactMap({Workout(dictionary: $0.data())})
+        firestoreService.fetchCollection(endpoint: .workout(programId: programId)) { [weak self] result in
+            switch result {
+            case .success(let firestoreWorkouts):
+                self?.workouts = firestoreWorkouts
                 DispatchQueue.main.async {
-                    self.workoutsTableView.reloadData()
+                    self?.workoutsTableView.reloadData()
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
     
     private func deleteWorkoutInFirestore(identifier: String) {
         guard let programId = programId else { return }
-        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { (error) in
-            if let error = error {
+        firestoreService.deleteDocumentData(endpoint: .workout(programId: programId), identifier: identifier) { [weak self] result in
+            switch result {
+            case .success(let successMessage):
+                print(successMessage)
+            case .failure(let error):
                 print("Error removing document: \(error)")
-                self.displayAlert(message: Constants.AlertError.serverError)
-            } else {
-                print("Document successfully removed!")
+                self?.displayAlert(message: Constants.AlertError.serverError)
             }
         }
     }
@@ -79,6 +83,7 @@ class WorkoutViewController: UIViewController {
     @objc func addItemTapped() {
         let storyboard = UIStoryboard(name: "Training", bundle: nil)
         guard let addWorkoutNavigationController = storyboard.instantiateViewController(withIdentifier: "AddWorkout") as? UINavigationController else { return }
+        addWorkoutNavigationController.modalPresentationStyle = .fullScreen
         guard let addWorkoutVC = addWorkoutNavigationController.topViewController as? AddWorkoutViewController else { return }
         addWorkoutVC.programId = programId
         present(addWorkoutNavigationController, animated: true, completion: nil)

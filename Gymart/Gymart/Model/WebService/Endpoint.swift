@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Endpoint {
+public enum Endpoint {
     case user
     case currentUser
     case program

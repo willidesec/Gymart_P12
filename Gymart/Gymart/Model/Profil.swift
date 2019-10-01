@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Profil {
+struct Profil: Equatable {
     let identifier: String
     let email: String
     let userName: String
