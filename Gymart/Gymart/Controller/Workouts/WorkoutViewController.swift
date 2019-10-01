@@ -83,6 +83,7 @@ class WorkoutViewController: UIViewController {
     @objc func addItemTapped() {
         let storyboard = UIStoryboard(name: "Training", bundle: nil)
         guard let addWorkoutNavigationController = storyboard.instantiateViewController(withIdentifier: "AddWorkout") as? UINavigationController else { return }
+        addWorkoutNavigationController.modalPresentationStyle = .fullScreen
         guard let addWorkoutVC = addWorkoutNavigationController.topViewController as? AddWorkoutViewController else { return }
         addWorkoutVC.programId = programId
         present(addWorkoutNavigationController, animated: true, completion: nil)

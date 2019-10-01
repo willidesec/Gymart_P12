@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mo-Ak-4VT">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mo-Ak-4VT">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,30 +38,30 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E8D-d3-YBb" id="EaF-Ok-CWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5A-wC-fqM">
-                                                    <rect key="frame" x="16" y="7.9999999999999964" width="343" height="63.666666666666657"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="64"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNC-fZ-gZy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="63.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                             <color key="backgroundColor" red="0.35686274509803922" green="0.90588235294117647" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="wNC-fZ-gZy" secondAttribute="height" multiplier="1:1" id="PQM-4Q-jli"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-Kj-6BC">
-                                                            <rect key="frame" x="71.666666666666657" y="8" width="263.33333333333337" height="47.666666666666664"/>
+                                                            <rect key="frame" x="72" y="8" width="263" height="48"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Program_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-fS-6zX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="19.666666666666668"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="20"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSansCondensed-Bold" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.4457378387" green="0.48942786459999998" blue="0.92161422969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Program_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-iW-PxR">
-                                                                    <rect key="frame" x="0.0" y="27.666666666666664" width="158.66666666666666" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="28" width="175.66666666666666" height="20"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSans-Oblique" family="DejaVu Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.74117647058823533" green="0.76470588235294112" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -112,7 +110,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hMR-9C-dtv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="CNa-Xf-B6Y" kind="presentation" id="KpR-rW-LfN"/>
+                                <segue destination="CNa-Xf-B6Y" kind="presentation" modalPresentationStyle="fullScreen" id="KpR-rW-LfN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,11 +138,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rrw-Pm-IP0" id="GEG-EW-UcN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2l-wG-yfh" userLabel="Container View">
-                                                    <rect key="frame" x="16" y="8" width="343" height="183.66666666666666"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="184"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-uB-Xwf">
                                                             <rect key="frame" x="26" y="8" width="301" height="20"/>
@@ -156,7 +154,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-PH-GW6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="10" height="183.66666666666666"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="10" height="184"/>
                                                             <color key="backgroundColor" red="0.35686274509999999" green="0.90588235289999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="10" id="gYO-ux-bRS"/>
@@ -184,18 +182,18 @@
                                                             </constraints>
                                                         </stackView>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-Aq-Hs8">
-                                                            <rect key="frame" x="26" y="61.000000000000007" width="301" height="122.66666666666669"/>
+                                                            <rect key="frame" x="26" y="61" width="301" height="123"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <prototypes>
                                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExercicesTableViewCell" rowHeight="30" id="t2P-m7-IgT" customClass="ExercicesTableViewCell" customModule="Gymart" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="28" width="301" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2P-m7-IgT" id="cG0-zO-qFj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="301" height="29.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="301" height="30"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCq-dL-OTF">
-                                                                                <rect key="frame" x="0.0" y="5" width="301" height="19.666666666666668"/>
+                                                                                <rect key="frame" x="0.0" y="5" width="301" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -403,20 +401,20 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainingTableViewCell" id="8bA-Ia-Sqr" customClass="TrainingTableViewCell" customModule="Gymart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="98" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bA-Ia-Sqr" id="bce-G8-C86">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-ZZ-xiy">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="50"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2d4-WP-j0S">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeW-NS-q6p" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="7.6666666666666679" y="9.6666666666666643" width="30.000000000000004" height="25"/>
+                                                                    <rect key="frame" x="7.6666666666666679" y="12.666666666666664" width="30.000000000000004" height="25"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2px-t5-ai8">
                                                                             <rect key="frame" x="0.6666666666666643" y="3.6666666666666679" width="28.333333333333332" height="17.666666666666668"/>
@@ -441,16 +439,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BME-Yg-oEq">
-                                                            <rect key="frame" x="68" y="0.0" width="86" height="44"/>
+                                                            <rect key="frame" x="68" y="0.0" width="86" height="50"/>
                                                             <subviews>
                                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREVIOUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAP-UW-99a">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="44"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
                                                                     <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OZ-ZZ-piG">
-                                                                    <rect key="frame" x="33" y="20.666666666666668" width="20" height="3"/>
+                                                                    <rect key="frame" x="33" y="23.666666666666668" width="20" height="3"/>
                                                                     <color key="backgroundColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="3" id="l6m-P8-cyW"/>
@@ -468,15 +466,14 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djS-SW-n4i">
-                                                            <rect key="frame" x="177" y="0.0" width="45" height="44"/>
+                                                            <rect key="frame" x="177" y="0.0" width="45" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-NC-05q" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="45" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="12.666666666666664" width="45" height="25"/>
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-SZ-JNL">
                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
                                                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                            <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
@@ -499,15 +496,14 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-Lg-Wia">
-                                                            <rect key="frame" x="245" y="0.0" width="45" height="44"/>
+                                                            <rect key="frame" x="245" y="0.0" width="45" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-2p-cPd" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="45" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="12.666666666666664" width="45" height="25"/>
                                                                     <subviews>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5b-rS-mjO">
                                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
                                                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                            <nil key="textColor"/>
                                                                             <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="15"/>
                                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
@@ -530,10 +526,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-e8-iro">
-                                                            <rect key="frame" x="313" y="0.0" width="30" height="44"/>
+                                                            <rect key="frame" x="313" y="0.0" width="30" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-3q-xHP" customClass="TrainingRegularView" customModule="Gymart" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="9.6666666666666643" width="30" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="12.666666666666664" width="30" height="25"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-Li-VRb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
@@ -795,14 +791,14 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-xT-iie">
-                                <rect key="frame" x="0.0" y="349.33333333333326" width="375" height="428.66666666666674"/>
+                                <rect key="frame" x="0.0" y="353.33333333333326" width="375" height="424.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddExerciceTableViewCell" id="XKu-jI-BxG" customClass="AddExerciceTableViewCell" customModule="Gymart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XKu-jI-BxG" id="wjf-kp-dNq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-Oq-lB9">
@@ -844,26 +840,25 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-mB-ozd">
-                                <rect key="frame" x="22" y="230.33333333333337" width="331" height="89"/>
+                                <rect key="frame" x="22" y="230.33333333333337" width="331" height="93"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sTF-HG-lCa">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercice's Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-oO-YLT">
-                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="34"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-qC-U0l">
-                                                <rect key="frame" x="252.66666666666671" y="0.0" width="10.333333333333343" height="30"/>
+                                                <rect key="frame" x="252.66666666666671" y="0.0" width="10.333333333333343" height="34"/>
                                                 <fontDescription key="fontDescription" name="DejaVuSans" family="DejaVu Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-DV-MMJ">
-                                                <rect key="frame" x="271" y="0.0" width="60" height="30"/>
+                                                <rect key="frame" x="271" y="0.0" width="60" height="34"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="iwR-b2-Kfq"/>
@@ -875,7 +870,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X82-8q-IAR" customClass="LoginButton" customModule="Gymart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.999999999999972" width="331" height="44"/>
+                                        <rect key="frame" x="0.0" y="48.999999999999972" width="331" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fxQ-fk-bjp"/>
                                         </constraints>
