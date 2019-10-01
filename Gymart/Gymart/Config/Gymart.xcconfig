@@ -1,0 +1,12 @@
+//
+//  Gymart.xcconfig
+//  Gymart
+//
+//  Created by William on 30/05/2019.
+//  Copyright © 2019 William Désécot. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+server_url = "Ceci est le serveur de la Production"

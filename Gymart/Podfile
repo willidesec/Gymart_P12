@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+use_frameworks!
+
+def firebase_pods
+    pod 'Firebase/Core'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
+end
+
+target 'Gymart' do
+	firebase_pods
+end
+
+target 'GymartTests' do
+    firebase_pods
+end

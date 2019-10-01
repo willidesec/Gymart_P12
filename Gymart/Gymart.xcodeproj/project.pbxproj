@@ -1,0 +1,1051 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145A612339244400E64058 /* FirestoreServiceSpy.swift */; };
+		303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */; };
+		30E0618B22C0E905007A1964 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0618A22C0E905007A1964 /* Program.swift */; };
+		3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F235CA4232546C4006C3638 /* Endpoint.swift */; };
+		3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */; };
+		3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23FE2A22AD73050085B20C /* RegisterViewController.swift */; };
+		3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */; };
+		3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */; };
+		3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25403422B6BCE200DB33DC /* Training.storyboard */; };
+		3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */; };
+		3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6822305770D00DB769F /* TrainingRegularView.swift */; };
+		3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */; };
+		3F25A68B2305CDC200DB769F /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */; };
+		3F26455C23075C0B00465DBD /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26455B23075C0B00465DBD /* Vibration.swift */; };
+		3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */; };
+		3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27DFDA22DA25B200859E05 /* AuthService.swift */; };
+		3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B48BF22E48D46000E4DBB /* Exercice.swift */; };
+		3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D92892323A8E20004AE7F /* Profil.swift */; };
+		3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */; };
+		3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */; };
+		3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */; };
+		3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */; };
+		3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA422AC15550004C720 /* Login&Register.storyboard */; };
+		3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */; };
+		3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */; };
+		3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */; };
+		3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */; };
+		3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */; };
+		3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */; };
+		3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */; };
+		3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */; };
+		3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */; };
+		3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */; };
+		3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */; };
+		3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC022AC2F300004C720 /* LoginButton.swift */; };
+		3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC222AC30CE0004C720 /* UIView+extension.swift */; };
+		3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC422AC33C50004C720 /* UIFont+extension.swift */; };
+		3F2FADC822AC35760004C720 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC722AC35760004C720 /* Constants.swift */; };
+		3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADC922AC39200004C720 /* CALayer+extension.swift */; };
+		3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */; };
+		3F3387C42323FA5D0090D3EE /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3387C32323FA5D0090D3EE /* FirestoreService.swift */; };
+		3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB24722A0675C00D22D36 /* AppDelegate.swift */; };
+		3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB24E22A0675D00D22D36 /* Assets.xcassets */; };
+		3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */; };
+		3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F622C7C03300D84692 /* Main.storyboard */; };
+		3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A60F822C7C4C000D84692 /* Profile.storyboard */; };
+		3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */; };
+		3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */; };
+		3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */; };
+		3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FACE7ED23084F1D0066EC3A /* Historical.storyboard */; };
+		3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */; };
+		3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */; };
+		3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F323085E540066EC3A /* HistoricalExercice.swift */; };
+		3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACE7F523085EB50066EC3A /* ExerciceSet.swift */; };
+		3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */; };
+		3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163722E37D8800A44FA1 /* Workout.swift */; };
+		3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */; };
+		3FBD197D232E9CB6007AB627 /* GymartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD197C232E9CB6007AB627 /* GymartTests.swift */; };
+		3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC8441230413D900F65DEF /* TrainingViewController.swift */; };
+		3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC844523041E4600F65DEF /* TrainingActionButton.swift */; };
+		3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */; };
+		3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */; };
+		BC8897979BD85E1D99D5BBC2 /* Pods_GymartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */; };
+		D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FBD197F232E9CB6007AB627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F3FB23C22A0675C00D22D36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F3FB24322A0675C00D22D36;
+			remoteInfo = Gymart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30145A612339244400E64058 /* FirestoreServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceSpy.swift; sourceTree = "<group>"; };
+		303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		30E0618A22C0E905007A1964 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Program.swift; path = Gymart/View/Cells/Program.swift; sourceTree = SOURCE_ROOT; };
+		3F235CA4232546C4006C3638 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		3F23FE2A22AD73050085B20C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		3F25403422B6BCE200DB33DC /* Training.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Training.storyboard; sourceTree = "<group>"; };
+		3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3F25A6822305770D00DB769F /* TrainingRegularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRegularView.swift; sourceTree = "<group>"; };
+		3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
+		3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
+		3F26455B23075C0B00465DBD /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewController.swift; sourceTree = "<group>"; };
+		3F27DFDA22DA25B200859E05 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3F2B48BF22E48D46000E4DBB /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
+		3F2D92892323A8E20004AE7F /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
+		3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesTableViewCell.swift; sourceTree = "<group>"; };
+		3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSerializableProtocol.swift; sourceTree = "<group>"; };
+		3F2FADA422AC15550004C720 /* Login&Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
+		3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansCondensed.ttf; sourceTree = "<group>"; };
+		3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSans.ttf; sourceTree = "<group>"; };
+		3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Bold.ttf"; sourceTree = "<group>"; };
+		3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSansCondensed-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-BoldOblique.ttf"; sourceTree = "<group>"; };
+		3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DejaVuSans-Oblique.ttf"; sourceTree = "<group>"; };
+		3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC022AC2F300004C720 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		3F2FADC222AC30CE0004C720 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC422AC33C50004C720 /* UIFont+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extension.swift"; sourceTree = "<group>"; };
+		3F2FADC722AC35760004C720 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3F2FADC922AC39200004C720 /* CALayer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+extension.swift"; sourceTree = "<group>"; };
+		3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
+		3F3387C32323FA5D0090D3EE /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		3F3FB24422A0675C00D22D36 /* Gymart-PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gymart-PP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3FB24722A0675C00D22D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F3FB24E22A0675D00D22D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F3FB25122A0675D00D22D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F3FB25322A0675D00D22D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Gymart.xcconfig; sourceTree = "<group>"; };
+		3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Gymart-PreProd.xcconfig"; sourceTree = "<group>"; };
+		3F5A60F622C7C03300D84692 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F5A60F822C7C4C000D84692 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewController.swift; path = Gymart/Controller/ProfilViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3FACE7ED23084F1D0066EC3A /* Historical.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historical.storyboard; sourceTree = "<group>"; };
+		3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
+		3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalWorkout.swift; sourceTree = "<group>"; };
+		3FACE7F323085E540066EC3A /* HistoricalExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalExercice.swift; sourceTree = "<group>"; };
+		3FACE7F523085EB50066EC3A /* ExerciceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceSet.swift; sourceTree = "<group>"; };
+		3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		3FB7163722E37D8800A44FA1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		3FBD197A232E9CB6007AB627 /* GymartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBD197C232E9CB6007AB627 /* GymartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymartTests.swift; sourceTree = "<group>"; };
+		3FBD197E232E9CB6007AB627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FDC8441230413D900F65DEF /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		3FDC844523041E4600F65DEF /* TrainingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingActionButton.swift; sourceTree = "<group>"; };
+		3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceTableViewCell.swift; sourceTree = "<group>"; };
+		63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.release.xcconfig"; sourceTree = "<group>"; };
+		6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gymart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gymart/Pods-Gymart.debug.xcconfig"; sourceTree = "<group>"; };
+		E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gymart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F3FB24122A0675C00D22D36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D502A691DFE0A34A7230627B /* Pods_Gymart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FBD1977232E9CB6007AB627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8897979BD85E1D99D5BBC2 /* Pods_GymartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		303AFF1922C0E5100077B62A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				303AFF1A22C0E5340077B62A /* ProgramTableViewCell.swift */,
+				3FB7163922E37F9100A44FA1 /* WorkoutTableViewCell.swift */,
+				3F2DA29022EE12E8004B154A /* ExercicesTableViewCell.swift */,
+				3FF0C5A222F74D5B005E2F01 /* AddExerciceTableViewCell.swift */,
+				3F25A68023056C3000DB769F /* TrainingHeaderTableViewCell.swift */,
+				3F25A6882305BEFE00DB769F /* TrainingTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3F23FE2722AD31B80085B20C /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADBA22AC1BDF0004C720 /* LoginViewController.swift */,
+				3F23FE2A22AD73050085B20C /* RegisterViewController.swift */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		3F26455A23075BFF00465DBD /* Vibration */ = {
+			isa = PBXGroup;
+			children = (
+				3F26455B23075C0B00465DBD /* Vibration.swift */,
+			);
+			path = Vibration;
+			sourceTree = "<group>";
+		};
+		3F2FADA322AC15300004C720 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADA422AC15550004C720 /* Login&Register.storyboard */,
+				3F5A60F622C7C03300D84692 /* Main.storyboard */,
+				3F25403422B6BCE200DB33DC /* Training.storyboard */,
+				3F5A60F822C7C4C000D84692 /* Profile.storyboard */,
+				3FACE7ED23084F1D0066EC3A /* Historical.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3F2FADA622AC181E0004C720 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				3F26455A23075BFF00465DBD /* Vibration */,
+				3F2FADC622AC34CC0004C720 /* Constants */,
+				3F2FADA722AC182C0004C720 /* Fonts */,
+				3F3FB24E22A0675D00D22D36 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		3F2FADA722AC182C0004C720 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADAC22AC18940004C720 /* DejaVuSans-Bold.ttf */,
+				3F2FADAF22AC18940004C720 /* DejaVuSans-BoldOblique.ttf */,
+				3F2FADAE22AC18940004C720 /* DejaVuSans-ExtraLight.ttf */,
+				3F2FADB022AC18940004C720 /* DejaVuSans-Oblique.ttf */,
+				3F2FADAB22AC18940004C720 /* DejaVuSans.ttf */,
+				3F2FADA822AC18930004C720 /* DejaVuSansCondensed-Bold.ttf */,
+				3F2FADA922AC18930004C720 /* DejaVuSansCondensed-BoldOblique.ttf */,
+				3F2FADAD22AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf */,
+				3F2FADAA22AC18930004C720 /* DejaVuSansCondensed.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F2FADBC22AC1E0C0004C720 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADBD22AC1ED60004C720 /* UIColor+extension.swift */,
+				3F2FADC222AC30CE0004C720 /* UIView+extension.swift */,
+				3F2FADC422AC33C50004C720 /* UIFont+extension.swift */,
+				3F2FADC922AC39200004C720 /* CALayer+extension.swift */,
+				3F23FE2322AD2D620085B20C /* UIViewController+extension.swift */,
+				3F2DA28E22EE1008004B154A /* UITableViewCell+extension.swift */,
+				3F2E520E22F5B15C00C8C7D8 /* Date+extension.swift */,
+				3F25A68A2305CDC200DB769F /* UIImageView+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F2FADBF22AC2F0E0004C720 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC022AC2F300004C720 /* LoginButton.swift */,
+				3FDC844523041E4600F65DEF /* TrainingActionButton.swift */,
+				3F25A6822305770D00DB769F /* TrainingRegularView.swift */,
+				3F2FADCB22AC3B8A0004C720 /* UserInputView.swift */,
+				3F5A60FA22C7C53700D84692 /* CustomNavBar.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3F2FADC622AC34CC0004C720 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADC722AC35760004C720 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3F3387C22323F3550090D3EE /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3F235CA4232546C4006C3638 /* Endpoint.swift */,
+				3F27DFDA22DA25B200859E05 /* AuthService.swift */,
+				3F3387C32323FA5D0090D3EE /* FirestoreService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		3F3FB23B22A0675C00D22D36 = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24622A0675C00D22D36 /* Gymart */,
+				3FBD197B232E9CB6007AB627 /* GymartTests */,
+				3F3FB24522A0675C00D22D36 /* Products */,
+				4C9506C1FC48B794E3ED1E5A /* Pods */,
+				A8562B67907D98D17FDFC6B2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F3FB24522A0675C00D22D36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24422A0675C00D22D36 /* Gymart-PP.app */,
+				3FBD197A232E9CB6007AB627 /* GymartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F3FB24622A0675C00D22D36 /* Gymart */ = {
+			isa = PBXGroup;
+			children = (
+				3F2FADA622AC181E0004C720 /* Ressources */,
+				3F3FB25D22A071E500D22D36 /* Config */,
+				3F3FB25C22A068BA00D22D36 /* SupportingFiles */,
+				3F3FB25B22A068B300D22D36 /* Model */,
+				3F3FB25A22A0689A00D22D36 /* View */,
+				3F3FB25922A0689000D22D36 /* Controller */,
+				3F2FADBC22AC1E0C0004C720 /* Extensions */,
+				3F2FADBF22AC2F0E0004C720 /* CustomView */,
+			);
+			path = Gymart;
+			sourceTree = "<group>";
+		};
+		3F3FB25922A0689000D22D36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F5A60FE22C7D9AC00D84692 /* MainViewController.swift */,
+				3FB7163322E3358000A44FA1 /* Program */,
+				3FB7163422E335D000A44FA1 /* Workouts */,
+				3F5A60FC22C7C72B00D84692 /* ProfilViewController.swift */,
+				3FACE7EF23084F480066EC3A /* HistoricalViewController.swift */,
+				3F23FE2722AD31B80085B20C /* Login&Register */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F3FB25A22A0689A00D22D36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */,
+				303AFF1922C0E5100077B62A /* Cells */,
+				3F2FADA322AC15300004C720 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F3FB25B22A068B300D22D36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F3387C22323F3550090D3EE /* WebService */,
+				3F2E521022F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift */,
+				3F2D92892323A8E20004AE7F /* Profil.swift */,
+				30E0618A22C0E905007A1964 /* Program.swift */,
+				3FB7163722E37D8800A44FA1 /* Workout.swift */,
+				3F2B48BF22E48D46000E4DBB /* Exercice.swift */,
+				3FACE7F123085CF70066EC3A /* HistoricalWorkout.swift */,
+				3FACE7F323085E540066EC3A /* HistoricalExercice.swift */,
+				3FACE7F523085EB50066EC3A /* ExerciceSet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F3FB25C22A068BA00D22D36 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB24722A0675C00D22D36 /* AppDelegate.swift */,
+				3F3FB25322A0675D00D22D36 /* Info.plist */,
+				3F23FE2C22AD944D0085B20C /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3F3FB25D22A071E500D22D36 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */,
+				3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3FB7163322E3358000A44FA1 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				3F27389722C8E3E500FD2BE4 /* AddProgramViewController.swift */,
+				3F25403222B6BC9B00DB33DC /* ProgramViewController.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		3FB7163422E335D000A44FA1 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				3FF0C5A022F731D2005E2F01 /* AddWorkoutViewController.swift */,
+				3FB7163522E338F700A44FA1 /* WorkoutViewController.swift */,
+				3FDC8441230413D900F65DEF /* TrainingViewController.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		3FBD197B232E9CB6007AB627 /* GymartTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FBD197C232E9CB6007AB627 /* GymartTests.swift */,
+				3FBD197E232E9CB6007AB627 /* Info.plist */,
+				30145A612339244400E64058 /* FirestoreServiceSpy.swift */,
+			);
+			path = GymartTests;
+			sourceTree = "<group>";
+		};
+		4C9506C1FC48B794E3ED1E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */,
+				63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */,
+				042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */,
+				6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A8562B67907D98D17FDFC6B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8F97DDF386984A1AC8D4D41 /* Pods_Gymart.framework */,
+				F4706CEC0BBA7452B038934C /* Pods_GymartTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F3FB24322A0675C00D22D36 /* Gymart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F3FB25622A0675D00D22D36 /* Build configuration list for PBXNativeTarget "Gymart" */;
+			buildPhases = (
+				2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */,
+				3F3FB24022A0675C00D22D36 /* Sources */,
+				3F3FB24122A0675C00D22D36 /* Frameworks */,
+				3F3FB24222A0675C00D22D36 /* Resources */,
+				84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */,
+				024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */,
+				3FDF78192323BE8800AC8DB5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gymart;
+			productName = Gymart;
+			productReference = 3F3FB24422A0675C00D22D36 /* Gymart-PP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FBD1979232E9CB6007AB627 /* GymartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FBD1983232E9CB6007AB627 /* Build configuration list for PBXNativeTarget "GymartTests" */;
+			buildPhases = (
+				74E814EC39C09939D8773B93 /* [CP] Check Pods Manifest.lock */,
+				3FBD1976232E9CB6007AB627 /* Sources */,
+				3FBD1977232E9CB6007AB627 /* Frameworks */,
+				3FBD1978232E9CB6007AB627 /* Resources */,
+				8C4041B02A9089987F05416D /* [CP] Embed Pods Frameworks */,
+				F886367AB70A05B1DCA201F0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FBD1980232E9CB6007AB627 /* PBXTargetDependency */,
+			);
+			name = GymartTests;
+			productName = GymartTests;
+			productReference = 3FBD197A232E9CB6007AB627 /* GymartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F3FB23C22A0675C00D22D36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "William Désécot";
+				TargetAttributes = {
+					3F3FB24322A0675C00D22D36 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					3FBD1979232E9CB6007AB627 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 3F3FB24322A0675C00D22D36;
+					};
+				};
+			};
+			buildConfigurationList = 3F3FB23F22A0675C00D22D36 /* Build configuration list for PBXProject "Gymart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F3FB23B22A0675C00D22D36;
+			productRefGroup = 3F3FB24522A0675C00D22D36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F3FB24322A0675C00D22D36 /* Gymart */,
+				3FBD1979232E9CB6007AB627 /* GymartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F3FB24222A0675C00D22D36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2FADB622AC18940004C720 /* DejaVuSansCondensed-Oblique.ttf in Resources */,
+				3F2FADB422AC18940004C720 /* DejaVuSans.ttf in Resources */,
+				3F23FE2D22AD944D0085B20C /* GoogleService-Info.plist in Resources */,
+				3F3FB25222A0675D00D22D36 /* LaunchScreen.storyboard in Resources */,
+				3F5A60F722C7C03300D84692 /* Main.storyboard in Resources */,
+				3F2FADB122AC18940004C720 /* DejaVuSansCondensed-Bold.ttf in Resources */,
+				3FACE7EE23084F1D0066EC3A /* Historical.storyboard in Resources */,
+				3F5A60F922C7C4C000D84692 /* Profile.storyboard in Resources */,
+				3F3FB24F22A0675D00D22D36 /* Assets.xcassets in Resources */,
+				3F25403522B6BCE200DB33DC /* Training.storyboard in Resources */,
+				3F2FADA522AC15550004C720 /* Login&Register.storyboard in Resources */,
+				3F2FADB722AC18940004C720 /* DejaVuSans-ExtraLight.ttf in Resources */,
+				3F2FADB522AC18940004C720 /* DejaVuSans-Bold.ttf in Resources */,
+				3F2FADB922AC18940004C720 /* DejaVuSans-Oblique.ttf in Resources */,
+				3F2FADB222AC18940004C720 /* DejaVuSansCondensed-BoldOblique.ttf in Resources */,
+				3F2FADB322AC18940004C720 /* DejaVuSansCondensed.ttf in Resources */,
+				3F2FADB822AC18940004C720 /* DejaVuSans-BoldOblique.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FBD1978232E9CB6007AB627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024778B6F843A67746295BF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore-iOS12.2/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAAB66FCB2E230141CB6843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gymart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDF78192323BE8800AC8DB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		74E814EC39C09939D8773B93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GymartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A7BD8705B2E7C8F8B0DDC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-iOS12.2/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS12.2/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-iOS12.2/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf-iOS12.2/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++-iOS12.2/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core-iOS12.2/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library-iOS12.2/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-iOS12.2/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gymart/Pods-Gymart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4041B02A9089987F05416D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-iOS12.4/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS12.4/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-iOS12.4/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf-iOS12.4/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++-iOS12.4/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core-iOS12.4/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library-iOS12.4/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-iOS12.4/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F886367AB70A05B1DCA201F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore-iOS12.4/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymartTests/Pods-GymartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F3FB24022A0675C00D22D36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FDC8442230413D900F65DEF /* TrainingViewController.swift in Sources */,
+				3F2FADC322AC30CE0004C720 /* UIView+extension.swift in Sources */,
+				3F2FADC122AC2F300004C720 /* LoginButton.swift in Sources */,
+				3F2B48C022E48D46000E4DBB /* Exercice.swift in Sources */,
+				3F2DA28F22EE1008004B154A /* UITableViewCell+extension.swift in Sources */,
+				3F2DA29122EE12E8004B154A /* ExercicesTableViewCell.swift in Sources */,
+				3F25A6832305770D00DB769F /* TrainingRegularView.swift in Sources */,
+				3F3387C42323FA5D0090D3EE /* FirestoreService.swift in Sources */,
+				3F235CA5232546C4006C3638 /* Endpoint.swift in Sources */,
+				3FACE7F223085CF70066EC3A /* HistoricalWorkout.swift in Sources */,
+				3FB7163822E37D8800A44FA1 /* Workout.swift in Sources */,
+				3F2FADCA22AC39200004C720 /* CALayer+extension.swift in Sources */,
+				3F2E520F22F5B15C00C8C7D8 /* Date+extension.swift in Sources */,
+				3FF0C5A322F74D5B005E2F01 /* AddExerciceTableViewCell.swift in Sources */,
+				3F23FE2B22AD73050085B20C /* RegisterViewController.swift in Sources */,
+				30E0618B22C0E905007A1964 /* Program.swift in Sources */,
+				3FACE7F023084F480066EC3A /* HistoricalViewController.swift in Sources */,
+				3F25A6892305BEFE00DB769F /* TrainingTableViewCell.swift in Sources */,
+				3F25A68B2305CDC200DB769F /* UIImageView+extensions.swift in Sources */,
+				3F2FADBB22AC1BDF0004C720 /* LoginViewController.swift in Sources */,
+				3F2D928A2323A8E20004AE7F /* Profil.swift in Sources */,
+				3F27DFDB22DA25B200859E05 /* AuthService.swift in Sources */,
+				3F25A68123056C3000DB769F /* TrainingHeaderTableViewCell.swift in Sources */,
+				3F5A60FD22C7C72B00D84692 /* ProfilViewController.swift in Sources */,
+				3F5A60FF22C7D9AC00D84692 /* MainViewController.swift in Sources */,
+				3F25403322B6BC9B00DB33DC /* ProgramViewController.swift in Sources */,
+				3F23FE2422AD2D620085B20C /* UIViewController+extension.swift in Sources */,
+				3FACE7F623085EB50066EC3A /* ExerciceSet.swift in Sources */,
+				3FF0C5A122F731D2005E2F01 /* AddWorkoutViewController.swift in Sources */,
+				3F2FADC522AC33C50004C720 /* UIFont+extension.swift in Sources */,
+				3F26455C23075C0B00465DBD /* Vibration.swift in Sources */,
+				3F5A60FB22C7C53700D84692 /* CustomNavBar.swift in Sources */,
+				3F3FB24822A0675C00D22D36 /* AppDelegate.swift in Sources */,
+				3FB7163A22E37F9100A44FA1 /* WorkoutTableViewCell.swift in Sources */,
+				3F27389822C8E3E500FD2BE4 /* AddProgramViewController.swift in Sources */,
+				3FDC844623041E4600F65DEF /* TrainingActionButton.swift in Sources */,
+				3FACE7F423085E540066EC3A /* HistoricalExercice.swift in Sources */,
+				303AFF1B22C0E5340077B62A /* ProgramTableViewCell.swift in Sources */,
+				3FB7163622E338F700A44FA1 /* WorkoutViewController.swift in Sources */,
+				3F2FADBE22AC1ED60004C720 /* UIColor+extension.swift in Sources */,
+				3F2FADC822AC35760004C720 /* Constants.swift in Sources */,
+				3F2E521122F5CC2000C8C7D8 /* DocumentSerializableProtocol.swift in Sources */,
+				3F2FADCC22AC3B8A0004C720 /* UserInputView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FBD1976232E9CB6007AB627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30145A622339244400E64058 /* FirestoreServiceSpy.swift in Sources */,
+				3FBD197D232E9CB6007AB627 /* GymartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FBD1980232E9CB6007AB627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F3FB24322A0675C00D22D36 /* Gymart */;
+			targetProxy = 3FBD197F232E9CB6007AB627 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F3FB25022A0675D00D22D36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F3FB25122A0675D00D22D36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F3FB25422A0675D00D22D36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB26022A0724B00D22D36 /* Gymart-PreProd.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F3FB25522A0675D00D22D36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F3FB25E22A0723300D22D36 /* Gymart.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F3FB25722A0675D00D22D36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B165E7A4265203764C4A876 /* Pods-Gymart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = "$(SRCROOT)/Gymart/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.william.gymart-preprod";
+				PRODUCT_NAME = "Gymart-PP";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F3FB25822A0675D00D22D36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DEAE6B79E312FA90115EB2 /* Pods-Gymart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = "$(SRCROOT)/Gymart/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.william.gymart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3FBD1981232E9CB6007AB627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042F8C82EE75408B9EB1E9D1 /* Pods-GymartTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = GymartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.william.GymartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
+			};
+			name = Debug;
+		};
+		3FBD1982232E9CB6007AB627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D312BD0B588CD99ABF01C3E /* Pods-GymartTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGXH6EX8FJ;
+				INFOPLIST_FILE = GymartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.william.GymartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymart-PP.app/Gymart-PP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F3FB23F22A0675C00D22D36 /* Build configuration list for PBXProject "Gymart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3FB25422A0675D00D22D36 /* Debug */,
+				3F3FB25522A0675D00D22D36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F3FB25622A0675D00D22D36 /* Build configuration list for PBXNativeTarget "Gymart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3FB25722A0675D00D22D36 /* Debug */,
+				3F3FB25822A0675D00D22D36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FBD1983232E9CB6007AB627 /* Build configuration list for PBXNativeTarget "GymartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBD1981232E9CB6007AB627 /* Debug */,
+				3FBD1982232E9CB6007AB627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F3FB23C22A0675C00D22D36 /* Project object */;
+}
