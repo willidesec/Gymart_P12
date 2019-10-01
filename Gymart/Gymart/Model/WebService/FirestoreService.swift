@@ -44,6 +44,10 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
     
     // MARK: - Methods
     
+    /// Fetch an array of Firestore Object from a collection in Firestore BDD and parse it into a Swift object
+    ///
+    /// - Parameter endpoint: The endpoint where to fetch collection in Firestore BDD
+    /// - Parameter result: A result type to make action when it's success or failure
     public func fetchCollection(endpoint: Endpoint, result: @escaping (FirestoreCollectionResult<FirestoreObject>) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.order(by: "creationDate", descending: true).getDocuments(completion: { (querySnapshot, error) in
@@ -60,6 +64,10 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
         })
     }
     
+    /// Fetch a Firestore Object from a document in Firestore BDD and parse it into a Swift object
+    ///
+    /// - Parameter endpoint: The endpoint where to fetch document in Firestore BDD
+    /// - Parameter result: A result type to make action when it's success or failure
     public func fetchDocument(endpoint: Endpoint, result: @escaping (FirestoreDocumentResult<FirestoreObject>) -> Void) {
         document = dataBase.document(endpoint.path)
         document?.getDocument(completion: { (documentSnapshot, error) in
@@ -76,6 +84,10 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
         })
     }
     
+    /// Save data in a Firestore Document
+    ///
+    /// - Parameter endpoint: The endpoint where to save document in Firestore BDD
+    /// - Parameter result: A result type to make action when it's success or failure
     public func saveData(endpoint: Endpoint, identifier: String, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).setData(data, completion: { (error) in
@@ -88,6 +100,10 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
         })
     }
     
+    /// Delete document in a Firestore BDD
+    ///
+    /// - Parameter endpoint: The endpoint where to delete document in Firestore BDD
+    /// - Parameter result: A result type to make action when it's success or failure
     public func deleteDocumentData(endpoint: Endpoint, identifier: String, result: @escaping (FirestoreUpdateResult) -> Void) {
         collection = dataBase.collection(endpoint.path)
         collection?.document(identifier).delete(completion: { error in
@@ -100,6 +116,10 @@ final public class FirestoreService<FirestoreObject: DocumentSerializableProtoco
         })
     }
     
+    /// Update document in a Firestore BDD
+    ///
+    /// - Parameter endpoint: The endpoint where to update document in Firestore BDD
+    /// - Parameter result: A result type to make action when it's success or failure
     public func updateData(endpoint: Endpoint, data: [String: Any], result: @escaping (FirestoreUpdateResult) -> Void) {
         document = dataBase.document(endpoint.path)
         document?.updateData(data, completion: { error in
