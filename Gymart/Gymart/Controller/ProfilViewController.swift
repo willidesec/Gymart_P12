@@ -99,6 +99,7 @@ class ProfilViewController: UIViewController {
                 try authService.signOut()
                 let loginStoryboard = UIStoryboard(name: "Login&Register", bundle: nil)
                 let loginVC = loginStoryboard.instantiateViewController(withIdentifier: "Login")
+                loginVC.modalPresentationStyle = .fullScreen
                 self?.present(loginVC, animated: true, completion: nil)
             } catch let error {
                 print(error.localizedDescription)
